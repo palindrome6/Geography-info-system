@@ -2,7 +2,6 @@ from html import XHTML
 import pycountry
 import wikipedia
 
-# print wikipedia.summary("India")
 
 country_list = list(pycountry.countries)
 i = 1
@@ -12,7 +11,7 @@ for country in country_list:
     summary1 = summary1.encode('utf-8')
     h = XHTML()
     h.div(summary1)
-    cname = str(country.name) + ".xhtml"
+    cname = (str(country.alpha2)).lower() + ".xhtml"
     with open(str(cname), "w") as cfile:
         cfile.write(str(h))
     print i
