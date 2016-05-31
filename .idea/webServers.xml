@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="b0e23c2e-47c3-443c-b495-f758adbecde3" name="geography" url="http://wwwis.win.tue.nl">
+        <fileTransfer host="wwwis.win.tue.nl" port="22" rootFolder="/home/as11_2016/public_html" accessType="SFTP" password="df98dfe3dfe7dffddf98df9fdff5dfcddf9bdf9b" username="as11_2016">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
