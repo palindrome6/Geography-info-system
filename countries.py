@@ -14,6 +14,6 @@ for country in country_list:
     cname = (str(country.alpha2)).lower() + ".xhtml"
     with open(str(cname), "w") as cfile:
         cfile.write(str(h))
-    print i
-    i += 1
+    # print i
+    # i += 1
     break
