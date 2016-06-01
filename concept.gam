@@ -1,0 +1,115 @@
+$options { default.properties "event;strict"}
+index {
+	#resource = `~ return "[[=index.xhtml]]";`
+}
+earth {
+	title `Earth`
+	#content:String =`~ return "[[=content/Earth.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+europe {
+	->(parent)earth
+	title `Europe`
+	#content:String =`~ return "[[=content/Europe.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+western-europe {
+	->(parent)europe
+	title `Western Europe`
+	#content:String =`~ return "[[=content/Western_Europe.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+eastern-europe {
+	->(parent)europe
+	title `Eastern Europe`
+	#content:String =`~ return "[[=content/Eastern_Europe.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+romania {
+	->(parent)eastern-europe
+	title `Romania`
+	#content:String =`~ return "[[=content/Romania.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+ukraine {
+	->(parent)romania
+	title `Ukraine`
+	#content:String =`~ return "[[=content/Ukraine.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+southern-europe {
+	->(parent)europe
+	title `Southern Europe`
+	#content:String =`~ return "[[=content/Southern_Europe.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+italy {
+	->(parent)southern-europe
+	title `Italy`
+	#content:String =`~ return "[[=content/Italy.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+asia {
+	->(parent)earth
+	title `Asia`
+	#content:String =`~ return "[[=content/Asia.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+eastern-asia {
+	->(parent)asia
+	title `Eastern Asia`
+	#content:String =`~ return "[[=content/Eastern_Asia.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+japan {
+	->(parent)eastern-asia
+	title `Japan`
+	#content:String =`~ return "[[=content/Japan.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+korea {
+	->(parent)japan
+	title `Korea`
+	#content:String =`~ return "[[=content/Korea.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+southeast-asia {
+	->(parent)asia
+	title `Southeast Asia`
+	#content:String =`~ return "[[=content/Southeast_Asia.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+thailand {
+	->(parent)southeast-asia
+	title `Thailand`
+	#content:String =`~ return "[[=content/Thailand.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+vietnam {
+	->(parent)thailand
+	title `Vietnam`
+	#content:String =`~ return "[[=content/Vietnam.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+indonesia {
+	->(parent)vietnam
+	title `Indonesia`
+	#content:String =`~ return "[[=content/Indonesia.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+

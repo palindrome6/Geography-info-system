@@ -1,0 +1,16 @@
+Earth,0
+Europe,1
+Western Europe,2
+Eastern Europe,2
+Romania,3
+Ukraine,3
+Southern Europe,2
+Italy,3
+Asia,1
+Eastern Asia,2
+Japan,3
+Korea,3
+Southeast Asia,2
+Thailand,3
+Vietnam,3
+Indonesia,3
