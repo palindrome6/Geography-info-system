@@ -4,112 +4,1848 @@ index {
 }
 earth {
 	title `Earth`
-	#content:String =`~ return "[[=content/Earth.xhtml]]";`
+	#content:String =`~ return "[[=content/earth.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+africa {
+	->(parent)earth
+	title `Africa`
+	#content:String =`~ return "[[=content/africa.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+northern-africa {
+	->(parent)africa
+	title `Northern Africa`
+	#content:String =`~ return "[[=content/northern_africa.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+dz {
+	->(parent)northern-africa
+	title `Algeria`
+	#content:String =`~ return "[[=content/dz.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+eg {
+	->(parent)northern-africa
+	title `Egypt`
+	#content:String =`~ return "[[=content/eg.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+eh {
+	->(parent)northern-africa
+	title `Western Sahara`
+	#content:String =`~ return "[[=content/eh.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+ly {
+	->(parent)northern-africa
+	title `Libya`
+	#content:String =`~ return "[[=content/ly.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+ma {
+	->(parent)northern-africa
+	title `Morocco`
+	#content:String =`~ return "[[=content/ma.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+sd {
+	->(parent)northern-africa
+	title `Sudan`
+	#content:String =`~ return "[[=content/sd.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+tn {
+	->(parent)northern-africa
+	title `Tunisia`
+	#content:String =`~ return "[[=content/tn.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+western-africa {
+	->(parent)africa
+	title `Western Africa`
+	#content:String =`~ return "[[=content/western_africa.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+bf {
+	->(parent)western-africa
+	title `Burkina Faso`
+	#content:String =`~ return "[[=content/bf.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+bj {
+	->(parent)western-africa
+	title `Benin`
+	#content:String =`~ return "[[=content/bj.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+ci {
+	->(parent)western-africa
+	title `Cte d'Ivoire`
+	#content:String =`~ return "[[=content/ci.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+cv {
+	->(parent)western-africa
+	title `Cape Verde`
+	#content:String =`~ return "[[=content/cv.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+gh {
+	->(parent)western-africa
+	title `Ghana`
+	#content:String =`~ return "[[=content/gh.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+gm {
+	->(parent)western-africa
+	title `Gambia`
+	#content:String =`~ return "[[=content/gm.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+gn {
+	->(parent)western-africa
+	title `Guinea`
+	#content:String =`~ return "[[=content/gn.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+gw {
+	->(parent)western-africa
+	title `Guinea-Bissau`
+	#content:String =`~ return "[[=content/gw.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+lr {
+	->(parent)western-africa
+	title `Liberia`
+	#content:String =`~ return "[[=content/lr.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+ml {
+	->(parent)western-africa
+	title `Mali`
+	#content:String =`~ return "[[=content/ml.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+mr {
+	->(parent)western-africa
+	title `Mauritania`
+	#content:String =`~ return "[[=content/mr.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+ne {
+	->(parent)western-africa
+	title `Niger`
+	#content:String =`~ return "[[=content/ne.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+ng {
+	->(parent)western-africa
+	title `Nigeria`
+	#content:String =`~ return "[[=content/ng.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+sh {
+	->(parent)western-africa
+	title `Saint Helena, Ascension and Tristan da Cunha`
+	#content:String =`~ return "[[=content/sh.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+sl {
+	->(parent)western-africa
+	title `Sierra Leone`
+	#content:String =`~ return "[[=content/sl.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+sn {
+	->(parent)western-africa
+	title `Senegal`
+	#content:String =`~ return "[[=content/sn.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+tg {
+	->(parent)western-africa
+	title `Togo`
+	#content:String =`~ return "[[=content/tg.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+middle-africa {
+	->(parent)africa
+	title `Middle Africa`
+	#content:String =`~ return "[[=content/middle_africa.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+ao {
+	->(parent)middle-africa
+	title `Angola`
+	#content:String =`~ return "[[=content/ao.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+cd {
+	->(parent)middle-africa
+	title `Congo, The Democratic Republic of the`
+	#content:String =`~ return "[[=content/cd.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+cf {
+	->(parent)middle-africa
+	title `Central African Republic`
+	#content:String =`~ return "[[=content/cf.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+cg {
+	->(parent)middle-africa
+	title `Congo`
+	#content:String =`~ return "[[=content/cg.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+cm {
+	->(parent)middle-africa
+	title `Cameroon`
+	#content:String =`~ return "[[=content/cm.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+ga {
+	->(parent)middle-africa
+	title `Gabon`
+	#content:String =`~ return "[[=content/ga.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+gq {
+	->(parent)middle-africa
+	title `Equatorial Guinea`
+	#content:String =`~ return "[[=content/gq.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+st {
+	->(parent)middle-africa
+	title `Sao Tome and Principe`
+	#content:String =`~ return "[[=content/st.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+td {
+	->(parent)middle-africa
+	title `Chad`
+	#content:String =`~ return "[[=content/td.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+eastern-africa {
+	->(parent)africa
+	title `Eastern Africa`
+	#content:String =`~ return "[[=content/eastern_africa.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+bi {
+	->(parent)eastern-africa
+	title `Burundi`
+	#content:String =`~ return "[[=content/bi.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+dj {
+	->(parent)eastern-africa
+	title `Djibouti`
+	#content:String =`~ return "[[=content/dj.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+er {
+	->(parent)eastern-africa
+	title `Eritrea`
+	#content:String =`~ return "[[=content/er.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+et {
+	->(parent)eastern-africa
+	title `Ethiopia`
+	#content:String =`~ return "[[=content/et.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+ke {
+	->(parent)eastern-africa
+	title `Kenya`
+	#content:String =`~ return "[[=content/ke.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+km {
+	->(parent)eastern-africa
+	title `Comoros`
+	#content:String =`~ return "[[=content/km.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+mg {
+	->(parent)eastern-africa
+	title `Madagascar`
+	#content:String =`~ return "[[=content/mg.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+mu {
+	->(parent)eastern-africa
+	title `Mauritius`
+	#content:String =`~ return "[[=content/mu.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+mw {
+	->(parent)eastern-africa
+	title `Malawi`
+	#content:String =`~ return "[[=content/mw.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+mz {
+	->(parent)eastern-africa
+	title `Mozambique`
+	#content:String =`~ return "[[=content/mz.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+re {
+	->(parent)eastern-africa
+	title `Runion`
+	#content:String =`~ return "[[=content/re.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+rw {
+	->(parent)eastern-africa
+	title `Rwanda`
+	#content:String =`~ return "[[=content/rw.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+sc {
+	->(parent)eastern-africa
+	title `Seychelles`
+	#content:String =`~ return "[[=content/sc.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+so {
+	->(parent)eastern-africa
+	title `Somalia`
+	#content:String =`~ return "[[=content/so.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+tz {
+	->(parent)eastern-africa
+	title `Tanzania, United Republic of`
+	#content:String =`~ return "[[=content/tz.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+ug {
+	->(parent)eastern-africa
+	title `Uganda`
+	#content:String =`~ return "[[=content/ug.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+yt {
+	->(parent)eastern-africa
+	title `Mayotte`
+	#content:String =`~ return "[[=content/yt.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+zm {
+	->(parent)eastern-africa
+	title `Zambia`
+	#content:String =`~ return "[[=content/zm.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+zw {
+	->(parent)eastern-africa
+	title `Zimbabwe`
+	#content:String =`~ return "[[=content/zw.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+southern-africa {
+	->(parent)africa
+	title `Southern Africa`
+	#content:String =`~ return "[[=content/southern_africa.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+bw {
+	->(parent)southern-africa
+	title `Botswana`
+	#content:String =`~ return "[[=content/bw.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+ls {
+	->(parent)southern-africa
+	title `Lesotho`
+	#content:String =`~ return "[[=content/ls.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+na {
+	->(parent)southern-africa
+	title `Namibia`
+	#content:String =`~ return "[[=content/na.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+sz {
+	->(parent)southern-africa
+	title `Swaziland`
+	#content:String =`~ return "[[=content/sz.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+za {
+	->(parent)southern-africa
+	title `South Africa`
+	#content:String =`~ return "[[=content/za.xhtml]]";`
 	#resource = `~ return "[[=layout.xhtml]]";`
 }
 
 europe {
 	->(parent)earth
 	title `Europe`
-	#content:String =`~ return "[[=content/Europe.xhtml]]";`
+	#content:String =`~ return "[[=content/europe.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+northern-europe {
+	->(parent)europe
+	title `Northern Europe`
+	#content:String =`~ return "[[=content/northern_europe.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+gg {
+	->(parent)northern-europe
+	title `Guernsey`
+	#content:String =`~ return "[[=content/gg.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+je {
+	->(parent)northern-europe
+	title `Jersey`
+	#content:String =`~ return "[[=content/je.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+ax {
+	->(parent)northern-europe
+	title `land Islands`
+	#content:String =`~ return "[[=content/ax.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+dk {
+	->(parent)northern-europe
+	title `Denmark`
+	#content:String =`~ return "[[=content/dk.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+ee {
+	->(parent)northern-europe
+	title `Estonia`
+	#content:String =`~ return "[[=content/ee.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+fi {
+	->(parent)northern-europe
+	title `Finland`
+	#content:String =`~ return "[[=content/fi.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+fo {
+	->(parent)northern-europe
+	title `Faroe Islands`
+	#content:String =`~ return "[[=content/fo.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+gb {
+	->(parent)northern-europe
+	title `United Kingdom`
+	#content:String =`~ return "[[=content/gb.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+ie {
+	->(parent)northern-europe
+	title `Ireland`
+	#content:String =`~ return "[[=content/ie.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+im {
+	->(parent)northern-europe
+	title `Isle of Man`
+	#content:String =`~ return "[[=content/im.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+is {
+	->(parent)northern-europe
+	title `Iceland`
+	#content:String =`~ return "[[=content/is.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+lt {
+	->(parent)northern-europe
+	title `Lithuania`
+	#content:String =`~ return "[[=content/lt.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+lv {
+	->(parent)northern-europe
+	title `Latvia`
+	#content:String =`~ return "[[=content/lv.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+no {
+	->(parent)northern-europe
+	title `Norway`
+	#content:String =`~ return "[[=content/no.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+se {
+	->(parent)northern-europe
+	title `Sweden`
+	#content:String =`~ return "[[=content/se.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+sj {
+	->(parent)northern-europe
+	title `Svalbard and Jan Mayen`
+	#content:String =`~ return "[[=content/sj.xhtml]]";`
 	#resource = `~ return "[[=layout.xhtml]]";`
 }
 
 western-europe {
 	->(parent)europe
 	title `Western Europe`
-	#content:String =`~ return "[[=content/Western_Europe.xhtml]]";`
+	#content:String =`~ return "[[=content/western_europe.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+at {
+	->(parent)western-europe
+	title `Austria`
+	#content:String =`~ return "[[=content/at.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+be {
+	->(parent)western-europe
+	title `Belgium`
+	#content:String =`~ return "[[=content/be.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+ch {
+	->(parent)western-europe
+	title `Switzerland`
+	#content:String =`~ return "[[=content/ch.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+de {
+	->(parent)western-europe
+	title `Germany`
+	#content:String =`~ return "[[=content/de.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+fr {
+	->(parent)western-europe
+	title `France`
+	#content:String =`~ return "[[=content/fr.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+li {
+	->(parent)western-europe
+	title `Liechtenstein`
+	#content:String =`~ return "[[=content/li.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+lu {
+	->(parent)western-europe
+	title `Luxembourg`
+	#content:String =`~ return "[[=content/lu.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+mc {
+	->(parent)western-europe
+	title `Monaco`
+	#content:String =`~ return "[[=content/mc.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+nl {
+	->(parent)western-europe
+	title `Netherlands`
+	#content:String =`~ return "[[=content/nl.xhtml]]";`
 	#resource = `~ return "[[=layout.xhtml]]";`
 }
 
 eastern-europe {
 	->(parent)europe
 	title `Eastern Europe`
-	#content:String =`~ return "[[=content/Eastern_Europe.xhtml]]";`
+	#content:String =`~ return "[[=content/eastern_europe.xhtml]]";`
 	#resource = `~ return "[[=layout.xhtml]]";`
 }
 
-romania {
+bg {
+	->(parent)eastern-europe
+	title `Bulgaria`
+	#content:String =`~ return "[[=content/bg.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+by {
+	->(parent)eastern-europe
+	title `Belarus`
+	#content:String =`~ return "[[=content/by.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+cz {
+	->(parent)eastern-europe
+	title `Czech Republic`
+	#content:String =`~ return "[[=content/cz.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+hu {
+	->(parent)eastern-europe
+	title `Hungary`
+	#content:String =`~ return "[[=content/hu.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+md {
+	->(parent)eastern-europe
+	title `Moldova, Republic of`
+	#content:String =`~ return "[[=content/md.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+pl {
+	->(parent)eastern-europe
+	title `Poland`
+	#content:String =`~ return "[[=content/pl.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+ro {
 	->(parent)eastern-europe
 	title `Romania`
-	#content:String =`~ return "[[=content/Romania.xhtml]]";`
+	#content:String =`~ return "[[=content/ro.xhtml]]";`
 	#resource = `~ return "[[=layout.xhtml]]";`
 }
 
-ukraine {
-	->(parent)romania
+ru {
+	->(parent)eastern-europe
+	title `Russian Federation`
+	#content:String =`~ return "[[=content/ru.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+sk {
+	->(parent)eastern-europe
+	title `Slovakia`
+	#content:String =`~ return "[[=content/sk.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+ua {
+	->(parent)eastern-europe
 	title `Ukraine`
-	#content:String =`~ return "[[=content/Ukraine.xhtml]]";`
+	#content:String =`~ return "[[=content/ua.xhtml]]";`
 	#resource = `~ return "[[=layout.xhtml]]";`
 }
 
 southern-europe {
 	->(parent)europe
 	title `Southern Europe`
-	#content:String =`~ return "[[=content/Southern_Europe.xhtml]]";`
+	#content:String =`~ return "[[=content/southern_europe.xhtml]]";`
 	#resource = `~ return "[[=layout.xhtml]]";`
 }
 
-italy {
+ad {
+	->(parent)southern-europe
+	title `Andorra`
+	#content:String =`~ return "[[=content/ad.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+al {
+	->(parent)southern-europe
+	title `Albania`
+	#content:String =`~ return "[[=content/al.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+ba {
+	->(parent)southern-europe
+	title `Bosnia and Herzegovina`
+	#content:String =`~ return "[[=content/ba.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+es {
+	->(parent)southern-europe
+	title `Spain`
+	#content:String =`~ return "[[=content/es.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+gi {
+	->(parent)southern-europe
+	title `Gibraltar`
+	#content:String =`~ return "[[=content/gi.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+gr {
+	->(parent)southern-europe
+	title `Greece`
+	#content:String =`~ return "[[=content/gr.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+hr {
+	->(parent)southern-europe
+	title `Croatia`
+	#content:String =`~ return "[[=content/hr.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+it {
 	->(parent)southern-europe
 	title `Italy`
-	#content:String =`~ return "[[=content/Italy.xhtml]]";`
+	#content:String =`~ return "[[=content/it.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+me {
+	->(parent)southern-europe
+	title `Montenegro`
+	#content:String =`~ return "[[=content/me.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+mk {
+	->(parent)southern-europe
+	title `Macedonia, Republic of`
+	#content:String =`~ return "[[=content/mk.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+mt {
+	->(parent)southern-europe
+	title `Malta`
+	#content:String =`~ return "[[=content/mt.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+rs {
+	->(parent)southern-europe
+	title `Serbia`
+	#content:String =`~ return "[[=content/rs.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+pt {
+	->(parent)southern-europe
+	title `Portugal`
+	#content:String =`~ return "[[=content/pt.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+si {
+	->(parent)southern-europe
+	title `Slovenia`
+	#content:String =`~ return "[[=content/si.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+sm {
+	->(parent)southern-europe
+	title `San Marino`
+	#content:String =`~ return "[[=content/sm.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+va {
+	->(parent)southern-europe
+	title `Holy See (Vatican City State)`
+	#content:String =`~ return "[[=content/va.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+americas {
+	->(parent)earth
+	title `Americas`
+	#content:String =`~ return "[[=content/americas.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+northern-america {
+	->(parent)americas
+	title `Northern America`
+	#content:String =`~ return "[[=content/northern_america.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+bm {
+	->(parent)northern-america
+	title `Bermuda`
+	#content:String =`~ return "[[=content/bm.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+ca {
+	->(parent)northern-america
+	title `Canada`
+	#content:String =`~ return "[[=content/ca.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+gl {
+	->(parent)northern-america
+	title `Greenland`
+	#content:String =`~ return "[[=content/gl.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+pm {
+	->(parent)northern-america
+	title `Saint Pierre and Miquelon`
+	#content:String =`~ return "[[=content/pm.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+us {
+	->(parent)northern-america
+	title `United States`
+	#content:String =`~ return "[[=content/us.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+caribbean {
+	->(parent)americas
+	title `Caribbean`
+	#content:String =`~ return "[[=content/caribbean.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+ag {
+	->(parent)caribbean
+	title `Antigua and Barbuda`
+	#content:String =`~ return "[[=content/ag.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+ai {
+	->(parent)caribbean
+	title `Anguilla`
+	#content:String =`~ return "[[=content/ai.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+aw {
+	->(parent)caribbean
+	title `Aruba`
+	#content:String =`~ return "[[=content/aw.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+bb {
+	->(parent)caribbean
+	title `Barbados`
+	#content:String =`~ return "[[=content/bb.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+bl {
+	->(parent)caribbean
+	title `Saint Barthlemy`
+	#content:String =`~ return "[[=content/bl.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+bs {
+	->(parent)caribbean
+	title `Bahamas`
+	#content:String =`~ return "[[=content/bs.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+cu {
+	->(parent)caribbean
+	title `Cuba`
+	#content:String =`~ return "[[=content/cu.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+dm {
+	->(parent)caribbean
+	title `Dominica`
+	#content:String =`~ return "[[=content/dm.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+do {
+	->(parent)caribbean
+	title `Dominican Republic`
+	#content:String =`~ return "[[=content/do.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+gd {
+	->(parent)caribbean
+	title `Grenada`
+	#content:String =`~ return "[[=content/gd.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+gp {
+	->(parent)caribbean
+	title `Guadeloupe`
+	#content:String =`~ return "[[=content/gp.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+ht {
+	->(parent)caribbean
+	title `Haiti`
+	#content:String =`~ return "[[=content/ht.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+jm {
+	->(parent)caribbean
+	title `Jamaica`
+	#content:String =`~ return "[[=content/jm.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+kn {
+	->(parent)caribbean
+	title `Saint Kitts and Nevis`
+	#content:String =`~ return "[[=content/kn.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+ky {
+	->(parent)caribbean
+	title `Cayman Islands`
+	#content:String =`~ return "[[=content/ky.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+lc {
+	->(parent)caribbean
+	title `Saint Lucia`
+	#content:String =`~ return "[[=content/lc.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+mf {
+	->(parent)caribbean
+	title `Saint Martin (French part)`
+	#content:String =`~ return "[[=content/mf.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+mq {
+	->(parent)caribbean
+	title `Martinique`
+	#content:String =`~ return "[[=content/mq.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+ms {
+	->(parent)caribbean
+	title `Montserrat`
+	#content:String =`~ return "[[=content/ms.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+pr {
+	->(parent)caribbean
+	title `Puerto Rico`
+	#content:String =`~ return "[[=content/pr.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+tc {
+	->(parent)caribbean
+	title `Turks and Caicos Islands`
+	#content:String =`~ return "[[=content/tc.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+tt {
+	->(parent)caribbean
+	title `Trinidad and Tobago`
+	#content:String =`~ return "[[=content/tt.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+vc {
+	->(parent)caribbean
+	title `Saint Vincent and the Grenadines`
+	#content:String =`~ return "[[=content/vc.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+vg {
+	->(parent)caribbean
+	title `Virgin Islands, British`
+	#content:String =`~ return "[[=content/vg.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+vi {
+	->(parent)caribbean
+	title `Virgin Islands, U.S.`
+	#content:String =`~ return "[[=content/vi.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+central-america {
+	->(parent)americas
+	title `Central America`
+	#content:String =`~ return "[[=content/central_america.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+bz {
+	->(parent)central-america
+	title `Belize`
+	#content:String =`~ return "[[=content/bz.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+cr {
+	->(parent)central-america
+	title `Costa Rica`
+	#content:String =`~ return "[[=content/cr.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+gt {
+	->(parent)central-america
+	title `Guatemala`
+	#content:String =`~ return "[[=content/gt.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+hn {
+	->(parent)central-america
+	title `Honduras`
+	#content:String =`~ return "[[=content/hn.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+mx {
+	->(parent)central-america
+	title `Mexico`
+	#content:String =`~ return "[[=content/mx.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+ni {
+	->(parent)central-america
+	title `Nicaragua`
+	#content:String =`~ return "[[=content/ni.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+pa {
+	->(parent)central-america
+	title `Panama`
+	#content:String =`~ return "[[=content/pa.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+sv {
+	->(parent)central-america
+	title `El Salvador`
+	#content:String =`~ return "[[=content/sv.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+south-america {
+	->(parent)americas
+	title `South America`
+	#content:String =`~ return "[[=content/south_america.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+ar {
+	->(parent)south-america
+	title `Argentina`
+	#content:String =`~ return "[[=content/ar.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+bo {
+	->(parent)south-america
+	title `Bolivia, Plurinational State of`
+	#content:String =`~ return "[[=content/bo.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+br {
+	->(parent)south-america
+	title `Brazil`
+	#content:String =`~ return "[[=content/br.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+cl {
+	->(parent)south-america
+	title `Chile`
+	#content:String =`~ return "[[=content/cl.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+co {
+	->(parent)south-america
+	title `Colombia`
+	#content:String =`~ return "[[=content/co.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+ec {
+	->(parent)south-america
+	title `Ecuador`
+	#content:String =`~ return "[[=content/ec.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+fk {
+	->(parent)south-america
+	title `Falkland Islands (Malvinas)`
+	#content:String =`~ return "[[=content/fk.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+gf {
+	->(parent)south-america
+	title `French Guiana`
+	#content:String =`~ return "[[=content/gf.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+gy {
+	->(parent)south-america
+	title `Guyana`
+	#content:String =`~ return "[[=content/gy.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+pe {
+	->(parent)south-america
+	title `Peru`
+	#content:String =`~ return "[[=content/pe.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+py {
+	->(parent)south-america
+	title `Paraguay`
+	#content:String =`~ return "[[=content/py.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+sr {
+	->(parent)south-america
+	title `Suriname`
+	#content:String =`~ return "[[=content/sr.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+uy {
+	->(parent)south-america
+	title `Uruguay`
+	#content:String =`~ return "[[=content/uy.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+ve {
+	->(parent)south-america
+	title `Venezuela, Bolivarian Republic of`
+	#content:String =`~ return "[[=content/ve.xhtml]]";`
 	#resource = `~ return "[[=layout.xhtml]]";`
 }
 
 asia {
 	->(parent)earth
 	title `Asia`
-	#content:String =`~ return "[[=content/Asia.xhtml]]";`
+	#content:String =`~ return "[[=content/asia.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+central-asia {
+	->(parent)asia
+	title `Central Asia`
+	#content:String =`~ return "[[=content/central_asia.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+tm {
+	->(parent)central-asia
+	title `Turkmenistan`
+	#content:String =`~ return "[[=content/tm.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+tj {
+	->(parent)central-asia
+	title `Tajikistan`
+	#content:String =`~ return "[[=content/tj.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+kg {
+	->(parent)central-asia
+	title `Kyrgyzstan`
+	#content:String =`~ return "[[=content/kg.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+kz {
+	->(parent)central-asia
+	title `Kazakhstan`
+	#content:String =`~ return "[[=content/kz.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+uz {
+	->(parent)central-asia
+	title `Uzbekistan`
+	#content:String =`~ return "[[=content/uz.xhtml]]";`
 	#resource = `~ return "[[=layout.xhtml]]";`
 }
 
 eastern-asia {
 	->(parent)asia
 	title `Eastern Asia`
-	#content:String =`~ return "[[=content/Eastern_Asia.xhtml]]";`
+	#content:String =`~ return "[[=content/eastern_asia.xhtml]]";`
 	#resource = `~ return "[[=layout.xhtml]]";`
 }
 
-japan {
+cn {
+	->(parent)eastern-asia
+	title `China`
+	#content:String =`~ return "[[=content/cn.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+hk {
+	->(parent)eastern-asia
+	title `Hong Kong`
+	#content:String =`~ return "[[=content/hk.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+jp {
 	->(parent)eastern-asia
 	title `Japan`
-	#content:String =`~ return "[[=content/Japan.xhtml]]";`
+	#content:String =`~ return "[[=content/jp.xhtml]]";`
 	#resource = `~ return "[[=layout.xhtml]]";`
 }
 
-korea {
-	->(parent)japan
-	title `Korea`
-	#content:String =`~ return "[[=content/Korea.xhtml]]";`
+kp {
+	->(parent)eastern-asia
+	title `Korea, Democratic People's Republic of`
+	#content:String =`~ return "[[=content/kp.xhtml]]";`
 	#resource = `~ return "[[=layout.xhtml]]";`
 }
 
-southeast-asia {
+kr {
+	->(parent)eastern-asia
+	title `Korea, Republic of`
+	#content:String =`~ return "[[=content/kr.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+mn {
+	->(parent)eastern-asia
+	title `Mongolia`
+	#content:String =`~ return "[[=content/mn.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+mo {
+	->(parent)eastern-asia
+	title `Macao`
+	#content:String =`~ return "[[=content/mo.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+tw {
+	->(parent)eastern-asia
+	title `Taiwan, Province of China`
+	#content:String =`~ return "[[=content/tw.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+southern-asia {
 	->(parent)asia
-	title `Southeast Asia`
-	#content:String =`~ return "[[=content/Southeast_Asia.xhtml]]";`
+	title `Southern Asia`
+	#content:String =`~ return "[[=content/southern_asia.xhtml]]";`
 	#resource = `~ return "[[=layout.xhtml]]";`
 }
 
-thailand {
-	->(parent)southeast-asia
-	title `Thailand`
-	#content:String =`~ return "[[=content/Thailand.xhtml]]";`
+af {
+	->(parent)southern-asia
+	title `Afghanistan`
+	#content:String =`~ return "[[=content/af.xhtml]]";`
 	#resource = `~ return "[[=layout.xhtml]]";`
 }
 
-vietnam {
-	->(parent)thailand
-	title `Vietnam`
-	#content:String =`~ return "[[=content/Vietnam.xhtml]]";`
+bd {
+	->(parent)southern-asia
+	title `Bangladesh`
+	#content:String =`~ return "[[=content/bd.xhtml]]";`
 	#resource = `~ return "[[=layout.xhtml]]";`
 }
 
-indonesia {
-	->(parent)vietnam
+bt {
+	->(parent)southern-asia
+	title `Bhutan`
+	#content:String =`~ return "[[=content/bt.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+in {
+	->(parent)southern-asia
+	title `India`
+	#content:String =`~ return "[[=content/in.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+ir {
+	->(parent)southern-asia
+	title `Iran, Islamic Republic of`
+	#content:String =`~ return "[[=content/ir.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+lk {
+	->(parent)southern-asia
+	title `Sri Lanka`
+	#content:String =`~ return "[[=content/lk.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+mv {
+	->(parent)southern-asia
+	title `Maldives`
+	#content:String =`~ return "[[=content/mv.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+np {
+	->(parent)southern-asia
+	title `Nepal`
+	#content:String =`~ return "[[=content/np.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+pk {
+	->(parent)southern-asia
+	title `Pakistan`
+	#content:String =`~ return "[[=content/pk.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+south-east-asia {
+	->(parent)asia
+	title `South East Asia`
+	#content:String =`~ return "[[=content/south_east_asia.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+bn {
+	->(parent)south-east-asia
+	title `Brunei Darussalam`
+	#content:String =`~ return "[[=content/bn.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+id {
+	->(parent)south-east-asia
 	title `Indonesia`
-	#content:String =`~ return "[[=content/Indonesia.xhtml]]";`
+	#content:String =`~ return "[[=content/id.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+kh {
+	->(parent)south-east-asia
+	title `Cambodia`
+	#content:String =`~ return "[[=content/kh.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+la {
+	->(parent)south-east-asia
+	title `Lao People's Democratic Republic`
+	#content:String =`~ return "[[=content/la.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+mm {
+	->(parent)south-east-asia
+	title `Myanmar`
+	#content:String =`~ return "[[=content/mm.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+my {
+	->(parent)south-east-asia
+	title `Malaysia`
+	#content:String =`~ return "[[=content/my.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+ph {
+	->(parent)south-east-asia
+	title `Philippines`
+	#content:String =`~ return "[[=content/ph.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+sg {
+	->(parent)south-east-asia
+	title `Singapore`
+	#content:String =`~ return "[[=content/sg.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+th {
+	->(parent)south-east-asia
+	title `Thailand`
+	#content:String =`~ return "[[=content/th.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+tl {
+	->(parent)south-east-asia
+	title `Timor-Leste`
+	#content:String =`~ return "[[=content/tl.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+vn {
+	->(parent)south-east-asia
+	title `Viet Nam`
+	#content:String =`~ return "[[=content/vn.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+western-asia {
+	->(parent)asia
+	title `Western Asia`
+	#content:String =`~ return "[[=content/western_asia.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+ae {
+	->(parent)western-asia
+	title `United Arab Emirates`
+	#content:String =`~ return "[[=content/ae.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+am {
+	->(parent)western-asia
+	title `Armenia`
+	#content:String =`~ return "[[=content/am.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+az {
+	->(parent)western-asia
+	title `Azerbaijan`
+	#content:String =`~ return "[[=content/az.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+bh {
+	->(parent)western-asia
+	title `Bahrain`
+	#content:String =`~ return "[[=content/bh.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+cy {
+	->(parent)western-asia
+	title `Cyprus`
+	#content:String =`~ return "[[=content/cy.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+ge {
+	->(parent)western-asia
+	title `Georgia`
+	#content:String =`~ return "[[=content/ge.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+il {
+	->(parent)western-asia
+	title `Israel`
+	#content:String =`~ return "[[=content/il.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+iq {
+	->(parent)western-asia
+	title `Iraq`
+	#content:String =`~ return "[[=content/iq.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+jo {
+	->(parent)western-asia
+	title `Jordan`
+	#content:String =`~ return "[[=content/jo.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+kw {
+	->(parent)western-asia
+	title `Kuwait`
+	#content:String =`~ return "[[=content/kw.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+lb {
+	->(parent)western-asia
+	title `Lebanon`
+	#content:String =`~ return "[[=content/lb.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+om {
+	->(parent)western-asia
+	title `Oman`
+	#content:String =`~ return "[[=content/om.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+ps {
+	->(parent)western-asia
+	title `Palestine, State of`
+	#content:String =`~ return "[[=content/ps.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+qa {
+	->(parent)western-asia
+	title `Qatar`
+	#content:String =`~ return "[[=content/qa.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+sa {
+	->(parent)western-asia
+	title `Saudi Arabia`
+	#content:String =`~ return "[[=content/sa.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+sy {
+	->(parent)western-asia
+	title `Syrian Arab Republic`
+	#content:String =`~ return "[[=content/sy.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+tr {
+	->(parent)western-asia
+	title `Turkey`
+	#content:String =`~ return "[[=content/tr.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+ye {
+	->(parent)western-asia
+	title `Yemen`
+	#content:String =`~ return "[[=content/ye.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+oceania {
+	->(parent)earth
+	title `Oceania`
+	#content:String =`~ return "[[=content/oceania.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+australia-and-new-zealand {
+	->(parent)oceania
+	title `Australia and New Zealand`
+	#content:String =`~ return "[[=content/australia_and_new_zealand.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+au {
+	->(parent)australia-and-new-zealand
+	title `Australia`
+	#content:String =`~ return "[[=content/au.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+nf {
+	->(parent)australia-and-new-zealand
+	title `Norfolk Island`
+	#content:String =`~ return "[[=content/nf.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+nz {
+	->(parent)australia-and-new-zealand
+	title `New Zealand`
+	#content:String =`~ return "[[=content/nz.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+melanesia {
+	->(parent)oceania
+	title `Melanesia`
+	#content:String =`~ return "[[=content/melanesia.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+fj {
+	->(parent)melanesia
+	title `Fiji`
+	#content:String =`~ return "[[=content/fj.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+nc {
+	->(parent)melanesia
+	title `New Caledonia`
+	#content:String =`~ return "[[=content/nc.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+pg {
+	->(parent)melanesia
+	title `Papua New Guinea`
+	#content:String =`~ return "[[=content/pg.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+sb {
+	->(parent)melanesia
+	title `Solomon Islands`
+	#content:String =`~ return "[[=content/sb.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+vu {
+	->(parent)melanesia
+	title `Vanuatu`
+	#content:String =`~ return "[[=content/vu.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+micronesia {
+	->(parent)oceania
+	title `Micronesia`
+	#content:String =`~ return "[[=content/micronesia.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+fm {
+	->(parent)micronesia
+	title `Micronesia, Federated States of`
+	#content:String =`~ return "[[=content/fm.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+gu {
+	->(parent)micronesia
+	title `Guam`
+	#content:String =`~ return "[[=content/gu.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+ki {
+	->(parent)micronesia
+	title `Kiribati`
+	#content:String =`~ return "[[=content/ki.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+mh {
+	->(parent)micronesia
+	title `Marshall Islands`
+	#content:String =`~ return "[[=content/mh.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+mp {
+	->(parent)micronesia
+	title `Northern Mariana Islands`
+	#content:String =`~ return "[[=content/mp.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+nr {
+	->(parent)micronesia
+	title `Nauru`
+	#content:String =`~ return "[[=content/nr.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+pw {
+	->(parent)micronesia
+	title `Palau`
+	#content:String =`~ return "[[=content/pw.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+polynesia {
+	->(parent)oceania
+	title `Polynesia`
+	#content:String =`~ return "[[=content/polynesia.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+as {
+	->(parent)polynesia
+	title `American Samoa`
+	#content:String =`~ return "[[=content/as.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+ck {
+	->(parent)polynesia
+	title `Cook Islands`
+	#content:String =`~ return "[[=content/ck.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+nu {
+	->(parent)polynesia
+	title `Niue`
+	#content:String =`~ return "[[=content/nu.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+pf {
+	->(parent)polynesia
+	title `French Polynesia`
+	#content:String =`~ return "[[=content/pf.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+pn {
+	->(parent)polynesia
+	title `Pitcairn`
+	#content:String =`~ return "[[=content/pn.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+tk {
+	->(parent)polynesia
+	title `Tokelau`
+	#content:String =`~ return "[[=content/tk.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+to {
+	->(parent)polynesia
+	title `Tonga`
+	#content:String =`~ return "[[=content/to.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+tv {
+	->(parent)polynesia
+	title `Tuvalu`
+	#content:String =`~ return "[[=content/tv.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+wf {
+	->(parent)polynesia
+	title `Wallis and Futuna`
+	#content:String =`~ return "[[=content/wf.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+}
+
+ws {
+	->(parent)polynesia
+	title `Samoa`
+	#content:String =`~ return "[[=content/ws.xhtml]]";`
 	#resource = `~ return "[[=layout.xhtml]]";`
 }
 
