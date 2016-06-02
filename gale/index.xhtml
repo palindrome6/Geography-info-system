@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:gale="http://gale.tue.nl/adaptation">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script src="js/countries.js"></script>
+    <script>
+        google.charts.load('current', {
+            packages: ['geochart']
+        });
+        google.charts.setOnLoadCallback(drawMap);
+        function drawMap() {
+            var map = new google.visualization.GeoChart(document.getElementById('map'));
+            google.visualization.events.addListener(map, 'select', function () {
+                redirectToCountry(countries[map.getSelection()[0].row][0]);
+            });
+            map.draw(google.visualization.arrayToDataTable([
+                ['Country', 'Name']
+            ].concat(countries)), {});
+        }
+    </script>
+</head>
+<body>
+<div class="container">
+    <div id="loading" class="text-center">
+        <h3>Please wait, we determine your location and redirect you to the country you are located in...</h3>
+        <i class="fa fa-spinner fa-pulse fa-5x"/>
+    </div>
+    <div id="countries" class="text-center" style="display: none">
+        <h3>We could not determine your location, please select the country you are located in:</h3>
+        <div id="map"></div>
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script>
+    function init() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(function (position) {
+                findCountry(position.coords.latitude, position.coords.longitude);
+            }, locationNotFound);
+        } else {
+            locationNotFound();
+        }
+    }
+
+    function locationNotFound() {
+        $('#loading').hide();
+        $('#countries').show();
+    }
+
+    function findCountry(lat, lng) {
+        var geocoder = new google.maps.Geocoder();
+
+        geocoder.geocode({
+            location: {
+                lat: lat,
+                lng: lng
+            }
+        }, function (results, status) {
+            var country = getCountry(results[0].address_components);
+            redirectToCountry(country);
+        });
+    }
+
+    function getCountry(addressComponents) {
+        return addressComponents.filter(function (component) {
+            return isCountryComponent(component);
+        })[0].short_name.toLowerCase();
+    }
+
+    function isCountryComponent(component) {
+        return component.types.some(function (type) {
+            return type == 'country';
+        });
+    }
+
+    function redirectToCountry(country) {
+        location.assign(location.href.replace(/\/[^\/]*$/, '/' + country.toLowerCase()));
+    }
+</script>
+<script async="async" defer="defer"
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBQnB3L-hjD98NYCz0PyzZluU-qoqNKYg8&amp;language=en&amp;callback=init"></script>
+<script src="https://use.fontawesome.com/5367d8fe32.js"></script>
+</body>
+</html>
