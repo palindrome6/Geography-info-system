@@ -1,0 +1,22 @@
+$options { default.properties "event;strict"}
+
+base-concept {
+  
+}
+
+index {
+  ->(extends)base-concept
+	#resource = `~ return "[[=index.xhtml]]";`
+}
+
+{{#concepts}}
+{{name}} {
+  ->(extends)base-concept
+	title `{{title}}`
+	#content:String =`~ return "[[=content/{{filename}}.xhtml]]";`
+	#resource = `~ return "[[=layout.xhtml]]";`
+  {{#parent}}
+  ->(parent){{parent}}
+  {{/parent}}
+}
+{{/concepts}}
