@@ -23,2084 +23,2716 @@ _personal {
 
 earth {
   ->(extends)_concept
-	title `Earth`
+  title `Earth`
   name `earth`
-	#content:String =`~ return "[[=content/earth.xhtml]]";`
+  #content:String =`~ return "[[=content/earth.xhtml]]";`
 }
 africa {
   ->(extends)_concept
-	title `Africa`
+  title `Africa`
   name `africa`
-	#content:String =`~ return "[[=content/africa.xhtml]]";`
+  #content:String =`~ return "[[=content/africa.xhtml]]";`
   ->(parent)earth
 }
 northern-africa {
   ->(extends)_concept
-	title `Northern Africa`
+  title `Northern Africa`
   name `northern-africa`
-	#content:String =`~ return "[[=content/northern_africa.xhtml]]";`
+  #content:String =`~ return "[[=content/northern_africa.xhtml]]";`
   ->(parent)africa
 }
 dz {
   ->(extends)_concept
-	title `Algeria`
+  title `Algeria`
   name `dz`
-	#content:String =`~ return "[[=content/dz.xhtml]]";`
+  #content:String =`~ return "[[=content/dz.xhtml]]";`
   ->(parent)northern-africa
   ->(isCountry)_concept
+  ->(isNeighborOf)ly
+  ->(isNeighborOf)ml
+  ->(isNeighborOf)mr
+  ->(isNeighborOf)ma
+  ->(isNeighborOf)ne
+  ->(isNeighborOf)tn
+  ->(isNeighborOf)eh
 }
 eg {
   ->(extends)_concept
-	title `Egypt`
+  title `Egypt`
   name `eg`
-	#content:String =`~ return "[[=content/eg.xhtml]]";`
+  #content:String =`~ return "[[=content/eg.xhtml]]";`
   ->(parent)northern-africa
   ->(isCountry)_concept
+  ->(isNeighborOf)il
+  ->(isNeighborOf)ly
+  ->(isNeighborOf)ps
+  ->(isNeighborOf)sd
 }
 eh {
   ->(extends)_concept
-	title `Western Sahara`
+  title `Western Sahara`
   name `eh`
-	#content:String =`~ return "[[=content/eh.xhtml]]";`
+  #content:String =`~ return "[[=content/eh.xhtml]]";`
   ->(parent)northern-africa
   ->(isCountry)_concept
 }
 ly {
   ->(extends)_concept
-	title `Libya`
+  title `Libya`
   name `ly`
-	#content:String =`~ return "[[=content/ly.xhtml]]";`
+  #content:String =`~ return "[[=content/ly.xhtml]]";`
   ->(parent)northern-africa
   ->(isCountry)_concept
+  ->(isNeighborOf)dz
+  ->(isNeighborOf)td
+  ->(isNeighborOf)eg
+  ->(isNeighborOf)ne
+  ->(isNeighborOf)sd
+  ->(isNeighborOf)tn
 }
 ma {
   ->(extends)_concept
-	title `Morocco`
+  title `Morocco`
   name `ma`
-	#content:String =`~ return "[[=content/ma.xhtml]]";`
+  #content:String =`~ return "[[=content/ma.xhtml]]";`
   ->(parent)northern-africa
   ->(isCountry)_concept
+  ->(isNeighborOf)dz
+  ->(isNeighborOf)es
+  ->(isNeighborOf)eh
 }
 sd {
   ->(extends)_concept
-	title `Sudan`
+  title `Sudan`
   name `sd`
-	#content:String =`~ return "[[=content/sd.xhtml]]";`
+  #content:String =`~ return "[[=content/sd.xhtml]]";`
   ->(parent)northern-africa
   ->(isCountry)_concept
+  ->(isNeighborOf)cf
+  ->(isNeighborOf)td
+  ->(isNeighborOf)eg
+  ->(isNeighborOf)er
+  ->(isNeighborOf)et
+  ->(isNeighborOf)ly
+  ->(isNeighborOf)ss
 }
 tn {
   ->(extends)_concept
-	title `Tunisia`
+  title `Tunisia`
   name `tn`
-	#content:String =`~ return "[[=content/tn.xhtml]]";`
+  #content:String =`~ return "[[=content/tn.xhtml]]";`
   ->(parent)northern-africa
   ->(isCountry)_concept
+  ->(isNeighborOf)dz
+  ->(isNeighborOf)ly
 }
 western-africa {
   ->(extends)_concept
-	title `Western Africa`
+  title `Western Africa`
   name `western-africa`
-	#content:String =`~ return "[[=content/western_africa.xhtml]]";`
+  #content:String =`~ return "[[=content/western_africa.xhtml]]";`
   ->(parent)africa
 }
 bf {
   ->(extends)_concept
-	title `Burkina Faso`
+  title `Burkina Faso`
   name `bf`
-	#content:String =`~ return "[[=content/bf.xhtml]]";`
+  #content:String =`~ return "[[=content/bf.xhtml]]";`
   ->(parent)western-africa
   ->(isCountry)_concept
+  ->(isNeighborOf)bj
+  ->(isNeighborOf)gh
+  ->(isNeighborOf)ci
+  ->(isNeighborOf)ml
+  ->(isNeighborOf)ne
+  ->(isNeighborOf)tg
 }
 bj {
   ->(extends)_concept
-	title `Benin`
+  title `Benin`
   name `bj`
-	#content:String =`~ return "[[=content/bj.xhtml]]";`
+  #content:String =`~ return "[[=content/bj.xhtml]]";`
   ->(parent)western-africa
   ->(isCountry)_concept
+  ->(isNeighborOf)bf
+  ->(isNeighborOf)ne
+  ->(isNeighborOf)ng
+  ->(isNeighborOf)tg
 }
 ci {
   ->(extends)_concept
-	title `Cte d'Ivoire`
+  title `Cte d'Ivoire`
   name `ci`
-	#content:String =`~ return "[[=content/ci.xhtml]]";`
+  #content:String =`~ return "[[=content/ci.xhtml]]";`
   ->(parent)western-africa
   ->(isCountry)_concept
+  ->(isNeighborOf)bf
+  ->(isNeighborOf)gh
+  ->(isNeighborOf)gn
+  ->(isNeighborOf)lr
+  ->(isNeighborOf)ml
 }
 cv {
   ->(extends)_concept
-	title `Cape Verde`
+  title `Cape Verde`
   name `cv`
-	#content:String =`~ return "[[=content/cv.xhtml]]";`
+  #content:String =`~ return "[[=content/cv.xhtml]]";`
   ->(parent)western-africa
   ->(isCountry)_concept
 }
 gh {
   ->(extends)_concept
-	title `Ghana`
+  title `Ghana`
   name `gh`
-	#content:String =`~ return "[[=content/gh.xhtml]]";`
+  #content:String =`~ return "[[=content/gh.xhtml]]";`
   ->(parent)western-africa
   ->(isCountry)_concept
+  ->(isNeighborOf)bf
+  ->(isNeighborOf)ci
+  ->(isNeighborOf)tg
 }
 gm {
   ->(extends)_concept
-	title `Gambia`
+  title `Gambia`
   name `gm`
-	#content:String =`~ return "[[=content/gm.xhtml]]";`
+  #content:String =`~ return "[[=content/gm.xhtml]]";`
   ->(parent)western-africa
   ->(isCountry)_concept
+  ->(isNeighborOf)sn
 }
 gn {
   ->(extends)_concept
-	title `Guinea`
+  title `Guinea`
   name `gn`
-	#content:String =`~ return "[[=content/gn.xhtml]]";`
+  #content:String =`~ return "[[=content/gn.xhtml]]";`
   ->(parent)western-africa
   ->(isCountry)_concept
+  ->(isNeighborOf)gw
+  ->(isNeighborOf)ci
+  ->(isNeighborOf)lr
+  ->(isNeighborOf)ml
+  ->(isNeighborOf)sn
+  ->(isNeighborOf)sl
 }
 gw {
   ->(extends)_concept
-	title `Guinea-Bissau`
+  title `Guinea-Bissau`
   name `gw`
-	#content:String =`~ return "[[=content/gw.xhtml]]";`
+  #content:String =`~ return "[[=content/gw.xhtml]]";`
   ->(parent)western-africa
   ->(isCountry)_concept
+  ->(isNeighborOf)gn
+  ->(isNeighborOf)sn
 }
 lr {
   ->(extends)_concept
-	title `Liberia`
+  title `Liberia`
   name `lr`
-	#content:String =`~ return "[[=content/lr.xhtml]]";`
+  #content:String =`~ return "[[=content/lr.xhtml]]";`
   ->(parent)western-africa
   ->(isCountry)_concept
+  ->(isNeighborOf)gn
+  ->(isNeighborOf)ci
+  ->(isNeighborOf)sl
 }
 ml {
   ->(extends)_concept
-	title `Mali`
+  title `Mali`
   name `ml`
-	#content:String =`~ return "[[=content/ml.xhtml]]";`
+  #content:String =`~ return "[[=content/ml.xhtml]]";`
   ->(parent)western-africa
   ->(isCountry)_concept
+  ->(isNeighborOf)dz
+  ->(isNeighborOf)bf
+  ->(isNeighborOf)gn
+  ->(isNeighborOf)ci
+  ->(isNeighborOf)mr
+  ->(isNeighborOf)ne
+  ->(isNeighborOf)sn
 }
 mr {
   ->(extends)_concept
-	title `Mauritania`
+  title `Mauritania`
   name `mr`
-	#content:String =`~ return "[[=content/mr.xhtml]]";`
+  #content:String =`~ return "[[=content/mr.xhtml]]";`
   ->(parent)western-africa
   ->(isCountry)_concept
+  ->(isNeighborOf)dz
+  ->(isNeighborOf)ml
+  ->(isNeighborOf)sn
+  ->(isNeighborOf)eh
 }
 ne {
   ->(extends)_concept
-	title `Niger`
+  title `Niger`
   name `ne`
-	#content:String =`~ return "[[=content/ne.xhtml]]";`
+  #content:String =`~ return "[[=content/ne.xhtml]]";`
   ->(parent)western-africa
   ->(isCountry)_concept
+  ->(isNeighborOf)dz
+  ->(isNeighborOf)bj
+  ->(isNeighborOf)bf
+  ->(isNeighborOf)td
+  ->(isNeighborOf)ly
+  ->(isNeighborOf)ml
+  ->(isNeighborOf)ng
 }
 ng {
   ->(extends)_concept
-	title `Nigeria`
+  title `Nigeria`
   name `ng`
-	#content:String =`~ return "[[=content/ng.xhtml]]";`
+  #content:String =`~ return "[[=content/ng.xhtml]]";`
   ->(parent)western-africa
   ->(isCountry)_concept
+  ->(isNeighborOf)bj
+  ->(isNeighborOf)cm
+  ->(isNeighborOf)td
+  ->(isNeighborOf)ne
 }
 sh {
   ->(extends)_concept
-	title `Saint Helena, Ascension and Tristan da Cunha`
+  title `Saint Helena, Ascension and Tristan da Cunha`
   name `sh`
-	#content:String =`~ return "[[=content/sh.xhtml]]";`
+  #content:String =`~ return "[[=content/sh.xhtml]]";`
   ->(parent)western-africa
   ->(isCountry)_concept
 }
 sl {
   ->(extends)_concept
-	title `Sierra Leone`
+  title `Sierra Leone`
   name `sl`
-	#content:String =`~ return "[[=content/sl.xhtml]]";`
+  #content:String =`~ return "[[=content/sl.xhtml]]";`
   ->(parent)western-africa
   ->(isCountry)_concept
+  ->(isNeighborOf)gn
+  ->(isNeighborOf)lr
 }
 sn {
   ->(extends)_concept
-	title `Senegal`
+  title `Senegal`
   name `sn`
-	#content:String =`~ return "[[=content/sn.xhtml]]";`
+  #content:String =`~ return "[[=content/sn.xhtml]]";`
   ->(parent)western-africa
   ->(isCountry)_concept
+  ->(isNeighborOf)gm
+  ->(isNeighborOf)gn
+  ->(isNeighborOf)gw
+  ->(isNeighborOf)ml
+  ->(isNeighborOf)mr
 }
 tg {
   ->(extends)_concept
-	title `Togo`
+  title `Togo`
   name `tg`
-	#content:String =`~ return "[[=content/tg.xhtml]]";`
+  #content:String =`~ return "[[=content/tg.xhtml]]";`
   ->(parent)western-africa
   ->(isCountry)_concept
+  ->(isNeighborOf)bj
+  ->(isNeighborOf)bf
+  ->(isNeighborOf)gh
 }
 middle-africa {
   ->(extends)_concept
-	title `Middle Africa`
+  title `Middle Africa`
   name `middle-africa`
-	#content:String =`~ return "[[=content/middle_africa.xhtml]]";`
+  #content:String =`~ return "[[=content/middle_africa.xhtml]]";`
   ->(parent)africa
 }
 ao {
   ->(extends)_concept
-	title `Angola`
+  title `Angola`
   name `ao`
-	#content:String =`~ return "[[=content/ao.xhtml]]";`
+  #content:String =`~ return "[[=content/ao.xhtml]]";`
   ->(parent)middle-africa
   ->(isCountry)_concept
+  ->(isNeighborOf)cg
+  ->(isNeighborOf)cd
+  ->(isNeighborOf)na
+  ->(isNeighborOf)zm
 }
 cd {
   ->(extends)_concept
-	title `Congo, The Democratic Republic of the`
+  title `Congo, The Democratic Republic of the`
   name `cd`
-	#content:String =`~ return "[[=content/cd.xhtml]]";`
+  #content:String =`~ return "[[=content/cd.xhtml]]";`
   ->(parent)middle-africa
   ->(isCountry)_concept
+  ->(isNeighborOf)ao
+  ->(isNeighborOf)bi
+  ->(isNeighborOf)cf
+  ->(isNeighborOf)cg
+  ->(isNeighborOf)rw
+  ->(isNeighborOf)ss
+  ->(isNeighborOf)tz
+  ->(isNeighborOf)ug
+  ->(isNeighborOf)zm
 }
 cf {
   ->(extends)_concept
-	title `Central African Republic`
+  title `Central African Republic`
   name `cf`
-	#content:String =`~ return "[[=content/cf.xhtml]]";`
+  #content:String =`~ return "[[=content/cf.xhtml]]";`
   ->(parent)middle-africa
   ->(isCountry)_concept
+  ->(isNeighborOf)cm
+  ->(isNeighborOf)td
+  ->(isNeighborOf)cg
+  ->(isNeighborOf)cd
+  ->(isNeighborOf)ss
+  ->(isNeighborOf)sd
 }
 cg {
   ->(extends)_concept
-	title `Congo`
+  title `Congo`
   name `cg`
-	#content:String =`~ return "[[=content/cg.xhtml]]";`
+  #content:String =`~ return "[[=content/cg.xhtml]]";`
   ->(parent)middle-africa
   ->(isCountry)_concept
+  ->(isNeighborOf)ao
+  ->(isNeighborOf)cm
+  ->(isNeighborOf)cf
+  ->(isNeighborOf)cd
+  ->(isNeighborOf)ga
 }
 cm {
   ->(extends)_concept
-	title `Cameroon`
+  title `Cameroon`
   name `cm`
-	#content:String =`~ return "[[=content/cm.xhtml]]";`
+  #content:String =`~ return "[[=content/cm.xhtml]]";`
   ->(parent)middle-africa
   ->(isCountry)_concept
+  ->(isNeighborOf)cf
+  ->(isNeighborOf)td
+  ->(isNeighborOf)cg
+  ->(isNeighborOf)gq
+  ->(isNeighborOf)ga
+  ->(isNeighborOf)ng
 }
 ga {
   ->(extends)_concept
-	title `Gabon`
+  title `Gabon`
   name `ga`
-	#content:String =`~ return "[[=content/ga.xhtml]]";`
+  #content:String =`~ return "[[=content/ga.xhtml]]";`
   ->(parent)middle-africa
   ->(isCountry)_concept
+  ->(isNeighborOf)cm
+  ->(isNeighborOf)cg
+  ->(isNeighborOf)gq
 }
 gq {
   ->(extends)_concept
-	title `Equatorial Guinea`
+  title `Equatorial Guinea`
   name `gq`
-	#content:String =`~ return "[[=content/gq.xhtml]]";`
+  #content:String =`~ return "[[=content/gq.xhtml]]";`
   ->(parent)middle-africa
   ->(isCountry)_concept
+  ->(isNeighborOf)cm
+  ->(isNeighborOf)ga
 }
 st {
   ->(extends)_concept
-	title `Sao Tome and Principe`
+  title `Sao Tome and Principe`
   name `st`
-	#content:String =`~ return "[[=content/st.xhtml]]";`
+  #content:String =`~ return "[[=content/st.xhtml]]";`
   ->(parent)middle-africa
   ->(isCountry)_concept
 }
 td {
   ->(extends)_concept
-	title `Chad`
+  title `Chad`
   name `td`
-	#content:String =`~ return "[[=content/td.xhtml]]";`
+  #content:String =`~ return "[[=content/td.xhtml]]";`
   ->(parent)middle-africa
   ->(isCountry)_concept
+  ->(isNeighborOf)cm
+  ->(isNeighborOf)cf
+  ->(isNeighborOf)ly
+  ->(isNeighborOf)ne
+  ->(isNeighborOf)ng
+  ->(isNeighborOf)sd
 }
 eastern-africa {
   ->(extends)_concept
-	title `Eastern Africa`
+  title `Eastern Africa`
   name `eastern-africa`
-	#content:String =`~ return "[[=content/eastern_africa.xhtml]]";`
+  #content:String =`~ return "[[=content/eastern_africa.xhtml]]";`
   ->(parent)africa
 }
 bi {
   ->(extends)_concept
-	title `Burundi`
+  title `Burundi`
   name `bi`
-	#content:String =`~ return "[[=content/bi.xhtml]]";`
+  #content:String =`~ return "[[=content/bi.xhtml]]";`
   ->(parent)eastern-africa
   ->(isCountry)_concept
+  ->(isNeighborOf)cd
+  ->(isNeighborOf)rw
+  ->(isNeighborOf)tz
 }
 dj {
   ->(extends)_concept
-	title `Djibouti`
+  title `Djibouti`
   name `dj`
-	#content:String =`~ return "[[=content/dj.xhtml]]";`
+  #content:String =`~ return "[[=content/dj.xhtml]]";`
   ->(parent)eastern-africa
   ->(isCountry)_concept
+  ->(isNeighborOf)er
+  ->(isNeighborOf)et
+  ->(isNeighborOf)so
 }
 er {
   ->(extends)_concept
-	title `Eritrea`
+  title `Eritrea`
   name `er`
-	#content:String =`~ return "[[=content/er.xhtml]]";`
+  #content:String =`~ return "[[=content/er.xhtml]]";`
   ->(parent)eastern-africa
   ->(isCountry)_concept
+  ->(isNeighborOf)dj
+  ->(isNeighborOf)et
+  ->(isNeighborOf)sd
 }
 et {
   ->(extends)_concept
-	title `Ethiopia`
+  title `Ethiopia`
   name `et`
-	#content:String =`~ return "[[=content/et.xhtml]]";`
+  #content:String =`~ return "[[=content/et.xhtml]]";`
   ->(parent)eastern-africa
   ->(isCountry)_concept
+  ->(isNeighborOf)dj
+  ->(isNeighborOf)er
+  ->(isNeighborOf)ke
+  ->(isNeighborOf)so
+  ->(isNeighborOf)ss
+  ->(isNeighborOf)sd
 }
 ke {
   ->(extends)_concept
-	title `Kenya`
+  title `Kenya`
   name `ke`
-	#content:String =`~ return "[[=content/ke.xhtml]]";`
+  #content:String =`~ return "[[=content/ke.xhtml]]";`
   ->(parent)eastern-africa
   ->(isCountry)_concept
+  ->(isNeighborOf)et
+  ->(isNeighborOf)so
+  ->(isNeighborOf)ss
+  ->(isNeighborOf)tz
+  ->(isNeighborOf)ug
 }
 km {
   ->(extends)_concept
-	title `Comoros`
+  title `Comoros`
   name `km`
-	#content:String =`~ return "[[=content/km.xhtml]]";`
+  #content:String =`~ return "[[=content/km.xhtml]]";`
   ->(parent)eastern-africa
   ->(isCountry)_concept
 }
 mg {
   ->(extends)_concept
-	title `Madagascar`
+  title `Madagascar`
   name `mg`
-	#content:String =`~ return "[[=content/mg.xhtml]]";`
+  #content:String =`~ return "[[=content/mg.xhtml]]";`
   ->(parent)eastern-africa
   ->(isCountry)_concept
 }
 mu {
   ->(extends)_concept
-	title `Mauritius`
+  title `Mauritius`
   name `mu`
-	#content:String =`~ return "[[=content/mu.xhtml]]";`
+  #content:String =`~ return "[[=content/mu.xhtml]]";`
   ->(parent)eastern-africa
   ->(isCountry)_concept
 }
 mw {
   ->(extends)_concept
-	title `Malawi`
+  title `Malawi`
   name `mw`
-	#content:String =`~ return "[[=content/mw.xhtml]]";`
+  #content:String =`~ return "[[=content/mw.xhtml]]";`
   ->(parent)eastern-africa
   ->(isCountry)_concept
+  ->(isNeighborOf)mz
+  ->(isNeighborOf)tz
+  ->(isNeighborOf)zm
 }
 mz {
   ->(extends)_concept
-	title `Mozambique`
+  title `Mozambique`
   name `mz`
-	#content:String =`~ return "[[=content/mz.xhtml]]";`
+  #content:String =`~ return "[[=content/mz.xhtml]]";`
   ->(parent)eastern-africa
   ->(isCountry)_concept
+  ->(isNeighborOf)mw
+  ->(isNeighborOf)za
+  ->(isNeighborOf)sz
+  ->(isNeighborOf)tz
+  ->(isNeighborOf)zm
+  ->(isNeighborOf)zw
 }
 re {
   ->(extends)_concept
-	title `Runion`
+  title `Runion`
   name `re`
-	#content:String =`~ return "[[=content/re.xhtml]]";`
+  #content:String =`~ return "[[=content/re.xhtml]]";`
   ->(parent)eastern-africa
   ->(isCountry)_concept
 }
 rw {
   ->(extends)_concept
-	title `Rwanda`
+  title `Rwanda`
   name `rw`
-	#content:String =`~ return "[[=content/rw.xhtml]]";`
+  #content:String =`~ return "[[=content/rw.xhtml]]";`
   ->(parent)eastern-africa
   ->(isCountry)_concept
+  ->(isNeighborOf)bi
+  ->(isNeighborOf)cd
+  ->(isNeighborOf)tz
+  ->(isNeighborOf)ug
 }
 sc {
   ->(extends)_concept
-	title `Seychelles`
+  title `Seychelles`
   name `sc`
-	#content:String =`~ return "[[=content/sc.xhtml]]";`
+  #content:String =`~ return "[[=content/sc.xhtml]]";`
   ->(parent)eastern-africa
   ->(isCountry)_concept
 }
 so {
   ->(extends)_concept
-	title `Somalia`
+  title `Somalia`
   name `so`
-	#content:String =`~ return "[[=content/so.xhtml]]";`
+  #content:String =`~ return "[[=content/so.xhtml]]";`
   ->(parent)eastern-africa
   ->(isCountry)_concept
+  ->(isNeighborOf)dj
+  ->(isNeighborOf)et
+  ->(isNeighborOf)ke
 }
 tz {
   ->(extends)_concept
-	title `Tanzania, United Republic of`
+  title `Tanzania, United Republic of`
   name `tz`
-	#content:String =`~ return "[[=content/tz.xhtml]]";`
+  #content:String =`~ return "[[=content/tz.xhtml]]";`
   ->(parent)eastern-africa
   ->(isCountry)_concept
+  ->(isNeighborOf)bi
+  ->(isNeighborOf)cd
+  ->(isNeighborOf)ke
+  ->(isNeighborOf)mw
+  ->(isNeighborOf)mz
+  ->(isNeighborOf)rw
+  ->(isNeighborOf)ug
+  ->(isNeighborOf)zm
 }
 ug {
   ->(extends)_concept
-	title `Uganda`
+  title `Uganda`
   name `ug`
-	#content:String =`~ return "[[=content/ug.xhtml]]";`
+  #content:String =`~ return "[[=content/ug.xhtml]]";`
   ->(parent)eastern-africa
   ->(isCountry)_concept
+  ->(isNeighborOf)cd
+  ->(isNeighborOf)ke
+  ->(isNeighborOf)rw
+  ->(isNeighborOf)ss
+  ->(isNeighborOf)tz
 }
 yt {
   ->(extends)_concept
-	title `Mayotte`
+  title `Mayotte`
   name `yt`
-	#content:String =`~ return "[[=content/yt.xhtml]]";`
+  #content:String =`~ return "[[=content/yt.xhtml]]";`
   ->(parent)eastern-africa
   ->(isCountry)_concept
 }
 zm {
   ->(extends)_concept
-	title `Zambia`
+  title `Zambia`
   name `zm`
-	#content:String =`~ return "[[=content/zm.xhtml]]";`
+  #content:String =`~ return "[[=content/zm.xhtml]]";`
   ->(parent)eastern-africa
   ->(isCountry)_concept
+  ->(isNeighborOf)ao
+  ->(isNeighborOf)cd
+  ->(isNeighborOf)mw
+  ->(isNeighborOf)mz
+  ->(isNeighborOf)na
+  ->(isNeighborOf)tz
+  ->(isNeighborOf)zw
 }
 zw {
   ->(extends)_concept
-	title `Zimbabwe`
+  title `Zimbabwe`
   name `zw`
-	#content:String =`~ return "[[=content/zw.xhtml]]";`
+  #content:String =`~ return "[[=content/zw.xhtml]]";`
   ->(parent)eastern-africa
   ->(isCountry)_concept
+  ->(isNeighborOf)bw
+  ->(isNeighborOf)mz
+  ->(isNeighborOf)za
+  ->(isNeighborOf)zm
 }
 southern-africa {
   ->(extends)_concept
-	title `Southern Africa`
+  title `Southern Africa`
   name `southern-africa`
-	#content:String =`~ return "[[=content/southern_africa.xhtml]]";`
+  #content:String =`~ return "[[=content/southern_africa.xhtml]]";`
   ->(parent)africa
 }
 bw {
   ->(extends)_concept
-	title `Botswana`
+  title `Botswana`
   name `bw`
-	#content:String =`~ return "[[=content/bw.xhtml]]";`
+  #content:String =`~ return "[[=content/bw.xhtml]]";`
   ->(parent)southern-africa
   ->(isCountry)_concept
+  ->(isNeighborOf)na
+  ->(isNeighborOf)za
+  ->(isNeighborOf)zw
 }
 ls {
   ->(extends)_concept
-	title `Lesotho`
+  title `Lesotho`
   name `ls`
-	#content:String =`~ return "[[=content/ls.xhtml]]";`
+  #content:String =`~ return "[[=content/ls.xhtml]]";`
   ->(parent)southern-africa
   ->(isCountry)_concept
+  ->(isNeighborOf)za
 }
 na {
   ->(extends)_concept
-	title `Namibia`
+  title `Namibia`
   name `na`
-	#content:String =`~ return "[[=content/na.xhtml]]";`
+  #content:String =`~ return "[[=content/na.xhtml]]";`
   ->(parent)southern-africa
   ->(isCountry)_concept
+  ->(isNeighborOf)ao
+  ->(isNeighborOf)bw
+  ->(isNeighborOf)za
+  ->(isNeighborOf)zm
 }
 sz {
   ->(extends)_concept
-	title `Swaziland`
+  title `Swaziland`
   name `sz`
-	#content:String =`~ return "[[=content/sz.xhtml]]";`
+  #content:String =`~ return "[[=content/sz.xhtml]]";`
   ->(parent)southern-africa
   ->(isCountry)_concept
+  ->(isNeighborOf)mz
+  ->(isNeighborOf)za
 }
 za {
   ->(extends)_concept
-	title `South Africa`
+  title `South Africa`
   name `za`
-	#content:String =`~ return "[[=content/za.xhtml]]";`
+  #content:String =`~ return "[[=content/za.xhtml]]";`
   ->(parent)southern-africa
   ->(isCountry)_concept
+  ->(isNeighborOf)bw
+  ->(isNeighborOf)ls
+  ->(isNeighborOf)mz
+  ->(isNeighborOf)na
+  ->(isNeighborOf)sz
+  ->(isNeighborOf)zw
 }
 europe {
   ->(extends)_concept
-	title `Europe`
+  title `Europe`
   name `europe`
-	#content:String =`~ return "[[=content/europe.xhtml]]";`
+  #content:String =`~ return "[[=content/europe.xhtml]]";`
   ->(parent)earth
 }
 northern-europe {
   ->(extends)_concept
-	title `Northern Europe`
+  title `Northern Europe`
   name `northern-europe`
-	#content:String =`~ return "[[=content/northern_europe.xhtml]]";`
+  #content:String =`~ return "[[=content/northern_europe.xhtml]]";`
   ->(parent)europe
 }
 gg {
   ->(extends)_concept
-	title `Guernsey`
+  title `Guernsey`
   name `gg`
-	#content:String =`~ return "[[=content/gg.xhtml]]";`
+  #content:String =`~ return "[[=content/gg.xhtml]]";`
   ->(parent)northern-europe
   ->(isCountry)_concept
 }
 je {
   ->(extends)_concept
-	title `Jersey`
+  title `Jersey`
   name `je`
-	#content:String =`~ return "[[=content/je.xhtml]]";`
+  #content:String =`~ return "[[=content/je.xhtml]]";`
   ->(parent)northern-europe
   ->(isCountry)_concept
 }
 ax {
   ->(extends)_concept
-	title `land Islands`
+  title `land Islands`
   name `ax`
-	#content:String =`~ return "[[=content/ax.xhtml]]";`
+  #content:String =`~ return "[[=content/ax.xhtml]]";`
   ->(parent)northern-europe
   ->(isCountry)_concept
 }
 dk {
   ->(extends)_concept
-	title `Denmark`
+  title `Denmark`
   name `dk`
-	#content:String =`~ return "[[=content/dk.xhtml]]";`
+  #content:String =`~ return "[[=content/dk.xhtml]]";`
   ->(parent)northern-europe
   ->(isCountry)_concept
+  ->(isNeighborOf)de
 }
 ee {
   ->(extends)_concept
-	title `Estonia`
+  title `Estonia`
   name `ee`
-	#content:String =`~ return "[[=content/ee.xhtml]]";`
+  #content:String =`~ return "[[=content/ee.xhtml]]";`
   ->(parent)northern-europe
   ->(isCountry)_concept
+  ->(isNeighborOf)lv
+  ->(isNeighborOf)ru
 }
 fi {
   ->(extends)_concept
-	title `Finland`
+  title `Finland`
   name `fi`
-	#content:String =`~ return "[[=content/fi.xhtml]]";`
+  #content:String =`~ return "[[=content/fi.xhtml]]";`
   ->(parent)northern-europe
   ->(isCountry)_concept
+  ->(isNeighborOf)no
+  ->(isNeighborOf)ru
+  ->(isNeighborOf)se
 }
 fo {
   ->(extends)_concept
-	title `Faroe Islands`
+  title `Faroe Islands`
   name `fo`
-	#content:String =`~ return "[[=content/fo.xhtml]]";`
+  #content:String =`~ return "[[=content/fo.xhtml]]";`
   ->(parent)northern-europe
   ->(isCountry)_concept
 }
 gb {
   ->(extends)_concept
-	title `United Kingdom`
+  title `United Kingdom`
   name `gb`
-	#content:String =`~ return "[[=content/gb.xhtml]]";`
+  #content:String =`~ return "[[=content/gb.xhtml]]";`
   ->(parent)northern-europe
   ->(isCountry)_concept
+  ->(isNeighborOf)ie
 }
 ie {
   ->(extends)_concept
-	title `Ireland`
+  title `Ireland`
   name `ie`
-	#content:String =`~ return "[[=content/ie.xhtml]]";`
+  #content:String =`~ return "[[=content/ie.xhtml]]";`
   ->(parent)northern-europe
   ->(isCountry)_concept
+  ->(isNeighborOf)gb
 }
 im {
   ->(extends)_concept
-	title `Isle of Man`
+  title `Isle of Man`
   name `im`
-	#content:String =`~ return "[[=content/im.xhtml]]";`
+  #content:String =`~ return "[[=content/im.xhtml]]";`
   ->(parent)northern-europe
   ->(isCountry)_concept
 }
 is {
   ->(extends)_concept
-	title `Iceland`
+  title `Iceland`
   name `is`
-	#content:String =`~ return "[[=content/is.xhtml]]";`
+  #content:String =`~ return "[[=content/is.xhtml]]";`
   ->(parent)northern-europe
   ->(isCountry)_concept
 }
 lt {
   ->(extends)_concept
-	title `Lithuania`
+  title `Lithuania`
   name `lt`
-	#content:String =`~ return "[[=content/lt.xhtml]]";`
+  #content:String =`~ return "[[=content/lt.xhtml]]";`
   ->(parent)northern-europe
   ->(isCountry)_concept
+  ->(isNeighborOf)by
+  ->(isNeighborOf)lv
+  ->(isNeighborOf)pl
+  ->(isNeighborOf)ru
 }
 lv {
   ->(extends)_concept
-	title `Latvia`
+  title `Latvia`
   name `lv`
-	#content:String =`~ return "[[=content/lv.xhtml]]";`
+  #content:String =`~ return "[[=content/lv.xhtml]]";`
   ->(parent)northern-europe
   ->(isCountry)_concept
+  ->(isNeighborOf)by
+  ->(isNeighborOf)ee
+  ->(isNeighborOf)lt
+  ->(isNeighborOf)ru
 }
 no {
   ->(extends)_concept
-	title `Norway`
+  title `Norway`
   name `no`
-	#content:String =`~ return "[[=content/no.xhtml]]";`
+  #content:String =`~ return "[[=content/no.xhtml]]";`
   ->(parent)northern-europe
   ->(isCountry)_concept
+  ->(isNeighborOf)fi
+  ->(isNeighborOf)ru
+  ->(isNeighborOf)se
 }
 se {
   ->(extends)_concept
-	title `Sweden`
+  title `Sweden`
   name `se`
-	#content:String =`~ return "[[=content/se.xhtml]]";`
+  #content:String =`~ return "[[=content/se.xhtml]]";`
   ->(parent)northern-europe
   ->(isCountry)_concept
+  ->(isNeighborOf)fi
+  ->(isNeighborOf)no
 }
 sj {
   ->(extends)_concept
-	title `Svalbard and Jan Mayen`
+  title `Svalbard and Jan Mayen`
   name `sj`
-	#content:String =`~ return "[[=content/sj.xhtml]]";`
+  #content:String =`~ return "[[=content/sj.xhtml]]";`
   ->(parent)northern-europe
   ->(isCountry)_concept
 }
 western-europe {
   ->(extends)_concept
-	title `Western Europe`
+  title `Western Europe`
   name `western-europe`
-	#content:String =`~ return "[[=content/western_europe.xhtml]]";`
+  #content:String =`~ return "[[=content/western_europe.xhtml]]";`
   ->(parent)europe
 }
 at {
   ->(extends)_concept
-	title `Austria`
+  title `Austria`
   name `at`
-	#content:String =`~ return "[[=content/at.xhtml]]";`
+  #content:String =`~ return "[[=content/at.xhtml]]";`
   ->(parent)western-europe
   ->(isCountry)_concept
+  ->(isNeighborOf)cz
+  ->(isNeighborOf)de
+  ->(isNeighborOf)hu
+  ->(isNeighborOf)it
+  ->(isNeighborOf)li
+  ->(isNeighborOf)sk
+  ->(isNeighborOf)si
+  ->(isNeighborOf)ch
 }
 be {
   ->(extends)_concept
-	title `Belgium`
+  title `Belgium`
   name `be`
-	#content:String =`~ return "[[=content/be.xhtml]]";`
+  #content:String =`~ return "[[=content/be.xhtml]]";`
   ->(parent)western-europe
   ->(isCountry)_concept
+  ->(isNeighborOf)fr
+  ->(isNeighborOf)de
+  ->(isNeighborOf)lu
+  ->(isNeighborOf)nl
 }
 ch {
   ->(extends)_concept
-	title `Switzerland`
+  title `Switzerland`
   name `ch`
-	#content:String =`~ return "[[=content/ch.xhtml]]";`
+  #content:String =`~ return "[[=content/ch.xhtml]]";`
   ->(parent)western-europe
   ->(isCountry)_concept
+  ->(isNeighborOf)at
+  ->(isNeighborOf)fr
+  ->(isNeighborOf)de
+  ->(isNeighborOf)it
+  ->(isNeighborOf)li
 }
 de {
   ->(extends)_concept
-	title `Germany`
+  title `Germany`
   name `de`
-	#content:String =`~ return "[[=content/de.xhtml]]";`
+  #content:String =`~ return "[[=content/de.xhtml]]";`
   ->(parent)western-europe
   ->(isCountry)_concept
+  ->(isNeighborOf)at
+  ->(isNeighborOf)be
+  ->(isNeighborOf)cz
+  ->(isNeighborOf)dk
+  ->(isNeighborOf)fr
+  ->(isNeighborOf)lu
+  ->(isNeighborOf)nl
+  ->(isNeighborOf)pl
+  ->(isNeighborOf)ch
 }
 fr {
   ->(extends)_concept
-	title `France`
+  title `France`
   name `fr`
-	#content:String =`~ return "[[=content/fr.xhtml]]";`
+  #content:String =`~ return "[[=content/fr.xhtml]]";`
   ->(parent)western-europe
   ->(isCountry)_concept
+  ->(isNeighborOf)ad
+  ->(isNeighborOf)be
+  ->(isNeighborOf)de
+  ->(isNeighborOf)it
+  ->(isNeighborOf)lu
+  ->(isNeighborOf)mc
+  ->(isNeighborOf)es
+  ->(isNeighborOf)ch
 }
 li {
   ->(extends)_concept
-	title `Liechtenstein`
+  title `Liechtenstein`
   name `li`
-	#content:String =`~ return "[[=content/li.xhtml]]";`
+  #content:String =`~ return "[[=content/li.xhtml]]";`
   ->(parent)western-europe
   ->(isCountry)_concept
+  ->(isNeighborOf)at
+  ->(isNeighborOf)ch
 }
 lu {
   ->(extends)_concept
-	title `Luxembourg`
+  title `Luxembourg`
   name `lu`
-	#content:String =`~ return "[[=content/lu.xhtml]]";`
+  #content:String =`~ return "[[=content/lu.xhtml]]";`
   ->(parent)western-europe
   ->(isCountry)_concept
+  ->(isNeighborOf)be
+  ->(isNeighborOf)fr
+  ->(isNeighborOf)de
 }
 mc {
   ->(extends)_concept
-	title `Monaco`
+  title `Monaco`
   name `mc`
-	#content:String =`~ return "[[=content/mc.xhtml]]";`
+  #content:String =`~ return "[[=content/mc.xhtml]]";`
   ->(parent)western-europe
   ->(isCountry)_concept
+  ->(isNeighborOf)fr
 }
 nl {
   ->(extends)_concept
-	title `Netherlands`
+  title `Netherlands`
   name `nl`
-	#content:String =`~ return "[[=content/nl.xhtml]]";`
+  #content:String =`~ return "[[=content/nl.xhtml]]";`
   ->(parent)western-europe
   ->(isCountry)_concept
+  ->(isNeighborOf)be
+  ->(isNeighborOf)de
 }
 eastern-europe {
   ->(extends)_concept
-	title `Eastern Europe`
+  title `Eastern Europe`
   name `eastern-europe`
-	#content:String =`~ return "[[=content/eastern_europe.xhtml]]";`
+  #content:String =`~ return "[[=content/eastern_europe.xhtml]]";`
   ->(parent)europe
 }
 bg {
   ->(extends)_concept
-	title `Bulgaria`
+  title `Bulgaria`
   name `bg`
-	#content:String =`~ return "[[=content/bg.xhtml]]";`
+  #content:String =`~ return "[[=content/bg.xhtml]]";`
   ->(parent)eastern-europe
   ->(isCountry)_concept
+  ->(isNeighborOf)gr
+  ->(isNeighborOf)mk
+  ->(isNeighborOf)ro
+  ->(isNeighborOf)rs
+  ->(isNeighborOf)tr
 }
 by {
   ->(extends)_concept
-	title `Belarus`
+  title `Belarus`
   name `by`
-	#content:String =`~ return "[[=content/by.xhtml]]";`
+  #content:String =`~ return "[[=content/by.xhtml]]";`
   ->(parent)eastern-europe
   ->(isCountry)_concept
+  ->(isNeighborOf)lv
+  ->(isNeighborOf)lt
+  ->(isNeighborOf)pl
+  ->(isNeighborOf)ru
+  ->(isNeighborOf)ua
 }
 cz {
   ->(extends)_concept
-	title `Czech Republic`
+  title `Czech Republic`
   name `cz`
-	#content:String =`~ return "[[=content/cz.xhtml]]";`
+  #content:String =`~ return "[[=content/cz.xhtml]]";`
   ->(parent)eastern-europe
   ->(isCountry)_concept
+  ->(isNeighborOf)at
+  ->(isNeighborOf)de
+  ->(isNeighborOf)pl
+  ->(isNeighborOf)sk
 }
 hu {
   ->(extends)_concept
-	title `Hungary`
+  title `Hungary`
   name `hu`
-	#content:String =`~ return "[[=content/hu.xhtml]]";`
+  #content:String =`~ return "[[=content/hu.xhtml]]";`
   ->(parent)eastern-europe
   ->(isCountry)_concept
+  ->(isNeighborOf)at
+  ->(isNeighborOf)hr
+  ->(isNeighborOf)ro
+  ->(isNeighborOf)rs
+  ->(isNeighborOf)sk
+  ->(isNeighborOf)si
+  ->(isNeighborOf)ua
 }
 md {
   ->(extends)_concept
-	title `Moldova, Republic of`
+  title `Moldova, Republic of`
   name `md`
-	#content:String =`~ return "[[=content/md.xhtml]]";`
+  #content:String =`~ return "[[=content/md.xhtml]]";`
   ->(parent)eastern-europe
   ->(isCountry)_concept
+  ->(isNeighborOf)ro
+  ->(isNeighborOf)ua
 }
 pl {
   ->(extends)_concept
-	title `Poland`
+  title `Poland`
   name `pl`
-	#content:String =`~ return "[[=content/pl.xhtml]]";`
+  #content:String =`~ return "[[=content/pl.xhtml]]";`
   ->(parent)eastern-europe
   ->(isCountry)_concept
+  ->(isNeighborOf)by
+  ->(isNeighborOf)cz
+  ->(isNeighborOf)de
+  ->(isNeighborOf)lt
+  ->(isNeighborOf)ru
+  ->(isNeighborOf)sk
+  ->(isNeighborOf)ua
 }
 ro {
   ->(extends)_concept
-	title `Romania`
+  title `Romania`
   name `ro`
-	#content:String =`~ return "[[=content/ro.xhtml]]";`
+  #content:String =`~ return "[[=content/ro.xhtml]]";`
   ->(parent)eastern-europe
   ->(isCountry)_concept
+  ->(isNeighborOf)bg
+  ->(isNeighborOf)hu
+  ->(isNeighborOf)md
+  ->(isNeighborOf)rs
+  ->(isNeighborOf)ua
 }
 ru {
   ->(extends)_concept
-	title `Russian Federation`
+  title `Russian Federation`
   name `ru`
-	#content:String =`~ return "[[=content/ru.xhtml]]";`
+  #content:String =`~ return "[[=content/ru.xhtml]]";`
   ->(parent)eastern-europe
   ->(isCountry)_concept
+  ->(isNeighborOf)az
+  ->(isNeighborOf)by
+  ->(isNeighborOf)cn
+  ->(isNeighborOf)ee
+  ->(isNeighborOf)fi
+  ->(isNeighborOf)ge
+  ->(isNeighborOf)kz
+  ->(isNeighborOf)lv
+  ->(isNeighborOf)lt
+  ->(isNeighborOf)mn
+  ->(isNeighborOf)kp
+  ->(isNeighborOf)no
+  ->(isNeighborOf)pl
+  ->(isNeighborOf)ua
 }
 sk {
   ->(extends)_concept
-	title `Slovakia`
+  title `Slovakia`
   name `sk`
-	#content:String =`~ return "[[=content/sk.xhtml]]";`
+  #content:String =`~ return "[[=content/sk.xhtml]]";`
   ->(parent)eastern-europe
   ->(isCountry)_concept
+  ->(isNeighborOf)at
+  ->(isNeighborOf)cz
+  ->(isNeighborOf)hu
+  ->(isNeighborOf)pl
+  ->(isNeighborOf)ua
 }
 ua {
   ->(extends)_concept
-	title `Ukraine`
+  title `Ukraine`
   name `ua`
-	#content:String =`~ return "[[=content/ua.xhtml]]";`
+  #content:String =`~ return "[[=content/ua.xhtml]]";`
   ->(parent)eastern-europe
   ->(isCountry)_concept
+  ->(isNeighborOf)by
+  ->(isNeighborOf)hu
+  ->(isNeighborOf)md
+  ->(isNeighborOf)pl
+  ->(isNeighborOf)ro
+  ->(isNeighborOf)ru
+  ->(isNeighborOf)sk
 }
 southern-europe {
   ->(extends)_concept
-	title `Southern Europe`
+  title `Southern Europe`
   name `southern-europe`
-	#content:String =`~ return "[[=content/southern_europe.xhtml]]";`
+  #content:String =`~ return "[[=content/southern_europe.xhtml]]";`
   ->(parent)europe
 }
 ad {
   ->(extends)_concept
-	title `Andorra`
+  title `Andorra`
   name `ad`
-	#content:String =`~ return "[[=content/ad.xhtml]]";`
+  #content:String =`~ return "[[=content/ad.xhtml]]";`
   ->(parent)southern-europe
   ->(isCountry)_concept
+  ->(isNeighborOf)fr
+  ->(isNeighborOf)es
 }
 al {
   ->(extends)_concept
-	title `Albania`
+  title `Albania`
   name `al`
-	#content:String =`~ return "[[=content/al.xhtml]]";`
+  #content:String =`~ return "[[=content/al.xhtml]]";`
   ->(parent)southern-europe
   ->(isCountry)_concept
+  ->(isNeighborOf)gr
+  ->(isNeighborOf)xk
+  ->(isNeighborOf)mk
+  ->(isNeighborOf)me
+  ->(isNeighborOf)rs
 }
 ba {
   ->(extends)_concept
-	title `Bosnia and Herzegovina`
+  title `Bosnia and Herzegovina`
   name `ba`
-	#content:String =`~ return "[[=content/ba.xhtml]]";`
+  #content:String =`~ return "[[=content/ba.xhtml]]";`
   ->(parent)southern-europe
   ->(isCountry)_concept
+  ->(isNeighborOf)hr
+  ->(isNeighborOf)me
+  ->(isNeighborOf)rs
 }
 es {
   ->(extends)_concept
-	title `Spain`
+  title `Spain`
   name `es`
-	#content:String =`~ return "[[=content/es.xhtml]]";`
+  #content:String =`~ return "[[=content/es.xhtml]]";`
   ->(parent)southern-europe
   ->(isCountry)_concept
+  ->(isNeighborOf)ad
+  ->(isNeighborOf)fr
+  ->(isNeighborOf)gi
+  ->(isNeighborOf)ma
+  ->(isNeighborOf)pt
 }
 gi {
   ->(extends)_concept
-	title `Gibraltar`
+  title `Gibraltar`
   name `gi`
-	#content:String =`~ return "[[=content/gi.xhtml]]";`
+  #content:String =`~ return "[[=content/gi.xhtml]]";`
   ->(parent)southern-europe
   ->(isCountry)_concept
+  ->(isNeighborOf)es
 }
 gr {
   ->(extends)_concept
-	title `Greece`
+  title `Greece`
   name `gr`
-	#content:String =`~ return "[[=content/gr.xhtml]]";`
+  #content:String =`~ return "[[=content/gr.xhtml]]";`
   ->(parent)southern-europe
   ->(isCountry)_concept
+  ->(isNeighborOf)al
+  ->(isNeighborOf)bg
+  ->(isNeighborOf)mk
+  ->(isNeighborOf)tr
 }
 hr {
   ->(extends)_concept
-	title `Croatia`
+  title `Croatia`
   name `hr`
-	#content:String =`~ return "[[=content/hr.xhtml]]";`
+  #content:String =`~ return "[[=content/hr.xhtml]]";`
   ->(parent)southern-europe
   ->(isCountry)_concept
+  ->(isNeighborOf)ba
+  ->(isNeighborOf)hu
+  ->(isNeighborOf)me
+  ->(isNeighborOf)rs
+  ->(isNeighborOf)si
 }
 it {
   ->(extends)_concept
-	title `Italy`
+  title `Italy`
   name `it`
-	#content:String =`~ return "[[=content/it.xhtml]]";`
+  #content:String =`~ return "[[=content/it.xhtml]]";`
   ->(parent)southern-europe
   ->(isCountry)_concept
+  ->(isNeighborOf)at
+  ->(isNeighborOf)fr
+  ->(isNeighborOf)sm
+  ->(isNeighborOf)si
+  ->(isNeighborOf)ch
+  ->(isNeighborOf)va
 }
 me {
   ->(extends)_concept
-	title `Montenegro`
+  title `Montenegro`
   name `me`
-	#content:String =`~ return "[[=content/me.xhtml]]";`
+  #content:String =`~ return "[[=content/me.xhtml]]";`
   ->(parent)southern-europe
   ->(isCountry)_concept
+  ->(isNeighborOf)al
+  ->(isNeighborOf)ba
+  ->(isNeighborOf)hr
+  ->(isNeighborOf)xk
+  ->(isNeighborOf)rs
 }
 mk {
   ->(extends)_concept
-	title `Macedonia, Republic of`
+  title `Macedonia, Republic of`
   name `mk`
-	#content:String =`~ return "[[=content/mk.xhtml]]";`
+  #content:String =`~ return "[[=content/mk.xhtml]]";`
   ->(parent)southern-europe
   ->(isCountry)_concept
+  ->(isNeighborOf)al
+  ->(isNeighborOf)bg
+  ->(isNeighborOf)gr
+  ->(isNeighborOf)xk
+  ->(isNeighborOf)rs
 }
 mt {
   ->(extends)_concept
-	title `Malta`
+  title `Malta`
   name `mt`
-	#content:String =`~ return "[[=content/mt.xhtml]]";`
+  #content:String =`~ return "[[=content/mt.xhtml]]";`
   ->(parent)southern-europe
   ->(isCountry)_concept
 }
 rs {
   ->(extends)_concept
-	title `Serbia`
+  title `Serbia`
   name `rs`
-	#content:String =`~ return "[[=content/rs.xhtml]]";`
+  #content:String =`~ return "[[=content/rs.xhtml]]";`
   ->(parent)southern-europe
   ->(isCountry)_concept
+  ->(isNeighborOf)al
+  ->(isNeighborOf)ba
+  ->(isNeighborOf)bg
+  ->(isNeighborOf)hr
+  ->(isNeighborOf)hu
+  ->(isNeighborOf)xk
+  ->(isNeighborOf)mk
+  ->(isNeighborOf)me
+  ->(isNeighborOf)ro
 }
 pt {
   ->(extends)_concept
-	title `Portugal`
+  title `Portugal`
   name `pt`
-	#content:String =`~ return "[[=content/pt.xhtml]]";`
+  #content:String =`~ return "[[=content/pt.xhtml]]";`
   ->(parent)southern-europe
   ->(isCountry)_concept
+  ->(isNeighborOf)es
 }
 si {
   ->(extends)_concept
-	title `Slovenia`
+  title `Slovenia`
   name `si`
-	#content:String =`~ return "[[=content/si.xhtml]]";`
+  #content:String =`~ return "[[=content/si.xhtml]]";`
   ->(parent)southern-europe
   ->(isCountry)_concept
+  ->(isNeighborOf)at
+  ->(isNeighborOf)hr
+  ->(isNeighborOf)hu
+  ->(isNeighborOf)it
 }
 sm {
   ->(extends)_concept
-	title `San Marino`
+  title `San Marino`
   name `sm`
-	#content:String =`~ return "[[=content/sm.xhtml]]";`
+  #content:String =`~ return "[[=content/sm.xhtml]]";`
   ->(parent)southern-europe
   ->(isCountry)_concept
+  ->(isNeighborOf)it
 }
 va {
   ->(extends)_concept
-	title `Holy See (Vatican City State)`
+  title `Holy See (Vatican City State)`
   name `va`
-	#content:String =`~ return "[[=content/va.xhtml]]";`
+  #content:String =`~ return "[[=content/va.xhtml]]";`
   ->(parent)southern-europe
   ->(isCountry)_concept
+  ->(isNeighborOf)it
 }
 americas {
   ->(extends)_concept
-	title `Americas`
+  title `Americas`
   name `americas`
-	#content:String =`~ return "[[=content/americas.xhtml]]";`
+  #content:String =`~ return "[[=content/americas.xhtml]]";`
   ->(parent)earth
 }
 northern-america {
   ->(extends)_concept
-	title `Northern America`
+  title `Northern America`
   name `northern-america`
-	#content:String =`~ return "[[=content/northern_america.xhtml]]";`
+  #content:String =`~ return "[[=content/northern_america.xhtml]]";`
   ->(parent)americas
 }
 bm {
   ->(extends)_concept
-	title `Bermuda`
+  title `Bermuda`
   name `bm`
-	#content:String =`~ return "[[=content/bm.xhtml]]";`
+  #content:String =`~ return "[[=content/bm.xhtml]]";`
   ->(parent)northern-america
   ->(isCountry)_concept
 }
 ca {
   ->(extends)_concept
-	title `Canada`
+  title `Canada`
   name `ca`
-	#content:String =`~ return "[[=content/ca.xhtml]]";`
+  #content:String =`~ return "[[=content/ca.xhtml]]";`
   ->(parent)northern-america
   ->(isCountry)_concept
+  ->(isNeighborOf)us
 }
 gl {
   ->(extends)_concept
-	title `Greenland`
+  title `Greenland`
   name `gl`
-	#content:String =`~ return "[[=content/gl.xhtml]]";`
+  #content:String =`~ return "[[=content/gl.xhtml]]";`
   ->(parent)northern-america
   ->(isCountry)_concept
 }
 pm {
   ->(extends)_concept
-	title `Saint Pierre and Miquelon`
+  title `Saint Pierre and Miquelon`
   name `pm`
-	#content:String =`~ return "[[=content/pm.xhtml]]";`
+  #content:String =`~ return "[[=content/pm.xhtml]]";`
   ->(parent)northern-america
   ->(isCountry)_concept
 }
 us {
   ->(extends)_concept
-	title `United States`
+  title `United States`
   name `us`
-	#content:String =`~ return "[[=content/us.xhtml]]";`
+  #content:String =`~ return "[[=content/us.xhtml]]";`
   ->(parent)northern-america
   ->(isCountry)_concept
+  ->(isNeighborOf)ca
+  ->(isNeighborOf)cu
+  ->(isNeighborOf)mx
 }
 caribbean {
   ->(extends)_concept
-	title `Caribbean`
+  title `Caribbean`
   name `caribbean`
-	#content:String =`~ return "[[=content/caribbean.xhtml]]";`
+  #content:String =`~ return "[[=content/caribbean.xhtml]]";`
   ->(parent)americas
 }
 ag {
   ->(extends)_concept
-	title `Antigua and Barbuda`
+  title `Antigua and Barbuda`
   name `ag`
-	#content:String =`~ return "[[=content/ag.xhtml]]";`
+  #content:String =`~ return "[[=content/ag.xhtml]]";`
   ->(parent)caribbean
   ->(isCountry)_concept
 }
 ai {
   ->(extends)_concept
-	title `Anguilla`
+  title `Anguilla`
   name `ai`
-	#content:String =`~ return "[[=content/ai.xhtml]]";`
+  #content:String =`~ return "[[=content/ai.xhtml]]";`
   ->(parent)caribbean
   ->(isCountry)_concept
 }
 aw {
   ->(extends)_concept
-	title `Aruba`
+  title `Aruba`
   name `aw`
-	#content:String =`~ return "[[=content/aw.xhtml]]";`
+  #content:String =`~ return "[[=content/aw.xhtml]]";`
   ->(parent)caribbean
   ->(isCountry)_concept
 }
 bb {
   ->(extends)_concept
-	title `Barbados`
+  title `Barbados`
   name `bb`
-	#content:String =`~ return "[[=content/bb.xhtml]]";`
+  #content:String =`~ return "[[=content/bb.xhtml]]";`
   ->(parent)caribbean
   ->(isCountry)_concept
 }
 bl {
   ->(extends)_concept
-	title `Saint Barthlemy`
+  title `Saint Barthlemy`
   name `bl`
-	#content:String =`~ return "[[=content/bl.xhtml]]";`
+  #content:String =`~ return "[[=content/bl.xhtml]]";`
   ->(parent)caribbean
   ->(isCountry)_concept
 }
 bs {
   ->(extends)_concept
-	title `Bahamas`
+  title `Bahamas`
   name `bs`
-	#content:String =`~ return "[[=content/bs.xhtml]]";`
+  #content:String =`~ return "[[=content/bs.xhtml]]";`
   ->(parent)caribbean
   ->(isCountry)_concept
 }
 cu {
   ->(extends)_concept
-	title `Cuba`
+  title `Cuba`
   name `cu`
-	#content:String =`~ return "[[=content/cu.xhtml]]";`
+  #content:String =`~ return "[[=content/cu.xhtml]]";`
   ->(parent)caribbean
   ->(isCountry)_concept
+  ->(isNeighborOf)us
 }
 dm {
   ->(extends)_concept
-	title `Dominica`
+  title `Dominica`
   name `dm`
-	#content:String =`~ return "[[=content/dm.xhtml]]";`
+  #content:String =`~ return "[[=content/dm.xhtml]]";`
   ->(parent)caribbean
   ->(isCountry)_concept
 }
 do {
   ->(extends)_concept
-	title `Dominican Republic`
+  title `Dominican Republic`
   name `do`
-	#content:String =`~ return "[[=content/do.xhtml]]";`
+  #content:String =`~ return "[[=content/do.xhtml]]";`
   ->(parent)caribbean
   ->(isCountry)_concept
+  ->(isNeighborOf)ht
 }
 gd {
   ->(extends)_concept
-	title `Grenada`
+  title `Grenada`
   name `gd`
-	#content:String =`~ return "[[=content/gd.xhtml]]";`
+  #content:String =`~ return "[[=content/gd.xhtml]]";`
   ->(parent)caribbean
   ->(isCountry)_concept
 }
 gp {
   ->(extends)_concept
-	title `Guadeloupe`
+  title `Guadeloupe`
   name `gp`
-	#content:String =`~ return "[[=content/gp.xhtml]]";`
+  #content:String =`~ return "[[=content/gp.xhtml]]";`
   ->(parent)caribbean
   ->(isCountry)_concept
 }
 ht {
   ->(extends)_concept
-	title `Haiti`
+  title `Haiti`
   name `ht`
-	#content:String =`~ return "[[=content/ht.xhtml]]";`
+  #content:String =`~ return "[[=content/ht.xhtml]]";`
   ->(parent)caribbean
   ->(isCountry)_concept
+  ->(isNeighborOf)do
 }
 jm {
   ->(extends)_concept
-	title `Jamaica`
+  title `Jamaica`
   name `jm`
-	#content:String =`~ return "[[=content/jm.xhtml]]";`
+  #content:String =`~ return "[[=content/jm.xhtml]]";`
   ->(parent)caribbean
   ->(isCountry)_concept
 }
 kn {
   ->(extends)_concept
-	title `Saint Kitts and Nevis`
+  title `Saint Kitts and Nevis`
   name `kn`
-	#content:String =`~ return "[[=content/kn.xhtml]]";`
+  #content:String =`~ return "[[=content/kn.xhtml]]";`
   ->(parent)caribbean
   ->(isCountry)_concept
 }
 ky {
   ->(extends)_concept
-	title `Cayman Islands`
+  title `Cayman Islands`
   name `ky`
-	#content:String =`~ return "[[=content/ky.xhtml]]";`
+  #content:String =`~ return "[[=content/ky.xhtml]]";`
   ->(parent)caribbean
   ->(isCountry)_concept
 }
 lc {
   ->(extends)_concept
-	title `Saint Lucia`
+  title `Saint Lucia`
   name `lc`
-	#content:String =`~ return "[[=content/lc.xhtml]]";`
+  #content:String =`~ return "[[=content/lc.xhtml]]";`
   ->(parent)caribbean
   ->(isCountry)_concept
 }
 mf {
   ->(extends)_concept
-	title `Saint Martin (French part)`
+  title `Saint Martin (French part)`
   name `mf`
-	#content:String =`~ return "[[=content/mf.xhtml]]";`
+  #content:String =`~ return "[[=content/mf.xhtml]]";`
   ->(parent)caribbean
   ->(isCountry)_concept
+  ->(isNeighborOf)sx
 }
 mq {
   ->(extends)_concept
-	title `Martinique`
+  title `Martinique`
   name `mq`
-	#content:String =`~ return "[[=content/mq.xhtml]]";`
+  #content:String =`~ return "[[=content/mq.xhtml]]";`
   ->(parent)caribbean
   ->(isCountry)_concept
 }
 ms {
   ->(extends)_concept
-	title `Montserrat`
+  title `Montserrat`
   name `ms`
-	#content:String =`~ return "[[=content/ms.xhtml]]";`
+  #content:String =`~ return "[[=content/ms.xhtml]]";`
   ->(parent)caribbean
   ->(isCountry)_concept
 }
 pr {
   ->(extends)_concept
-	title `Puerto Rico`
+  title `Puerto Rico`
   name `pr`
-	#content:String =`~ return "[[=content/pr.xhtml]]";`
+  #content:String =`~ return "[[=content/pr.xhtml]]";`
   ->(parent)caribbean
   ->(isCountry)_concept
 }
 tc {
   ->(extends)_concept
-	title `Turks and Caicos Islands`
+  title `Turks and Caicos Islands`
   name `tc`
-	#content:String =`~ return "[[=content/tc.xhtml]]";`
+  #content:String =`~ return "[[=content/tc.xhtml]]";`
   ->(parent)caribbean
   ->(isCountry)_concept
 }
 tt {
   ->(extends)_concept
-	title `Trinidad and Tobago`
+  title `Trinidad and Tobago`
   name `tt`
-	#content:String =`~ return "[[=content/tt.xhtml]]";`
+  #content:String =`~ return "[[=content/tt.xhtml]]";`
   ->(parent)caribbean
   ->(isCountry)_concept
 }
 vc {
   ->(extends)_concept
-	title `Saint Vincent and the Grenadines`
+  title `Saint Vincent and the Grenadines`
   name `vc`
-	#content:String =`~ return "[[=content/vc.xhtml]]";`
+  #content:String =`~ return "[[=content/vc.xhtml]]";`
   ->(parent)caribbean
   ->(isCountry)_concept
 }
 vg {
   ->(extends)_concept
-	title `Virgin Islands, British`
+  title `Virgin Islands, British`
   name `vg`
-	#content:String =`~ return "[[=content/vg.xhtml]]";`
+  #content:String =`~ return "[[=content/vg.xhtml]]";`
   ->(parent)caribbean
   ->(isCountry)_concept
 }
 vi {
   ->(extends)_concept
-	title `Virgin Islands, U.S.`
+  title `Virgin Islands, U.S.`
   name `vi`
-	#content:String =`~ return "[[=content/vi.xhtml]]";`
+  #content:String =`~ return "[[=content/vi.xhtml]]";`
   ->(parent)caribbean
   ->(isCountry)_concept
 }
 central-america {
   ->(extends)_concept
-	title `Central America`
+  title `Central America`
   name `central-america`
-	#content:String =`~ return "[[=content/central_america.xhtml]]";`
+  #content:String =`~ return "[[=content/central_america.xhtml]]";`
   ->(parent)americas
 }
 bz {
   ->(extends)_concept
-	title `Belize`
+  title `Belize`
   name `bz`
-	#content:String =`~ return "[[=content/bz.xhtml]]";`
+  #content:String =`~ return "[[=content/bz.xhtml]]";`
   ->(parent)central-america
   ->(isCountry)_concept
+  ->(isNeighborOf)gt
+  ->(isNeighborOf)mx
 }
 cr {
   ->(extends)_concept
-	title `Costa Rica`
+  title `Costa Rica`
   name `cr`
-	#content:String =`~ return "[[=content/cr.xhtml]]";`
+  #content:String =`~ return "[[=content/cr.xhtml]]";`
   ->(parent)central-america
   ->(isCountry)_concept
+  ->(isNeighborOf)ni
+  ->(isNeighborOf)pa
 }
 gt {
   ->(extends)_concept
-	title `Guatemala`
+  title `Guatemala`
   name `gt`
-	#content:String =`~ return "[[=content/gt.xhtml]]";`
+  #content:String =`~ return "[[=content/gt.xhtml]]";`
   ->(parent)central-america
   ->(isCountry)_concept
+  ->(isNeighborOf)bz
+  ->(isNeighborOf)sv
+  ->(isNeighborOf)hn
+  ->(isNeighborOf)mx
 }
 hn {
   ->(extends)_concept
-	title `Honduras`
+  title `Honduras`
   name `hn`
-	#content:String =`~ return "[[=content/hn.xhtml]]";`
+  #content:String =`~ return "[[=content/hn.xhtml]]";`
   ->(parent)central-america
   ->(isCountry)_concept
+  ->(isNeighborOf)sv
+  ->(isNeighborOf)gt
+  ->(isNeighborOf)ni
 }
 mx {
   ->(extends)_concept
-	title `Mexico`
+  title `Mexico`
   name `mx`
-	#content:String =`~ return "[[=content/mx.xhtml]]";`
+  #content:String =`~ return "[[=content/mx.xhtml]]";`
   ->(parent)central-america
   ->(isCountry)_concept
+  ->(isNeighborOf)bz
+  ->(isNeighborOf)gt
+  ->(isNeighborOf)us
 }
 ni {
   ->(extends)_concept
-	title `Nicaragua`
+  title `Nicaragua`
   name `ni`
-	#content:String =`~ return "[[=content/ni.xhtml]]";`
+  #content:String =`~ return "[[=content/ni.xhtml]]";`
   ->(parent)central-america
   ->(isCountry)_concept
+  ->(isNeighborOf)cr
+  ->(isNeighborOf)hn
 }
 pa {
   ->(extends)_concept
-	title `Panama`
+  title `Panama`
   name `pa`
-	#content:String =`~ return "[[=content/pa.xhtml]]";`
+  #content:String =`~ return "[[=content/pa.xhtml]]";`
   ->(parent)central-america
   ->(isCountry)_concept
+  ->(isNeighborOf)co
+  ->(isNeighborOf)cr
 }
 sv {
   ->(extends)_concept
-	title `El Salvador`
+  title `El Salvador`
   name `sv`
-	#content:String =`~ return "[[=content/sv.xhtml]]";`
+  #content:String =`~ return "[[=content/sv.xhtml]]";`
   ->(parent)central-america
   ->(isCountry)_concept
+  ->(isNeighborOf)gt
+  ->(isNeighborOf)hn
 }
 south-america {
   ->(extends)_concept
-	title `South America`
+  title `South America`
   name `south-america`
-	#content:String =`~ return "[[=content/south_america.xhtml]]";`
+  #content:String =`~ return "[[=content/south_america.xhtml]]";`
   ->(parent)americas
 }
 ar {
   ->(extends)_concept
-	title `Argentina`
+  title `Argentina`
   name `ar`
-	#content:String =`~ return "[[=content/ar.xhtml]]";`
+  #content:String =`~ return "[[=content/ar.xhtml]]";`
   ->(parent)south-america
   ->(isCountry)_concept
+  ->(isNeighborOf)bo
+  ->(isNeighborOf)br
+  ->(isNeighborOf)cl
+  ->(isNeighborOf)py
+  ->(isNeighborOf)uy
 }
 bo {
   ->(extends)_concept
-	title `Bolivia, Plurinational State of`
+  title `Bolivia, Plurinational State of`
   name `bo`
-	#content:String =`~ return "[[=content/bo.xhtml]]";`
+  #content:String =`~ return "[[=content/bo.xhtml]]";`
   ->(parent)south-america
   ->(isCountry)_concept
+  ->(isNeighborOf)ar
+  ->(isNeighborOf)br
+  ->(isNeighborOf)cl
+  ->(isNeighborOf)py
+  ->(isNeighborOf)pe
 }
 br {
   ->(extends)_concept
-	title `Brazil`
+  title `Brazil`
   name `br`
-	#content:String =`~ return "[[=content/br.xhtml]]";`
+  #content:String =`~ return "[[=content/br.xhtml]]";`
   ->(parent)south-america
   ->(isCountry)_concept
+  ->(isNeighborOf)ar
+  ->(isNeighborOf)bo
+  ->(isNeighborOf)co
+  ->(isNeighborOf)gf
+  ->(isNeighborOf)gy
+  ->(isNeighborOf)py
+  ->(isNeighborOf)pe
+  ->(isNeighborOf)sr
+  ->(isNeighborOf)uy
+  ->(isNeighborOf)ve
 }
 cl {
   ->(extends)_concept
-	title `Chile`
+  title `Chile`
   name `cl`
-	#content:String =`~ return "[[=content/cl.xhtml]]";`
+  #content:String =`~ return "[[=content/cl.xhtml]]";`
   ->(parent)south-america
   ->(isCountry)_concept
+  ->(isNeighborOf)ar
+  ->(isNeighborOf)bo
+  ->(isNeighborOf)pe
 }
 co {
   ->(extends)_concept
-	title `Colombia`
+  title `Colombia`
   name `co`
-	#content:String =`~ return "[[=content/co.xhtml]]";`
+  #content:String =`~ return "[[=content/co.xhtml]]";`
   ->(parent)south-america
   ->(isCountry)_concept
+  ->(isNeighborOf)br
+  ->(isNeighborOf)ec
+  ->(isNeighborOf)pa
+  ->(isNeighborOf)pe
+  ->(isNeighborOf)ve
 }
 ec {
   ->(extends)_concept
-	title `Ecuador`
+  title `Ecuador`
   name `ec`
-	#content:String =`~ return "[[=content/ec.xhtml]]";`
+  #content:String =`~ return "[[=content/ec.xhtml]]";`
   ->(parent)south-america
   ->(isCountry)_concept
+  ->(isNeighborOf)co
+  ->(isNeighborOf)pe
 }
 fk {
   ->(extends)_concept
-	title `Falkland Islands (Malvinas)`
+  title `Falkland Islands (Malvinas)`
   name `fk`
-	#content:String =`~ return "[[=content/fk.xhtml]]";`
+  #content:String =`~ return "[[=content/fk.xhtml]]";`
   ->(parent)south-america
   ->(isCountry)_concept
 }
 gf {
   ->(extends)_concept
-	title `French Guiana`
+  title `French Guiana`
   name `gf`
-	#content:String =`~ return "[[=content/gf.xhtml]]";`
+  #content:String =`~ return "[[=content/gf.xhtml]]";`
   ->(parent)south-america
   ->(isCountry)_concept
+  ->(isNeighborOf)br
+  ->(isNeighborOf)sr
 }
 gy {
   ->(extends)_concept
-	title `Guyana`
+  title `Guyana`
   name `gy`
-	#content:String =`~ return "[[=content/gy.xhtml]]";`
+  #content:String =`~ return "[[=content/gy.xhtml]]";`
   ->(parent)south-america
   ->(isCountry)_concept
+  ->(isNeighborOf)br
+  ->(isNeighborOf)sr
+  ->(isNeighborOf)ve
 }
 pe {
   ->(extends)_concept
-	title `Peru`
+  title `Peru`
   name `pe`
-	#content:String =`~ return "[[=content/pe.xhtml]]";`
+  #content:String =`~ return "[[=content/pe.xhtml]]";`
   ->(parent)south-america
   ->(isCountry)_concept
+  ->(isNeighborOf)bo
+  ->(isNeighborOf)br
+  ->(isNeighborOf)cl
+  ->(isNeighborOf)co
+  ->(isNeighborOf)ec
 }
 py {
   ->(extends)_concept
-	title `Paraguay`
+  title `Paraguay`
   name `py`
-	#content:String =`~ return "[[=content/py.xhtml]]";`
+  #content:String =`~ return "[[=content/py.xhtml]]";`
   ->(parent)south-america
   ->(isCountry)_concept
+  ->(isNeighborOf)ar
+  ->(isNeighborOf)bo
+  ->(isNeighborOf)br
 }
 sr {
   ->(extends)_concept
-	title `Suriname`
+  title `Suriname`
   name `sr`
-	#content:String =`~ return "[[=content/sr.xhtml]]";`
+  #content:String =`~ return "[[=content/sr.xhtml]]";`
   ->(parent)south-america
   ->(isCountry)_concept
+  ->(isNeighborOf)br
+  ->(isNeighborOf)gf
+  ->(isNeighborOf)gy
 }
 uy {
   ->(extends)_concept
-	title `Uruguay`
+  title `Uruguay`
   name `uy`
-	#content:String =`~ return "[[=content/uy.xhtml]]";`
+  #content:String =`~ return "[[=content/uy.xhtml]]";`
   ->(parent)south-america
   ->(isCountry)_concept
+  ->(isNeighborOf)ar
+  ->(isNeighborOf)br
 }
 ve {
   ->(extends)_concept
-	title `Venezuela, Bolivarian Republic of`
+  title `Venezuela, Bolivarian Republic of`
   name `ve`
-	#content:String =`~ return "[[=content/ve.xhtml]]";`
+  #content:String =`~ return "[[=content/ve.xhtml]]";`
   ->(parent)south-america
   ->(isCountry)_concept
+  ->(isNeighborOf)br
+  ->(isNeighborOf)co
+  ->(isNeighborOf)gy
 }
 asia {
   ->(extends)_concept
-	title `Asia`
+  title `Asia`
   name `asia`
-	#content:String =`~ return "[[=content/asia.xhtml]]";`
+  #content:String =`~ return "[[=content/asia.xhtml]]";`
   ->(parent)earth
 }
 central-asia {
   ->(extends)_concept
-	title `Central Asia`
+  title `Central Asia`
   name `central-asia`
-	#content:String =`~ return "[[=content/central_asia.xhtml]]";`
+  #content:String =`~ return "[[=content/central_asia.xhtml]]";`
   ->(parent)asia
 }
 tm {
   ->(extends)_concept
-	title `Turkmenistan`
+  title `Turkmenistan`
   name `tm`
-	#content:String =`~ return "[[=content/tm.xhtml]]";`
+  #content:String =`~ return "[[=content/tm.xhtml]]";`
   ->(parent)central-asia
   ->(isCountry)_concept
+  ->(isNeighborOf)af
+  ->(isNeighborOf)ir
+  ->(isNeighborOf)kz
+  ->(isNeighborOf)uz
 }
 tj {
   ->(extends)_concept
-	title `Tajikistan`
+  title `Tajikistan`
   name `tj`
-	#content:String =`~ return "[[=content/tj.xhtml]]";`
+  #content:String =`~ return "[[=content/tj.xhtml]]";`
   ->(parent)central-asia
   ->(isCountry)_concept
+  ->(isNeighborOf)af
+  ->(isNeighborOf)cn
+  ->(isNeighborOf)kg
+  ->(isNeighborOf)uz
 }
 kg {
   ->(extends)_concept
-	title `Kyrgyzstan`
+  title `Kyrgyzstan`
   name `kg`
-	#content:String =`~ return "[[=content/kg.xhtml]]";`
+  #content:String =`~ return "[[=content/kg.xhtml]]";`
   ->(parent)central-asia
   ->(isCountry)_concept
+  ->(isNeighborOf)cn
+  ->(isNeighborOf)kz
+  ->(isNeighborOf)tj
+  ->(isNeighborOf)uz
 }
 kz {
   ->(extends)_concept
-	title `Kazakhstan`
+  title `Kazakhstan`
   name `kz`
-	#content:String =`~ return "[[=content/kz.xhtml]]";`
+  #content:String =`~ return "[[=content/kz.xhtml]]";`
   ->(parent)central-asia
   ->(isCountry)_concept
+  ->(isNeighborOf)cn
+  ->(isNeighborOf)kg
+  ->(isNeighborOf)ru
+  ->(isNeighborOf)tm
+  ->(isNeighborOf)uz
 }
 uz {
   ->(extends)_concept
-	title `Uzbekistan`
+  title `Uzbekistan`
   name `uz`
-	#content:String =`~ return "[[=content/uz.xhtml]]";`
+  #content:String =`~ return "[[=content/uz.xhtml]]";`
   ->(parent)central-asia
   ->(isCountry)_concept
+  ->(isNeighborOf)af
+  ->(isNeighborOf)kz
+  ->(isNeighborOf)kg
+  ->(isNeighborOf)tj
+  ->(isNeighborOf)tm
 }
 eastern-asia {
   ->(extends)_concept
-	title `Eastern Asia`
+  title `Eastern Asia`
   name `eastern-asia`
-	#content:String =`~ return "[[=content/eastern_asia.xhtml]]";`
+  #content:String =`~ return "[[=content/eastern_asia.xhtml]]";`
   ->(parent)asia
 }
 cn {
   ->(extends)_concept
-	title `China`
+  title `China`
   name `cn`
-	#content:String =`~ return "[[=content/cn.xhtml]]";`
+  #content:String =`~ return "[[=content/cn.xhtml]]";`
   ->(parent)eastern-asia
   ->(isCountry)_concept
+  ->(isNeighborOf)af
+  ->(isNeighborOf)bt
+  ->(isNeighborOf)in
+  ->(isNeighborOf)kz
+  ->(isNeighborOf)kg
+  ->(isNeighborOf)la
+  ->(isNeighborOf)mn
+  ->(isNeighborOf)mm
+  ->(isNeighborOf)np
+  ->(isNeighborOf)kp
+  ->(isNeighborOf)pk
+  ->(isNeighborOf)ru
+  ->(isNeighborOf)tj
+  ->(isNeighborOf)vn
 }
 hk {
   ->(extends)_concept
-	title `Hong Kong`
+  title `Hong Kong`
   name `hk`
-	#content:String =`~ return "[[=content/hk.xhtml]]";`
+  #content:String =`~ return "[[=content/hk.xhtml]]";`
   ->(parent)eastern-asia
   ->(isCountry)_concept
 }
 jp {
   ->(extends)_concept
-	title `Japan`
+  title `Japan`
   name `jp`
-	#content:String =`~ return "[[=content/jp.xhtml]]";`
+  #content:String =`~ return "[[=content/jp.xhtml]]";`
   ->(parent)eastern-asia
   ->(isCountry)_concept
 }
 kp {
   ->(extends)_concept
-	title `Korea, Democratic People's Republic of`
+  title `Korea, Democratic People's Republic of`
   name `kp`
-	#content:String =`~ return "[[=content/kp.xhtml]]";`
+  #content:String =`~ return "[[=content/kp.xhtml]]";`
   ->(parent)eastern-asia
   ->(isCountry)_concept
+  ->(isNeighborOf)cn
+  ->(isNeighborOf)ru
+  ->(isNeighborOf)kr
 }
 kr {
   ->(extends)_concept
-	title `Korea, Republic of`
+  title `Korea, Republic of`
   name `kr`
-	#content:String =`~ return "[[=content/kr.xhtml]]";`
+  #content:String =`~ return "[[=content/kr.xhtml]]";`
   ->(parent)eastern-asia
   ->(isCountry)_concept
+  ->(isNeighborOf)kp
 }
 mn {
   ->(extends)_concept
-	title `Mongolia`
+  title `Mongolia`
   name `mn`
-	#content:String =`~ return "[[=content/mn.xhtml]]";`
+  #content:String =`~ return "[[=content/mn.xhtml]]";`
   ->(parent)eastern-asia
   ->(isCountry)_concept
+  ->(isNeighborOf)cn
+  ->(isNeighborOf)ru
 }
 mo {
   ->(extends)_concept
-	title `Macao`
+  title `Macao`
   name `mo`
-	#content:String =`~ return "[[=content/mo.xhtml]]";`
+  #content:String =`~ return "[[=content/mo.xhtml]]";`
   ->(parent)eastern-asia
   ->(isCountry)_concept
 }
 tw {
   ->(extends)_concept
-	title `Taiwan, Province of China`
+  title `Taiwan, Province of China`
   name `tw`
-	#content:String =`~ return "[[=content/tw.xhtml]]";`
+  #content:String =`~ return "[[=content/tw.xhtml]]";`
   ->(parent)eastern-asia
   ->(isCountry)_concept
 }
 southern-asia {
   ->(extends)_concept
-	title `Southern Asia`
+  title `Southern Asia`
   name `southern-asia`
-	#content:String =`~ return "[[=content/southern_asia.xhtml]]";`
+  #content:String =`~ return "[[=content/southern_asia.xhtml]]";`
   ->(parent)asia
 }
 af {
   ->(extends)_concept
-	title `Afghanistan`
+  title `Afghanistan`
   name `af`
-	#content:String =`~ return "[[=content/af.xhtml]]";`
+  #content:String =`~ return "[[=content/af.xhtml]]";`
   ->(parent)southern-asia
   ->(isCountry)_concept
+  ->(isNeighborOf)cn
+  ->(isNeighborOf)ir
+  ->(isNeighborOf)pk
+  ->(isNeighborOf)tj
+  ->(isNeighborOf)tm
+  ->(isNeighborOf)uz
 }
 bd {
   ->(extends)_concept
-	title `Bangladesh`
+  title `Bangladesh`
   name `bd`
-	#content:String =`~ return "[[=content/bd.xhtml]]";`
+  #content:String =`~ return "[[=content/bd.xhtml]]";`
   ->(parent)southern-asia
   ->(isCountry)_concept
+  ->(isNeighborOf)in
+  ->(isNeighborOf)mm
 }
 bt {
   ->(extends)_concept
-	title `Bhutan`
+  title `Bhutan`
   name `bt`
-	#content:String =`~ return "[[=content/bt.xhtml]]";`
+  #content:String =`~ return "[[=content/bt.xhtml]]";`
   ->(parent)southern-asia
   ->(isCountry)_concept
+  ->(isNeighborOf)cn
+  ->(isNeighborOf)in
 }
 in {
   ->(extends)_concept
-	title `India`
+  title `India`
   name `in`
-	#content:String =`~ return "[[=content/in.xhtml]]";`
+  #content:String =`~ return "[[=content/in.xhtml]]";`
   ->(parent)southern-asia
   ->(isCountry)_concept
+  ->(isNeighborOf)bd
+  ->(isNeighborOf)bt
+  ->(isNeighborOf)cn
+  ->(isNeighborOf)mm
+  ->(isNeighborOf)np
+  ->(isNeighborOf)pk
 }
 ir {
   ->(extends)_concept
-	title `Iran, Islamic Republic of`
+  title `Iran, Islamic Republic of`
   name `ir`
-	#content:String =`~ return "[[=content/ir.xhtml]]";`
+  #content:String =`~ return "[[=content/ir.xhtml]]";`
   ->(parent)southern-asia
   ->(isCountry)_concept
+  ->(isNeighborOf)af
+  ->(isNeighborOf)am
+  ->(isNeighborOf)az
+  ->(isNeighborOf)iq
+  ->(isNeighborOf)pk
+  ->(isNeighborOf)tr
+  ->(isNeighborOf)tm
 }
 lk {
   ->(extends)_concept
-	title `Sri Lanka`
+  title `Sri Lanka`
   name `lk`
-	#content:String =`~ return "[[=content/lk.xhtml]]";`
+  #content:String =`~ return "[[=content/lk.xhtml]]";`
   ->(parent)southern-asia
   ->(isCountry)_concept
 }
 mv {
   ->(extends)_concept
-	title `Maldives`
+  title `Maldives`
   name `mv`
-	#content:String =`~ return "[[=content/mv.xhtml]]";`
+  #content:String =`~ return "[[=content/mv.xhtml]]";`
   ->(parent)southern-asia
   ->(isCountry)_concept
 }
 np {
   ->(extends)_concept
-	title `Nepal`
+  title `Nepal`
   name `np`
-	#content:String =`~ return "[[=content/np.xhtml]]";`
+  #content:String =`~ return "[[=content/np.xhtml]]";`
   ->(parent)southern-asia
   ->(isCountry)_concept
+  ->(isNeighborOf)cn
+  ->(isNeighborOf)in
 }
 pk {
   ->(extends)_concept
-	title `Pakistan`
+  title `Pakistan`
   name `pk`
-	#content:String =`~ return "[[=content/pk.xhtml]]";`
+  #content:String =`~ return "[[=content/pk.xhtml]]";`
   ->(parent)southern-asia
   ->(isCountry)_concept
+  ->(isNeighborOf)af
+  ->(isNeighborOf)cn
+  ->(isNeighborOf)in
+  ->(isNeighborOf)ir
 }
 south-east-asia {
   ->(extends)_concept
-	title `South East Asia`
+  title `South East Asia`
   name `south-east-asia`
-	#content:String =`~ return "[[=content/south_east_asia.xhtml]]";`
+  #content:String =`~ return "[[=content/south_east_asia.xhtml]]";`
   ->(parent)asia
 }
 bn {
   ->(extends)_concept
-	title `Brunei Darussalam`
+  title `Brunei Darussalam`
   name `bn`
-	#content:String =`~ return "[[=content/bn.xhtml]]";`
+  #content:String =`~ return "[[=content/bn.xhtml]]";`
   ->(parent)south-east-asia
   ->(isCountry)_concept
+  ->(isNeighborOf)my
 }
 id {
   ->(extends)_concept
-	title `Indonesia`
+  title `Indonesia`
   name `id`
-	#content:String =`~ return "[[=content/id.xhtml]]";`
+  #content:String =`~ return "[[=content/id.xhtml]]";`
   ->(parent)south-east-asia
   ->(isCountry)_concept
+  ->(isNeighborOf)tl
+  ->(isNeighborOf)my
+  ->(isNeighborOf)pg
 }
 kh {
   ->(extends)_concept
-	title `Cambodia`
+  title `Cambodia`
   name `kh`
-	#content:String =`~ return "[[=content/kh.xhtml]]";`
+  #content:String =`~ return "[[=content/kh.xhtml]]";`
   ->(parent)south-east-asia
   ->(isCountry)_concept
+  ->(isNeighborOf)la
+  ->(isNeighborOf)th
+  ->(isNeighborOf)vn
 }
 la {
   ->(extends)_concept
-	title `Lao People's Democratic Republic`
+  title `Lao People's Democratic Republic`
   name `la`
-	#content:String =`~ return "[[=content/la.xhtml]]";`
+  #content:String =`~ return "[[=content/la.xhtml]]";`
   ->(parent)south-east-asia
   ->(isCountry)_concept
+  ->(isNeighborOf)kh
+  ->(isNeighborOf)cn
+  ->(isNeighborOf)mm
+  ->(isNeighborOf)th
+  ->(isNeighborOf)vn
 }
 mm {
   ->(extends)_concept
-	title `Myanmar`
+  title `Myanmar`
   name `mm`
-	#content:String =`~ return "[[=content/mm.xhtml]]";`
+  #content:String =`~ return "[[=content/mm.xhtml]]";`
   ->(parent)south-east-asia
   ->(isCountry)_concept
+  ->(isNeighborOf)bd
+  ->(isNeighborOf)cn
+  ->(isNeighborOf)in
+  ->(isNeighborOf)la
+  ->(isNeighborOf)th
 }
 my {
   ->(extends)_concept
-	title `Malaysia`
+  title `Malaysia`
   name `my`
-	#content:String =`~ return "[[=content/my.xhtml]]";`
+  #content:String =`~ return "[[=content/my.xhtml]]";`
   ->(parent)south-east-asia
   ->(isCountry)_concept
+  ->(isNeighborOf)bn
+  ->(isNeighborOf)id
+  ->(isNeighborOf)th
 }
 ph {
   ->(extends)_concept
-	title `Philippines`
+  title `Philippines`
   name `ph`
-	#content:String =`~ return "[[=content/ph.xhtml]]";`
+  #content:String =`~ return "[[=content/ph.xhtml]]";`
   ->(parent)south-east-asia
   ->(isCountry)_concept
 }
 sg {
   ->(extends)_concept
-	title `Singapore`
+  title `Singapore`
   name `sg`
-	#content:String =`~ return "[[=content/sg.xhtml]]";`
+  #content:String =`~ return "[[=content/sg.xhtml]]";`
   ->(parent)south-east-asia
   ->(isCountry)_concept
 }
 th {
   ->(extends)_concept
-	title `Thailand`
+  title `Thailand`
   name `th`
-	#content:String =`~ return "[[=content/th.xhtml]]";`
+  #content:String =`~ return "[[=content/th.xhtml]]";`
   ->(parent)south-east-asia
   ->(isCountry)_concept
+  ->(isNeighborOf)kh
+  ->(isNeighborOf)la
+  ->(isNeighborOf)my
+  ->(isNeighborOf)mm
 }
 tl {
   ->(extends)_concept
-	title `Timor-Leste`
+  title `Timor-Leste`
   name `tl`
-	#content:String =`~ return "[[=content/tl.xhtml]]";`
+  #content:String =`~ return "[[=content/tl.xhtml]]";`
   ->(parent)south-east-asia
   ->(isCountry)_concept
+  ->(isNeighborOf)id
 }
 vn {
   ->(extends)_concept
-	title `Viet Nam`
+  title `Viet Nam`
   name `vn`
-	#content:String =`~ return "[[=content/vn.xhtml]]";`
+  #content:String =`~ return "[[=content/vn.xhtml]]";`
   ->(parent)south-east-asia
   ->(isCountry)_concept
+  ->(isNeighborOf)kh
+  ->(isNeighborOf)cn
+  ->(isNeighborOf)la
 }
 western-asia {
   ->(extends)_concept
-	title `Western Asia`
+  title `Western Asia`
   name `western-asia`
-	#content:String =`~ return "[[=content/western_asia.xhtml]]";`
+  #content:String =`~ return "[[=content/western_asia.xhtml]]";`
   ->(parent)asia
 }
 ae {
   ->(extends)_concept
-	title `United Arab Emirates`
+  title `United Arab Emirates`
   name `ae`
-	#content:String =`~ return "[[=content/ae.xhtml]]";`
+  #content:String =`~ return "[[=content/ae.xhtml]]";`
   ->(parent)western-asia
   ->(isCountry)_concept
+  ->(isNeighborOf)om
+  ->(isNeighborOf)sa
 }
 am {
   ->(extends)_concept
-	title `Armenia`
+  title `Armenia`
   name `am`
-	#content:String =`~ return "[[=content/am.xhtml]]";`
+  #content:String =`~ return "[[=content/am.xhtml]]";`
   ->(parent)western-asia
   ->(isCountry)_concept
+  ->(isNeighborOf)az
+  ->(isNeighborOf)ge
+  ->(isNeighborOf)ir
+  ->(isNeighborOf)tr
 }
 az {
   ->(extends)_concept
-	title `Azerbaijan`
+  title `Azerbaijan`
   name `az`
-	#content:String =`~ return "[[=content/az.xhtml]]";`
+  #content:String =`~ return "[[=content/az.xhtml]]";`
   ->(parent)western-asia
   ->(isCountry)_concept
+  ->(isNeighborOf)am
+  ->(isNeighborOf)ge
+  ->(isNeighborOf)ir
+  ->(isNeighborOf)ru
+  ->(isNeighborOf)tr
 }
 bh {
   ->(extends)_concept
-	title `Bahrain`
+  title `Bahrain`
   name `bh`
-	#content:String =`~ return "[[=content/bh.xhtml]]";`
+  #content:String =`~ return "[[=content/bh.xhtml]]";`
   ->(parent)western-asia
   ->(isCountry)_concept
 }
 cy {
   ->(extends)_concept
-	title `Cyprus`
+  title `Cyprus`
   name `cy`
-	#content:String =`~ return "[[=content/cy.xhtml]]";`
+  #content:String =`~ return "[[=content/cy.xhtml]]";`
   ->(parent)western-asia
   ->(isCountry)_concept
 }
 ge {
   ->(extends)_concept
-	title `Georgia`
+  title `Georgia`
   name `ge`
-	#content:String =`~ return "[[=content/ge.xhtml]]";`
+  #content:String =`~ return "[[=content/ge.xhtml]]";`
   ->(parent)western-asia
   ->(isCountry)_concept
+  ->(isNeighborOf)am
+  ->(isNeighborOf)az
+  ->(isNeighborOf)ru
+  ->(isNeighborOf)tr
 }
 il {
   ->(extends)_concept
-	title `Israel`
+  title `Israel`
   name `il`
-	#content:String =`~ return "[[=content/il.xhtml]]";`
+  #content:String =`~ return "[[=content/il.xhtml]]";`
   ->(parent)western-asia
   ->(isCountry)_concept
+  ->(isNeighborOf)eg
+  ->(isNeighborOf)jo
+  ->(isNeighborOf)lb
+  ->(isNeighborOf)ps
+  ->(isNeighborOf)sy
 }
 iq {
   ->(extends)_concept
-	title `Iraq`
+  title `Iraq`
   name `iq`
-	#content:String =`~ return "[[=content/iq.xhtml]]";`
+  #content:String =`~ return "[[=content/iq.xhtml]]";`
   ->(parent)western-asia
   ->(isCountry)_concept
+  ->(isNeighborOf)ir
+  ->(isNeighborOf)jo
+  ->(isNeighborOf)kw
+  ->(isNeighborOf)sa
+  ->(isNeighborOf)sy
+  ->(isNeighborOf)tr
 }
 jo {
   ->(extends)_concept
-	title `Jordan`
+  title `Jordan`
   name `jo`
-	#content:String =`~ return "[[=content/jo.xhtml]]";`
+  #content:String =`~ return "[[=content/jo.xhtml]]";`
   ->(parent)western-asia
   ->(isCountry)_concept
+  ->(isNeighborOf)iq
+  ->(isNeighborOf)il
+  ->(isNeighborOf)ps
+  ->(isNeighborOf)sa
+  ->(isNeighborOf)sy
 }
 kw {
   ->(extends)_concept
-	title `Kuwait`
+  title `Kuwait`
   name `kw`
-	#content:String =`~ return "[[=content/kw.xhtml]]";`
+  #content:String =`~ return "[[=content/kw.xhtml]]";`
   ->(parent)western-asia
   ->(isCountry)_concept
+  ->(isNeighborOf)iq
+  ->(isNeighborOf)sa
 }
 lb {
   ->(extends)_concept
-	title `Lebanon`
+  title `Lebanon`
   name `lb`
-	#content:String =`~ return "[[=content/lb.xhtml]]";`
+  #content:String =`~ return "[[=content/lb.xhtml]]";`
   ->(parent)western-asia
   ->(isCountry)_concept
+  ->(isNeighborOf)il
+  ->(isNeighborOf)sy
 }
 om {
   ->(extends)_concept
-	title `Oman`
+  title `Oman`
   name `om`
-	#content:String =`~ return "[[=content/om.xhtml]]";`
+  #content:String =`~ return "[[=content/om.xhtml]]";`
   ->(parent)western-asia
   ->(isCountry)_concept
+  ->(isNeighborOf)sa
+  ->(isNeighborOf)ae
+  ->(isNeighborOf)ye
 }
 ps {
   ->(extends)_concept
-	title `Palestine, State of`
+  title `Palestine, State of`
   name `ps`
-	#content:String =`~ return "[[=content/ps.xhtml]]";`
+  #content:String =`~ return "[[=content/ps.xhtml]]";`
   ->(parent)western-asia
   ->(isCountry)_concept
+  ->(isNeighborOf)eg
+  ->(isNeighborOf)il
+  ->(isNeighborOf)jo
 }
 qa {
   ->(extends)_concept
-	title `Qatar`
+  title `Qatar`
   name `qa`
-	#content:String =`~ return "[[=content/qa.xhtml]]";`
+  #content:String =`~ return "[[=content/qa.xhtml]]";`
   ->(parent)western-asia
   ->(isCountry)_concept
+  ->(isNeighborOf)sa
 }
 sa {
   ->(extends)_concept
-	title `Saudi Arabia`
+  title `Saudi Arabia`
   name `sa`
-	#content:String =`~ return "[[=content/sa.xhtml]]";`
+  #content:String =`~ return "[[=content/sa.xhtml]]";`
   ->(parent)western-asia
   ->(isCountry)_concept
+  ->(isNeighborOf)iq
+  ->(isNeighborOf)jo
+  ->(isNeighborOf)kw
+  ->(isNeighborOf)om
+  ->(isNeighborOf)qa
+  ->(isNeighborOf)ae
+  ->(isNeighborOf)ye
 }
 sy {
   ->(extends)_concept
-	title `Syrian Arab Republic`
+  title `Syrian Arab Republic`
   name `sy`
-	#content:String =`~ return "[[=content/sy.xhtml]]";`
+  #content:String =`~ return "[[=content/sy.xhtml]]";`
   ->(parent)western-asia
   ->(isCountry)_concept
+  ->(isNeighborOf)iq
+  ->(isNeighborOf)il
+  ->(isNeighborOf)jo
+  ->(isNeighborOf)lb
+  ->(isNeighborOf)tr
 }
 tr {
   ->(extends)_concept
-	title `Turkey`
+  title `Turkey`
   name `tr`
-	#content:String =`~ return "[[=content/tr.xhtml]]";`
+  #content:String =`~ return "[[=content/tr.xhtml]]";`
   ->(parent)western-asia
   ->(isCountry)_concept
+  ->(isNeighborOf)am
+  ->(isNeighborOf)az
+  ->(isNeighborOf)bg
+  ->(isNeighborOf)ge
+  ->(isNeighborOf)gr
+  ->(isNeighborOf)ir
+  ->(isNeighborOf)iq
+  ->(isNeighborOf)sy
 }
 ye {
   ->(extends)_concept
-	title `Yemen`
+  title `Yemen`
   name `ye`
-	#content:String =`~ return "[[=content/ye.xhtml]]";`
+  #content:String =`~ return "[[=content/ye.xhtml]]";`
   ->(parent)western-asia
   ->(isCountry)_concept
+  ->(isNeighborOf)om
+  ->(isNeighborOf)sa
 }
 oceania {
   ->(extends)_concept
-	title `Oceania`
+  title `Oceania`
   name `oceania`
-	#content:String =`~ return "[[=content/oceania.xhtml]]";`
+  #content:String =`~ return "[[=content/oceania.xhtml]]";`
   ->(parent)earth
 }
 australia-and-new-zealand {
   ->(extends)_concept
-	title `Australia and New Zealand`
+  title `Australia and New Zealand`
   name `australia-and-new-zealand`
-	#content:String =`~ return "[[=content/australia_and_new_zealand.xhtml]]";`
+  #content:String =`~ return "[[=content/australia_and_new_zealand.xhtml]]";`
   ->(parent)oceania
 }
 au {
   ->(extends)_concept
-	title `Australia`
+  title `Australia`
   name `au`
-	#content:String =`~ return "[[=content/au.xhtml]]";`
+  #content:String =`~ return "[[=content/au.xhtml]]";`
   ->(parent)australia-and-new-zealand
   ->(isCountry)_concept
 }
 nf {
   ->(extends)_concept
-	title `Norfolk Island`
+  title `Norfolk Island`
   name `nf`
-	#content:String =`~ return "[[=content/nf.xhtml]]";`
+  #content:String =`~ return "[[=content/nf.xhtml]]";`
   ->(parent)australia-and-new-zealand
   ->(isCountry)_concept
 }
 nz {
   ->(extends)_concept
-	title `New Zealand`
+  title `New Zealand`
   name `nz`
-	#content:String =`~ return "[[=content/nz.xhtml]]";`
+  #content:String =`~ return "[[=content/nz.xhtml]]";`
   ->(parent)australia-and-new-zealand
   ->(isCountry)_concept
 }
 melanesia {
   ->(extends)_concept
-	title `Melanesia`
+  title `Melanesia`
   name `melanesia`
-	#content:String =`~ return "[[=content/melanesia.xhtml]]";`
+  #content:String =`~ return "[[=content/melanesia.xhtml]]";`
   ->(parent)oceania
 }
 fj {
   ->(extends)_concept
-	title `Fiji`
+  title `Fiji`
   name `fj`
-	#content:String =`~ return "[[=content/fj.xhtml]]";`
+  #content:String =`~ return "[[=content/fj.xhtml]]";`
   ->(parent)melanesia
   ->(isCountry)_concept
 }
 nc {
   ->(extends)_concept
-	title `New Caledonia`
+  title `New Caledonia`
   name `nc`
-	#content:String =`~ return "[[=content/nc.xhtml]]";`
+  #content:String =`~ return "[[=content/nc.xhtml]]";`
   ->(parent)melanesia
   ->(isCountry)_concept
 }
 pg {
   ->(extends)_concept
-	title `Papua New Guinea`
+  title `Papua New Guinea`
   name `pg`
-	#content:String =`~ return "[[=content/pg.xhtml]]";`
+  #content:String =`~ return "[[=content/pg.xhtml]]";`
   ->(parent)melanesia
   ->(isCountry)_concept
+  ->(isNeighborOf)id
 }
 sb {
   ->(extends)_concept
-	title `Solomon Islands`
+  title `Solomon Islands`
   name `sb`
-	#content:String =`~ return "[[=content/sb.xhtml]]";`
+  #content:String =`~ return "[[=content/sb.xhtml]]";`
   ->(parent)melanesia
   ->(isCountry)_concept
 }
 vu {
   ->(extends)_concept
-	title `Vanuatu`
+  title `Vanuatu`
   name `vu`
-	#content:String =`~ return "[[=content/vu.xhtml]]";`
+  #content:String =`~ return "[[=content/vu.xhtml]]";`
   ->(parent)melanesia
   ->(isCountry)_concept
 }
 micronesia {
   ->(extends)_concept
-	title `Micronesia`
+  title `Micronesia`
   name `micronesia`
-	#content:String =`~ return "[[=content/micronesia.xhtml]]";`
+  #content:String =`~ return "[[=content/micronesia.xhtml]]";`
   ->(parent)oceania
 }
 fm {
   ->(extends)_concept
-	title `Micronesia, Federated States of`
+  title `Micronesia, Federated States of`
   name `fm`
-	#content:String =`~ return "[[=content/fm.xhtml]]";`
+  #content:String =`~ return "[[=content/fm.xhtml]]";`
   ->(parent)micronesia
   ->(isCountry)_concept
 }
 gu {
   ->(extends)_concept
-	title `Guam`
+  title `Guam`
   name `gu`
-	#content:String =`~ return "[[=content/gu.xhtml]]";`
+  #content:String =`~ return "[[=content/gu.xhtml]]";`
   ->(parent)micronesia
   ->(isCountry)_concept
 }
 ki {
   ->(extends)_concept
-	title `Kiribati`
+  title `Kiribati`
   name `ki`
-	#content:String =`~ return "[[=content/ki.xhtml]]";`
+  #content:String =`~ return "[[=content/ki.xhtml]]";`
   ->(parent)micronesia
   ->(isCountry)_concept
 }
 mh {
   ->(extends)_concept
-	title `Marshall Islands`
+  title `Marshall Islands`
   name `mh`
-	#content:String =`~ return "[[=content/mh.xhtml]]";`
+  #content:String =`~ return "[[=content/mh.xhtml]]";`
   ->(parent)micronesia
   ->(isCountry)_concept
 }
 mp {
   ->(extends)_concept
-	title `Northern Mariana Islands`
+  title `Northern Mariana Islands`
   name `mp`
-	#content:String =`~ return "[[=content/mp.xhtml]]";`
+  #content:String =`~ return "[[=content/mp.xhtml]]";`
   ->(parent)micronesia
   ->(isCountry)_concept
 }
 nr {
   ->(extends)_concept
-	title `Nauru`
+  title `Nauru`
   name `nr`
-	#content:String =`~ return "[[=content/nr.xhtml]]";`
+  #content:String =`~ return "[[=content/nr.xhtml]]";`
   ->(parent)micronesia
   ->(isCountry)_concept
 }
 pw {
   ->(extends)_concept
-	title `Palau`
+  title `Palau`
   name `pw`
-	#content:String =`~ return "[[=content/pw.xhtml]]";`
+  #content:String =`~ return "[[=content/pw.xhtml]]";`
   ->(parent)micronesia
   ->(isCountry)_concept
 }
 polynesia {
   ->(extends)_concept
-	title `Polynesia`
+  title `Polynesia`
   name `polynesia`
-	#content:String =`~ return "[[=content/polynesia.xhtml]]";`
+  #content:String =`~ return "[[=content/polynesia.xhtml]]";`
   ->(parent)oceania
 }
 as {
   ->(extends)_concept
-	title `American Samoa`
+  title `American Samoa`
   name `as`
-	#content:String =`~ return "[[=content/as.xhtml]]";`
+  #content:String =`~ return "[[=content/as.xhtml]]";`
   ->(parent)polynesia
   ->(isCountry)_concept
 }
 ck {
   ->(extends)_concept
-	title `Cook Islands`
+  title `Cook Islands`
   name `ck`
-	#content:String =`~ return "[[=content/ck.xhtml]]";`
+  #content:String =`~ return "[[=content/ck.xhtml]]";`
   ->(parent)polynesia
   ->(isCountry)_concept
 }
 nu {
   ->(extends)_concept
-	title `Niue`
+  title `Niue`
   name `nu`
-	#content:String =`~ return "[[=content/nu.xhtml]]";`
+  #content:String =`~ return "[[=content/nu.xhtml]]";`
   ->(parent)polynesia
   ->(isCountry)_concept
 }
 pf {
   ->(extends)_concept
-	title `French Polynesia`
+  title `French Polynesia`
   name `pf`
-	#content:String =`~ return "[[=content/pf.xhtml]]";`
+  #content:String =`~ return "[[=content/pf.xhtml]]";`
   ->(parent)polynesia
   ->(isCountry)_concept
 }
 pn {
   ->(extends)_concept
-	title `Pitcairn`
+  title `Pitcairn`
   name `pn`
-	#content:String =`~ return "[[=content/pn.xhtml]]";`
+  #content:String =`~ return "[[=content/pn.xhtml]]";`
   ->(parent)polynesia
   ->(isCountry)_concept
 }
 tk {
   ->(extends)_concept
-	title `Tokelau`
+  title `Tokelau`
   name `tk`
-	#content:String =`~ return "[[=content/tk.xhtml]]";`
+  #content:String =`~ return "[[=content/tk.xhtml]]";`
   ->(parent)polynesia
   ->(isCountry)_concept
 }
 to {
   ->(extends)_concept
-	title `Tonga`
+  title `Tonga`
   name `to`
-	#content:String =`~ return "[[=content/to.xhtml]]";`
+  #content:String =`~ return "[[=content/to.xhtml]]";`
   ->(parent)polynesia
   ->(isCountry)_concept
 }
 tv {
   ->(extends)_concept
-	title `Tuvalu`
+  title `Tuvalu`
   name `tv`
-	#content:String =`~ return "[[=content/tv.xhtml]]";`
+  #content:String =`~ return "[[=content/tv.xhtml]]";`
   ->(parent)polynesia
   ->(isCountry)_concept
 }
 wf {
   ->(extends)_concept
-	title `Wallis and Futuna`
+  title `Wallis and Futuna`
   name `wf`
-	#content:String =`~ return "[[=content/wf.xhtml]]";`
+  #content:String =`~ return "[[=content/wf.xhtml]]";`
   ->(parent)polynesia
   ->(isCountry)_concept
 }
 ws {
   ->(extends)_concept
-	title `Samoa`
+  title `Samoa`
   name `ws`
-	#content:String =`~ return "[[=content/ws.xhtml]]";`
+  #content:String =`~ return "[[=content/ws.xhtml]]";`
   ->(parent)polynesia
   ->(isCountry)_concept
 }

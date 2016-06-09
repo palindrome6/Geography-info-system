@@ -24,14 +24,17 @@ _personal {
 {{#concepts}}
 {{name}} {
   ->(extends)_concept
-	title `{{title}}`
+  title `{{title}}`
   name `{{name}}`
-	#content:String =`~ return "[[=content/{{filename}}.xhtml]]";`
+  #content:String =`~ return "[[=content/{{filename}}.xhtml]]";`
   {{#parent}}
   ->(parent){{parent}}
   {{/parent}}
   {{#country}}
   ->(isCountry)_concept
   {{/country}}
+  {{#neighbors}}
+  ->(isNeighborOf){{.}}
+  {{/neighbors}}
 }
 {{/concepts}}
