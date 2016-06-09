@@ -114,7 +114,6 @@ sd {
   ->(isNeighborOf)er
   ->(isNeighborOf)et
   ->(isNeighborOf)ly
-  ->(isNeighborOf)ss
 }
 tn {
   ->(extends)_concept
@@ -362,7 +361,6 @@ cd {
   ->(isNeighborOf)cf
   ->(isNeighborOf)cg
   ->(isNeighborOf)rw
-  ->(isNeighborOf)ss
   ->(isNeighborOf)tz
   ->(isNeighborOf)ug
   ->(isNeighborOf)zm
@@ -378,7 +376,6 @@ cf {
   ->(isNeighborOf)td
   ->(isNeighborOf)cg
   ->(isNeighborOf)cd
-  ->(isNeighborOf)ss
   ->(isNeighborOf)sd
 }
 cg {
@@ -502,7 +499,6 @@ et {
   ->(isNeighborOf)er
   ->(isNeighborOf)ke
   ->(isNeighborOf)so
-  ->(isNeighborOf)ss
   ->(isNeighborOf)sd
 }
 ke {
@@ -514,7 +510,6 @@ ke {
   ->(isCountry)_concept
   ->(isNeighborOf)et
   ->(isNeighborOf)so
-  ->(isNeighborOf)ss
   ->(isNeighborOf)tz
   ->(isNeighborOf)ug
 }
@@ -632,7 +627,6 @@ ug {
   ->(isNeighborOf)cd
   ->(isNeighborOf)ke
   ->(isNeighborOf)rw
-  ->(isNeighborOf)ss
   ->(isNeighborOf)tz
 }
 yt {
@@ -1190,7 +1184,6 @@ al {
   ->(parent)southern-europe
   ->(isCountry)_concept
   ->(isNeighborOf)gr
-  ->(isNeighborOf)xk
   ->(isNeighborOf)mk
   ->(isNeighborOf)me
   ->(isNeighborOf)rs
@@ -1277,7 +1270,6 @@ me {
   ->(isNeighborOf)al
   ->(isNeighborOf)ba
   ->(isNeighborOf)hr
-  ->(isNeighborOf)xk
   ->(isNeighborOf)rs
 }
 mk {
@@ -1290,7 +1282,6 @@ mk {
   ->(isNeighborOf)al
   ->(isNeighborOf)bg
   ->(isNeighborOf)gr
-  ->(isNeighborOf)xk
   ->(isNeighborOf)rs
 }
 mt {
@@ -1313,7 +1304,6 @@ rs {
   ->(isNeighborOf)bg
   ->(isNeighborOf)hr
   ->(isNeighborOf)hu
-  ->(isNeighborOf)xk
   ->(isNeighborOf)mk
   ->(isNeighborOf)me
   ->(isNeighborOf)ro
@@ -1560,7 +1550,6 @@ mf {
   #content:String =`~ return "[[=content/mf.xhtml]]";`
   ->(parent)caribbean
   ->(isCountry)_concept
-  ->(isNeighborOf)sx
 }
 mq {
   ->(extends)_concept

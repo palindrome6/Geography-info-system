@@ -10,7 +10,7 @@ def get_country_title_by_code(code):
 	return pycountry.countries.get(alpha2=code).name.encode('ascii', 'ignore').decode('ascii')
 
 def get_neighbors(code):
-	return [slugify(neighbor) for neighbor in neighbor_data[code]]
+	return [slugify(neighbor) for neighbor in neighbor_data[code] if neighbor in concept_names]
 
 def map_concept(concept, level, parent):
 	country = level is '3'
@@ -29,9 +29,13 @@ with open('countrylist.txt', 'r') as country_file:
 	
 	concepts = []
 	parents = {}
+	
+	raw_concept_data = country_file.read().splitlines()
+	all_concept_data = [data.split(',') for data in raw_concept_data]
+	
+	concept_names = [concept_data[0] for concept_data in all_concept_data]
 
-	for concept_data in country_file.read().splitlines():
-		(concept, level) = concept_data.split(',')
+	for (concept, level) in all_concept_data:
 		parents[level] = concept
 		parent_level = str(int(level) - 1)
 		parent = parents[parent_level] if parent_level in parents else None
