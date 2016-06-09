@@ -1,22 +1,37 @@
 $options { default.properties "event;strict"}
 
-base-concept {
-  
+_concept {
+  #[visited]:Integer
+  #suitability:Boolean =`true`
+  event +`
+    if (!${[[=_personal]]#country}.equals("")) {
+      ${#visited}++;
+    }
+  `
+  #resource =`~
+    if (${[[=_personal]]#country}.equals("")) {
+      return "[[=index.xhtml]]";
+    } else {
+      return "[[=layout.xhtml]]";
+    }
+  `
 }
 
-index {
-  ->(extends)base-concept
-	#resource = `~ return "[[=index.xhtml]]";`
+_personal {
+  #[country]:String ``
 }
 
 {{#concepts}}
 {{name}} {
-  ->(extends)base-concept
+  ->(extends)_concept
 	title `{{title}}`
+  name `{{name}}`
 	#content:String =`~ return "[[=content/{{filename}}.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   {{#parent}}
   ->(parent){{parent}}
   {{/parent}}
+  {{#country}}
+  ->(isCountry)_concept
+  {{/country}}
 }
 {{/concepts}}

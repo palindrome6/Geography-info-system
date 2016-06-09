@@ -1,1589 +1,2106 @@
 $options { default.properties "event;strict"}
 
-index {
-	#resource = `~ return "[[=index.xhtml]]";`
+_concept {
+  #[visited]:Integer
+  #suitability:Boolean =`true`
+  event +`
+    if (!${[[=_personal]]#country}.equals("")) {
+      ${#visited}++;
+    }
+  `
+  #resource =`~
+    if (${[[=_personal]]#country}.equals("")) {
+      return "[[=index.xhtml]]";
+    } else {
+      return "[[=layout.xhtml]]";
+    }
+  `
+}
+
+_personal {
+  #[country]:String ``
 }
 
 earth {
+  ->(extends)_concept
 	title `Earth`
+  name `earth`
 	#content:String =`~ return "[[=content/earth.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
 }
 africa {
+  ->(extends)_concept
 	title `Africa`
+  name `africa`
 	#content:String =`~ return "[[=content/africa.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)earth
 }
 northern-africa {
+  ->(extends)_concept
 	title `Northern Africa`
+  name `northern-africa`
 	#content:String =`~ return "[[=content/northern_africa.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)africa
 }
 dz {
+  ->(extends)_concept
 	title `Algeria`
+  name `dz`
 	#content:String =`~ return "[[=content/dz.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)northern-africa
+  ->(isCountry)_concept
 }
 eg {
+  ->(extends)_concept
 	title `Egypt`
+  name `eg`
 	#content:String =`~ return "[[=content/eg.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)northern-africa
+  ->(isCountry)_concept
 }
 eh {
+  ->(extends)_concept
 	title `Western Sahara`
+  name `eh`
 	#content:String =`~ return "[[=content/eh.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)northern-africa
+  ->(isCountry)_concept
 }
 ly {
+  ->(extends)_concept
 	title `Libya`
+  name `ly`
 	#content:String =`~ return "[[=content/ly.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)northern-africa
+  ->(isCountry)_concept
 }
 ma {
+  ->(extends)_concept
 	title `Morocco`
+  name `ma`
 	#content:String =`~ return "[[=content/ma.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)northern-africa
+  ->(isCountry)_concept
 }
 sd {
+  ->(extends)_concept
 	title `Sudan`
+  name `sd`
 	#content:String =`~ return "[[=content/sd.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)northern-africa
+  ->(isCountry)_concept
 }
 tn {
+  ->(extends)_concept
 	title `Tunisia`
+  name `tn`
 	#content:String =`~ return "[[=content/tn.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)northern-africa
+  ->(isCountry)_concept
 }
 western-africa {
+  ->(extends)_concept
 	title `Western Africa`
+  name `western-africa`
 	#content:String =`~ return "[[=content/western_africa.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)africa
 }
 bf {
+  ->(extends)_concept
 	title `Burkina Faso`
+  name `bf`
 	#content:String =`~ return "[[=content/bf.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)western-africa
+  ->(isCountry)_concept
 }
 bj {
+  ->(extends)_concept
 	title `Benin`
+  name `bj`
 	#content:String =`~ return "[[=content/bj.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)western-africa
+  ->(isCountry)_concept
 }
 ci {
-	title `Cte d&#x27;Ivoire`
+  ->(extends)_concept
+	title `Cte d'Ivoire`
+  name `ci`
 	#content:String =`~ return "[[=content/ci.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)western-africa
+  ->(isCountry)_concept
 }
 cv {
+  ->(extends)_concept
 	title `Cape Verde`
+  name `cv`
 	#content:String =`~ return "[[=content/cv.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)western-africa
+  ->(isCountry)_concept
 }
 gh {
+  ->(extends)_concept
 	title `Ghana`
+  name `gh`
 	#content:String =`~ return "[[=content/gh.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)western-africa
+  ->(isCountry)_concept
 }
 gm {
+  ->(extends)_concept
 	title `Gambia`
+  name `gm`
 	#content:String =`~ return "[[=content/gm.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)western-africa
+  ->(isCountry)_concept
 }
 gn {
+  ->(extends)_concept
 	title `Guinea`
+  name `gn`
 	#content:String =`~ return "[[=content/gn.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)western-africa
+  ->(isCountry)_concept
 }
 gw {
+  ->(extends)_concept
 	title `Guinea-Bissau`
+  name `gw`
 	#content:String =`~ return "[[=content/gw.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)western-africa
+  ->(isCountry)_concept
 }
 lr {
+  ->(extends)_concept
 	title `Liberia`
+  name `lr`
 	#content:String =`~ return "[[=content/lr.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)western-africa
+  ->(isCountry)_concept
 }
 ml {
+  ->(extends)_concept
 	title `Mali`
+  name `ml`
 	#content:String =`~ return "[[=content/ml.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)western-africa
+  ->(isCountry)_concept
 }
 mr {
+  ->(extends)_concept
 	title `Mauritania`
+  name `mr`
 	#content:String =`~ return "[[=content/mr.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)western-africa
+  ->(isCountry)_concept
 }
 ne {
+  ->(extends)_concept
 	title `Niger`
+  name `ne`
 	#content:String =`~ return "[[=content/ne.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)western-africa
+  ->(isCountry)_concept
 }
 ng {
+  ->(extends)_concept
 	title `Nigeria`
+  name `ng`
 	#content:String =`~ return "[[=content/ng.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)western-africa
+  ->(isCountry)_concept
 }
 sh {
+  ->(extends)_concept
 	title `Saint Helena, Ascension and Tristan da Cunha`
+  name `sh`
 	#content:String =`~ return "[[=content/sh.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)western-africa
+  ->(isCountry)_concept
 }
 sl {
+  ->(extends)_concept
 	title `Sierra Leone`
+  name `sl`
 	#content:String =`~ return "[[=content/sl.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)western-africa
+  ->(isCountry)_concept
 }
 sn {
+  ->(extends)_concept
 	title `Senegal`
+  name `sn`
 	#content:String =`~ return "[[=content/sn.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)western-africa
+  ->(isCountry)_concept
 }
 tg {
+  ->(extends)_concept
 	title `Togo`
+  name `tg`
 	#content:String =`~ return "[[=content/tg.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)western-africa
+  ->(isCountry)_concept
 }
 middle-africa {
+  ->(extends)_concept
 	title `Middle Africa`
+  name `middle-africa`
 	#content:String =`~ return "[[=content/middle_africa.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)africa
 }
 ao {
+  ->(extends)_concept
 	title `Angola`
+  name `ao`
 	#content:String =`~ return "[[=content/ao.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)middle-africa
+  ->(isCountry)_concept
 }
 cd {
+  ->(extends)_concept
 	title `Congo, The Democratic Republic of the`
+  name `cd`
 	#content:String =`~ return "[[=content/cd.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)middle-africa
+  ->(isCountry)_concept
 }
 cf {
+  ->(extends)_concept
 	title `Central African Republic`
+  name `cf`
 	#content:String =`~ return "[[=content/cf.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)middle-africa
+  ->(isCountry)_concept
 }
 cg {
+  ->(extends)_concept
 	title `Congo`
+  name `cg`
 	#content:String =`~ return "[[=content/cg.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)middle-africa
+  ->(isCountry)_concept
 }
 cm {
+  ->(extends)_concept
 	title `Cameroon`
+  name `cm`
 	#content:String =`~ return "[[=content/cm.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)middle-africa
+  ->(isCountry)_concept
 }
 ga {
+  ->(extends)_concept
 	title `Gabon`
+  name `ga`
 	#content:String =`~ return "[[=content/ga.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)middle-africa
+  ->(isCountry)_concept
 }
 gq {
+  ->(extends)_concept
 	title `Equatorial Guinea`
+  name `gq`
 	#content:String =`~ return "[[=content/gq.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)middle-africa
+  ->(isCountry)_concept
 }
 st {
+  ->(extends)_concept
 	title `Sao Tome and Principe`
+  name `st`
 	#content:String =`~ return "[[=content/st.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)middle-africa
+  ->(isCountry)_concept
 }
 td {
+  ->(extends)_concept
 	title `Chad`
+  name `td`
 	#content:String =`~ return "[[=content/td.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)middle-africa
+  ->(isCountry)_concept
 }
 eastern-africa {
+  ->(extends)_concept
 	title `Eastern Africa`
+  name `eastern-africa`
 	#content:String =`~ return "[[=content/eastern_africa.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)africa
 }
 bi {
+  ->(extends)_concept
 	title `Burundi`
+  name `bi`
 	#content:String =`~ return "[[=content/bi.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)eastern-africa
+  ->(isCountry)_concept
 }
 dj {
+  ->(extends)_concept
 	title `Djibouti`
+  name `dj`
 	#content:String =`~ return "[[=content/dj.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)eastern-africa
+  ->(isCountry)_concept
 }
 er {
+  ->(extends)_concept
 	title `Eritrea`
+  name `er`
 	#content:String =`~ return "[[=content/er.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)eastern-africa
+  ->(isCountry)_concept
 }
 et {
+  ->(extends)_concept
 	title `Ethiopia`
+  name `et`
 	#content:String =`~ return "[[=content/et.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)eastern-africa
+  ->(isCountry)_concept
 }
 ke {
+  ->(extends)_concept
 	title `Kenya`
+  name `ke`
 	#content:String =`~ return "[[=content/ke.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)eastern-africa
+  ->(isCountry)_concept
 }
 km {
+  ->(extends)_concept
 	title `Comoros`
+  name `km`
 	#content:String =`~ return "[[=content/km.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)eastern-africa
+  ->(isCountry)_concept
 }
 mg {
+  ->(extends)_concept
 	title `Madagascar`
+  name `mg`
 	#content:String =`~ return "[[=content/mg.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)eastern-africa
+  ->(isCountry)_concept
 }
 mu {
+  ->(extends)_concept
 	title `Mauritius`
+  name `mu`
 	#content:String =`~ return "[[=content/mu.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)eastern-africa
+  ->(isCountry)_concept
 }
 mw {
+  ->(extends)_concept
 	title `Malawi`
+  name `mw`
 	#content:String =`~ return "[[=content/mw.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)eastern-africa
+  ->(isCountry)_concept
 }
 mz {
+  ->(extends)_concept
 	title `Mozambique`
+  name `mz`
 	#content:String =`~ return "[[=content/mz.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)eastern-africa
+  ->(isCountry)_concept
 }
 re {
+  ->(extends)_concept
 	title `Runion`
+  name `re`
 	#content:String =`~ return "[[=content/re.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)eastern-africa
+  ->(isCountry)_concept
 }
 rw {
+  ->(extends)_concept
 	title `Rwanda`
+  name `rw`
 	#content:String =`~ return "[[=content/rw.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)eastern-africa
+  ->(isCountry)_concept
 }
 sc {
+  ->(extends)_concept
 	title `Seychelles`
+  name `sc`
 	#content:String =`~ return "[[=content/sc.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)eastern-africa
+  ->(isCountry)_concept
 }
 so {
+  ->(extends)_concept
 	title `Somalia`
+  name `so`
 	#content:String =`~ return "[[=content/so.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)eastern-africa
+  ->(isCountry)_concept
 }
 tz {
+  ->(extends)_concept
 	title `Tanzania, United Republic of`
+  name `tz`
 	#content:String =`~ return "[[=content/tz.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)eastern-africa
+  ->(isCountry)_concept
 }
 ug {
+  ->(extends)_concept
 	title `Uganda`
+  name `ug`
 	#content:String =`~ return "[[=content/ug.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)eastern-africa
+  ->(isCountry)_concept
 }
 yt {
+  ->(extends)_concept
 	title `Mayotte`
+  name `yt`
 	#content:String =`~ return "[[=content/yt.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)eastern-africa
+  ->(isCountry)_concept
 }
 zm {
+  ->(extends)_concept
 	title `Zambia`
+  name `zm`
 	#content:String =`~ return "[[=content/zm.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)eastern-africa
+  ->(isCountry)_concept
 }
 zw {
+  ->(extends)_concept
 	title `Zimbabwe`
+  name `zw`
 	#content:String =`~ return "[[=content/zw.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)eastern-africa
+  ->(isCountry)_concept
 }
 southern-africa {
+  ->(extends)_concept
 	title `Southern Africa`
+  name `southern-africa`
 	#content:String =`~ return "[[=content/southern_africa.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)africa
 }
 bw {
+  ->(extends)_concept
 	title `Botswana`
+  name `bw`
 	#content:String =`~ return "[[=content/bw.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)southern-africa
+  ->(isCountry)_concept
 }
 ls {
+  ->(extends)_concept
 	title `Lesotho`
+  name `ls`
 	#content:String =`~ return "[[=content/ls.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)southern-africa
+  ->(isCountry)_concept
 }
 na {
+  ->(extends)_concept
 	title `Namibia`
+  name `na`
 	#content:String =`~ return "[[=content/na.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)southern-africa
+  ->(isCountry)_concept
 }
 sz {
+  ->(extends)_concept
 	title `Swaziland`
+  name `sz`
 	#content:String =`~ return "[[=content/sz.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)southern-africa
+  ->(isCountry)_concept
 }
 za {
+  ->(extends)_concept
 	title `South Africa`
+  name `za`
 	#content:String =`~ return "[[=content/za.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)southern-africa
+  ->(isCountry)_concept
 }
 europe {
+  ->(extends)_concept
 	title `Europe`
+  name `europe`
 	#content:String =`~ return "[[=content/europe.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)earth
 }
 northern-europe {
+  ->(extends)_concept
 	title `Northern Europe`
+  name `northern-europe`
 	#content:String =`~ return "[[=content/northern_europe.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)europe
 }
 gg {
+  ->(extends)_concept
 	title `Guernsey`
+  name `gg`
 	#content:String =`~ return "[[=content/gg.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)northern-europe
+  ->(isCountry)_concept
 }
 je {
+  ->(extends)_concept
 	title `Jersey`
+  name `je`
 	#content:String =`~ return "[[=content/je.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)northern-europe
+  ->(isCountry)_concept
 }
 ax {
+  ->(extends)_concept
 	title `land Islands`
+  name `ax`
 	#content:String =`~ return "[[=content/ax.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)northern-europe
+  ->(isCountry)_concept
 }
 dk {
+  ->(extends)_concept
 	title `Denmark`
+  name `dk`
 	#content:String =`~ return "[[=content/dk.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)northern-europe
+  ->(isCountry)_concept
 }
 ee {
+  ->(extends)_concept
 	title `Estonia`
+  name `ee`
 	#content:String =`~ return "[[=content/ee.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)northern-europe
+  ->(isCountry)_concept
 }
 fi {
+  ->(extends)_concept
 	title `Finland`
+  name `fi`
 	#content:String =`~ return "[[=content/fi.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)northern-europe
+  ->(isCountry)_concept
 }
 fo {
+  ->(extends)_concept
 	title `Faroe Islands`
+  name `fo`
 	#content:String =`~ return "[[=content/fo.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)northern-europe
+  ->(isCountry)_concept
 }
 gb {
+  ->(extends)_concept
 	title `United Kingdom`
+  name `gb`
 	#content:String =`~ return "[[=content/gb.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)northern-europe
+  ->(isCountry)_concept
 }
 ie {
+  ->(extends)_concept
 	title `Ireland`
+  name `ie`
 	#content:String =`~ return "[[=content/ie.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)northern-europe
+  ->(isCountry)_concept
 }
 im {
+  ->(extends)_concept
 	title `Isle of Man`
+  name `im`
 	#content:String =`~ return "[[=content/im.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)northern-europe
+  ->(isCountry)_concept
 }
 is {
+  ->(extends)_concept
 	title `Iceland`
+  name `is`
 	#content:String =`~ return "[[=content/is.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)northern-europe
+  ->(isCountry)_concept
 }
 lt {
+  ->(extends)_concept
 	title `Lithuania`
+  name `lt`
 	#content:String =`~ return "[[=content/lt.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)northern-europe
+  ->(isCountry)_concept
 }
 lv {
+  ->(extends)_concept
 	title `Latvia`
+  name `lv`
 	#content:String =`~ return "[[=content/lv.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)northern-europe
+  ->(isCountry)_concept
 }
 no {
+  ->(extends)_concept
 	title `Norway`
+  name `no`
 	#content:String =`~ return "[[=content/no.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)northern-europe
+  ->(isCountry)_concept
 }
 se {
+  ->(extends)_concept
 	title `Sweden`
+  name `se`
 	#content:String =`~ return "[[=content/se.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)northern-europe
+  ->(isCountry)_concept
 }
 sj {
+  ->(extends)_concept
 	title `Svalbard and Jan Mayen`
+  name `sj`
 	#content:String =`~ return "[[=content/sj.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)northern-europe
+  ->(isCountry)_concept
 }
 western-europe {
+  ->(extends)_concept
 	title `Western Europe`
+  name `western-europe`
 	#content:String =`~ return "[[=content/western_europe.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)europe
 }
 at {
+  ->(extends)_concept
 	title `Austria`
+  name `at`
 	#content:String =`~ return "[[=content/at.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)western-europe
+  ->(isCountry)_concept
 }
 be {
+  ->(extends)_concept
 	title `Belgium`
+  name `be`
 	#content:String =`~ return "[[=content/be.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)western-europe
+  ->(isCountry)_concept
 }
 ch {
+  ->(extends)_concept
 	title `Switzerland`
+  name `ch`
 	#content:String =`~ return "[[=content/ch.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)western-europe
+  ->(isCountry)_concept
 }
 de {
+  ->(extends)_concept
 	title `Germany`
+  name `de`
 	#content:String =`~ return "[[=content/de.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)western-europe
+  ->(isCountry)_concept
 }
 fr {
+  ->(extends)_concept
 	title `France`
+  name `fr`
 	#content:String =`~ return "[[=content/fr.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)western-europe
+  ->(isCountry)_concept
 }
 li {
+  ->(extends)_concept
 	title `Liechtenstein`
+  name `li`
 	#content:String =`~ return "[[=content/li.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)western-europe
+  ->(isCountry)_concept
 }
 lu {
+  ->(extends)_concept
 	title `Luxembourg`
+  name `lu`
 	#content:String =`~ return "[[=content/lu.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)western-europe
+  ->(isCountry)_concept
 }
 mc {
+  ->(extends)_concept
 	title `Monaco`
+  name `mc`
 	#content:String =`~ return "[[=content/mc.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)western-europe
+  ->(isCountry)_concept
 }
 nl {
+  ->(extends)_concept
 	title `Netherlands`
+  name `nl`
 	#content:String =`~ return "[[=content/nl.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)western-europe
+  ->(isCountry)_concept
 }
 eastern-europe {
+  ->(extends)_concept
 	title `Eastern Europe`
+  name `eastern-europe`
 	#content:String =`~ return "[[=content/eastern_europe.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)europe
 }
 bg {
+  ->(extends)_concept
 	title `Bulgaria`
+  name `bg`
 	#content:String =`~ return "[[=content/bg.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)eastern-europe
+  ->(isCountry)_concept
 }
 by {
+  ->(extends)_concept
 	title `Belarus`
+  name `by`
 	#content:String =`~ return "[[=content/by.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)eastern-europe
+  ->(isCountry)_concept
 }
 cz {
+  ->(extends)_concept
 	title `Czech Republic`
+  name `cz`
 	#content:String =`~ return "[[=content/cz.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)eastern-europe
+  ->(isCountry)_concept
 }
 hu {
+  ->(extends)_concept
 	title `Hungary`
+  name `hu`
 	#content:String =`~ return "[[=content/hu.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)eastern-europe
+  ->(isCountry)_concept
 }
 md {
+  ->(extends)_concept
 	title `Moldova, Republic of`
+  name `md`
 	#content:String =`~ return "[[=content/md.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)eastern-europe
+  ->(isCountry)_concept
 }
 pl {
+  ->(extends)_concept
 	title `Poland`
+  name `pl`
 	#content:String =`~ return "[[=content/pl.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)eastern-europe
+  ->(isCountry)_concept
 }
 ro {
+  ->(extends)_concept
 	title `Romania`
+  name `ro`
 	#content:String =`~ return "[[=content/ro.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)eastern-europe
+  ->(isCountry)_concept
 }
 ru {
+  ->(extends)_concept
 	title `Russian Federation`
+  name `ru`
 	#content:String =`~ return "[[=content/ru.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)eastern-europe
+  ->(isCountry)_concept
 }
 sk {
+  ->(extends)_concept
 	title `Slovakia`
+  name `sk`
 	#content:String =`~ return "[[=content/sk.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)eastern-europe
+  ->(isCountry)_concept
 }
 ua {
+  ->(extends)_concept
 	title `Ukraine`
+  name `ua`
 	#content:String =`~ return "[[=content/ua.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)eastern-europe
+  ->(isCountry)_concept
 }
 southern-europe {
+  ->(extends)_concept
 	title `Southern Europe`
+  name `southern-europe`
 	#content:String =`~ return "[[=content/southern_europe.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)europe
 }
 ad {
+  ->(extends)_concept
 	title `Andorra`
+  name `ad`
 	#content:String =`~ return "[[=content/ad.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)southern-europe
+  ->(isCountry)_concept
 }
 al {
+  ->(extends)_concept
 	title `Albania`
+  name `al`
 	#content:String =`~ return "[[=content/al.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)southern-europe
+  ->(isCountry)_concept
 }
 ba {
+  ->(extends)_concept
 	title `Bosnia and Herzegovina`
+  name `ba`
 	#content:String =`~ return "[[=content/ba.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)southern-europe
+  ->(isCountry)_concept
 }
 es {
+  ->(extends)_concept
 	title `Spain`
+  name `es`
 	#content:String =`~ return "[[=content/es.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)southern-europe
+  ->(isCountry)_concept
 }
 gi {
+  ->(extends)_concept
 	title `Gibraltar`
+  name `gi`
 	#content:String =`~ return "[[=content/gi.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)southern-europe
+  ->(isCountry)_concept
 }
 gr {
+  ->(extends)_concept
 	title `Greece`
+  name `gr`
 	#content:String =`~ return "[[=content/gr.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)southern-europe
+  ->(isCountry)_concept
 }
 hr {
+  ->(extends)_concept
 	title `Croatia`
+  name `hr`
 	#content:String =`~ return "[[=content/hr.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)southern-europe
+  ->(isCountry)_concept
 }
 it {
+  ->(extends)_concept
 	title `Italy`
+  name `it`
 	#content:String =`~ return "[[=content/it.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)southern-europe
+  ->(isCountry)_concept
 }
 me {
+  ->(extends)_concept
 	title `Montenegro`
+  name `me`
 	#content:String =`~ return "[[=content/me.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)southern-europe
+  ->(isCountry)_concept
 }
 mk {
+  ->(extends)_concept
 	title `Macedonia, Republic of`
+  name `mk`
 	#content:String =`~ return "[[=content/mk.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)southern-europe
+  ->(isCountry)_concept
 }
 mt {
+  ->(extends)_concept
 	title `Malta`
+  name `mt`
 	#content:String =`~ return "[[=content/mt.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)southern-europe
+  ->(isCountry)_concept
 }
 rs {
+  ->(extends)_concept
 	title `Serbia`
+  name `rs`
 	#content:String =`~ return "[[=content/rs.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)southern-europe
+  ->(isCountry)_concept
 }
 pt {
+  ->(extends)_concept
 	title `Portugal`
+  name `pt`
 	#content:String =`~ return "[[=content/pt.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)southern-europe
+  ->(isCountry)_concept
 }
 si {
+  ->(extends)_concept
 	title `Slovenia`
+  name `si`
 	#content:String =`~ return "[[=content/si.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)southern-europe
+  ->(isCountry)_concept
 }
 sm {
+  ->(extends)_concept
 	title `San Marino`
+  name `sm`
 	#content:String =`~ return "[[=content/sm.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)southern-europe
+  ->(isCountry)_concept
 }
 va {
+  ->(extends)_concept
 	title `Holy See (Vatican City State)`
+  name `va`
 	#content:String =`~ return "[[=content/va.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)southern-europe
+  ->(isCountry)_concept
 }
 americas {
+  ->(extends)_concept
 	title `Americas`
+  name `americas`
 	#content:String =`~ return "[[=content/americas.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)earth
 }
 northern-america {
+  ->(extends)_concept
 	title `Northern America`
+  name `northern-america`
 	#content:String =`~ return "[[=content/northern_america.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)americas
 }
 bm {
+  ->(extends)_concept
 	title `Bermuda`
+  name `bm`
 	#content:String =`~ return "[[=content/bm.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)northern-america
+  ->(isCountry)_concept
 }
 ca {
+  ->(extends)_concept
 	title `Canada`
+  name `ca`
 	#content:String =`~ return "[[=content/ca.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)northern-america
+  ->(isCountry)_concept
 }
 gl {
+  ->(extends)_concept
 	title `Greenland`
+  name `gl`
 	#content:String =`~ return "[[=content/gl.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)northern-america
+  ->(isCountry)_concept
 }
 pm {
+  ->(extends)_concept
 	title `Saint Pierre and Miquelon`
+  name `pm`
 	#content:String =`~ return "[[=content/pm.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)northern-america
+  ->(isCountry)_concept
 }
 us {
+  ->(extends)_concept
 	title `United States`
+  name `us`
 	#content:String =`~ return "[[=content/us.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)northern-america
+  ->(isCountry)_concept
 }
 caribbean {
+  ->(extends)_concept
 	title `Caribbean`
+  name `caribbean`
 	#content:String =`~ return "[[=content/caribbean.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)americas
 }
 ag {
+  ->(extends)_concept
 	title `Antigua and Barbuda`
+  name `ag`
 	#content:String =`~ return "[[=content/ag.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)caribbean
+  ->(isCountry)_concept
 }
 ai {
+  ->(extends)_concept
 	title `Anguilla`
+  name `ai`
 	#content:String =`~ return "[[=content/ai.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)caribbean
+  ->(isCountry)_concept
 }
 aw {
+  ->(extends)_concept
 	title `Aruba`
+  name `aw`
 	#content:String =`~ return "[[=content/aw.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)caribbean
+  ->(isCountry)_concept
 }
 bb {
+  ->(extends)_concept
 	title `Barbados`
+  name `bb`
 	#content:String =`~ return "[[=content/bb.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)caribbean
+  ->(isCountry)_concept
 }
 bl {
+  ->(extends)_concept
 	title `Saint Barthlemy`
+  name `bl`
 	#content:String =`~ return "[[=content/bl.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)caribbean
+  ->(isCountry)_concept
 }
 bs {
+  ->(extends)_concept
 	title `Bahamas`
+  name `bs`
 	#content:String =`~ return "[[=content/bs.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)caribbean
+  ->(isCountry)_concept
 }
 cu {
+  ->(extends)_concept
 	title `Cuba`
+  name `cu`
 	#content:String =`~ return "[[=content/cu.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)caribbean
+  ->(isCountry)_concept
 }
 dm {
+  ->(extends)_concept
 	title `Dominica`
+  name `dm`
 	#content:String =`~ return "[[=content/dm.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)caribbean
+  ->(isCountry)_concept
 }
 do {
+  ->(extends)_concept
 	title `Dominican Republic`
+  name `do`
 	#content:String =`~ return "[[=content/do.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)caribbean
+  ->(isCountry)_concept
 }
 gd {
+  ->(extends)_concept
 	title `Grenada`
+  name `gd`
 	#content:String =`~ return "[[=content/gd.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)caribbean
+  ->(isCountry)_concept
 }
 gp {
+  ->(extends)_concept
 	title `Guadeloupe`
+  name `gp`
 	#content:String =`~ return "[[=content/gp.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)caribbean
+  ->(isCountry)_concept
 }
 ht {
+  ->(extends)_concept
 	title `Haiti`
+  name `ht`
 	#content:String =`~ return "[[=content/ht.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)caribbean
+  ->(isCountry)_concept
 }
 jm {
+  ->(extends)_concept
 	title `Jamaica`
+  name `jm`
 	#content:String =`~ return "[[=content/jm.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)caribbean
+  ->(isCountry)_concept
 }
 kn {
+  ->(extends)_concept
 	title `Saint Kitts and Nevis`
+  name `kn`
 	#content:String =`~ return "[[=content/kn.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)caribbean
+  ->(isCountry)_concept
 }
 ky {
+  ->(extends)_concept
 	title `Cayman Islands`
+  name `ky`
 	#content:String =`~ return "[[=content/ky.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)caribbean
+  ->(isCountry)_concept
 }
 lc {
+  ->(extends)_concept
 	title `Saint Lucia`
+  name `lc`
 	#content:String =`~ return "[[=content/lc.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)caribbean
+  ->(isCountry)_concept
 }
 mf {
+  ->(extends)_concept
 	title `Saint Martin (French part)`
+  name `mf`
 	#content:String =`~ return "[[=content/mf.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)caribbean
+  ->(isCountry)_concept
 }
 mq {
+  ->(extends)_concept
 	title `Martinique`
+  name `mq`
 	#content:String =`~ return "[[=content/mq.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)caribbean
+  ->(isCountry)_concept
 }
 ms {
+  ->(extends)_concept
 	title `Montserrat`
+  name `ms`
 	#content:String =`~ return "[[=content/ms.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)caribbean
+  ->(isCountry)_concept
 }
 pr {
+  ->(extends)_concept
 	title `Puerto Rico`
+  name `pr`
 	#content:String =`~ return "[[=content/pr.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)caribbean
+  ->(isCountry)_concept
 }
 tc {
+  ->(extends)_concept
 	title `Turks and Caicos Islands`
+  name `tc`
 	#content:String =`~ return "[[=content/tc.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)caribbean
+  ->(isCountry)_concept
 }
 tt {
+  ->(extends)_concept
 	title `Trinidad and Tobago`
+  name `tt`
 	#content:String =`~ return "[[=content/tt.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)caribbean
+  ->(isCountry)_concept
 }
 vc {
+  ->(extends)_concept
 	title `Saint Vincent and the Grenadines`
+  name `vc`
 	#content:String =`~ return "[[=content/vc.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)caribbean
+  ->(isCountry)_concept
 }
 vg {
+  ->(extends)_concept
 	title `Virgin Islands, British`
+  name `vg`
 	#content:String =`~ return "[[=content/vg.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)caribbean
+  ->(isCountry)_concept
 }
 vi {
+  ->(extends)_concept
 	title `Virgin Islands, U.S.`
+  name `vi`
 	#content:String =`~ return "[[=content/vi.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)caribbean
+  ->(isCountry)_concept
 }
 central-america {
+  ->(extends)_concept
 	title `Central America`
+  name `central-america`
 	#content:String =`~ return "[[=content/central_america.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)americas
 }
 bz {
+  ->(extends)_concept
 	title `Belize`
+  name `bz`
 	#content:String =`~ return "[[=content/bz.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)central-america
+  ->(isCountry)_concept
 }
 cr {
+  ->(extends)_concept
 	title `Costa Rica`
+  name `cr`
 	#content:String =`~ return "[[=content/cr.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)central-america
+  ->(isCountry)_concept
 }
 gt {
+  ->(extends)_concept
 	title `Guatemala`
+  name `gt`
 	#content:String =`~ return "[[=content/gt.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)central-america
+  ->(isCountry)_concept
 }
 hn {
+  ->(extends)_concept
 	title `Honduras`
+  name `hn`
 	#content:String =`~ return "[[=content/hn.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)central-america
+  ->(isCountry)_concept
 }
 mx {
+  ->(extends)_concept
 	title `Mexico`
+  name `mx`
 	#content:String =`~ return "[[=content/mx.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)central-america
+  ->(isCountry)_concept
 }
 ni {
+  ->(extends)_concept
 	title `Nicaragua`
+  name `ni`
 	#content:String =`~ return "[[=content/ni.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)central-america
+  ->(isCountry)_concept
 }
 pa {
+  ->(extends)_concept
 	title `Panama`
+  name `pa`
 	#content:String =`~ return "[[=content/pa.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)central-america
+  ->(isCountry)_concept
 }
 sv {
+  ->(extends)_concept
 	title `El Salvador`
+  name `sv`
 	#content:String =`~ return "[[=content/sv.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)central-america
+  ->(isCountry)_concept
 }
 south-america {
+  ->(extends)_concept
 	title `South America`
+  name `south-america`
 	#content:String =`~ return "[[=content/south_america.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)americas
 }
 ar {
+  ->(extends)_concept
 	title `Argentina`
+  name `ar`
 	#content:String =`~ return "[[=content/ar.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)south-america
+  ->(isCountry)_concept
 }
 bo {
+  ->(extends)_concept
 	title `Bolivia, Plurinational State of`
+  name `bo`
 	#content:String =`~ return "[[=content/bo.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)south-america
+  ->(isCountry)_concept
 }
 br {
+  ->(extends)_concept
 	title `Brazil`
+  name `br`
 	#content:String =`~ return "[[=content/br.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)south-america
+  ->(isCountry)_concept
 }
 cl {
+  ->(extends)_concept
 	title `Chile`
+  name `cl`
 	#content:String =`~ return "[[=content/cl.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)south-america
+  ->(isCountry)_concept
 }
 co {
+  ->(extends)_concept
 	title `Colombia`
+  name `co`
 	#content:String =`~ return "[[=content/co.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)south-america
+  ->(isCountry)_concept
 }
 ec {
+  ->(extends)_concept
 	title `Ecuador`
+  name `ec`
 	#content:String =`~ return "[[=content/ec.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)south-america
+  ->(isCountry)_concept
 }
 fk {
+  ->(extends)_concept
 	title `Falkland Islands (Malvinas)`
+  name `fk`
 	#content:String =`~ return "[[=content/fk.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)south-america
+  ->(isCountry)_concept
 }
 gf {
+  ->(extends)_concept
 	title `French Guiana`
+  name `gf`
 	#content:String =`~ return "[[=content/gf.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)south-america
+  ->(isCountry)_concept
 }
 gy {
+  ->(extends)_concept
 	title `Guyana`
+  name `gy`
 	#content:String =`~ return "[[=content/gy.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)south-america
+  ->(isCountry)_concept
 }
 pe {
+  ->(extends)_concept
 	title `Peru`
+  name `pe`
 	#content:String =`~ return "[[=content/pe.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)south-america
+  ->(isCountry)_concept
 }
 py {
+  ->(extends)_concept
 	title `Paraguay`
+  name `py`
 	#content:String =`~ return "[[=content/py.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)south-america
+  ->(isCountry)_concept
 }
 sr {
+  ->(extends)_concept
 	title `Suriname`
+  name `sr`
 	#content:String =`~ return "[[=content/sr.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)south-america
+  ->(isCountry)_concept
 }
 uy {
+  ->(extends)_concept
 	title `Uruguay`
+  name `uy`
 	#content:String =`~ return "[[=content/uy.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)south-america
+  ->(isCountry)_concept
 }
 ve {
+  ->(extends)_concept
 	title `Venezuela, Bolivarian Republic of`
+  name `ve`
 	#content:String =`~ return "[[=content/ve.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)south-america
+  ->(isCountry)_concept
 }
 asia {
+  ->(extends)_concept
 	title `Asia`
+  name `asia`
 	#content:String =`~ return "[[=content/asia.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)earth
 }
 central-asia {
+  ->(extends)_concept
 	title `Central Asia`
+  name `central-asia`
 	#content:String =`~ return "[[=content/central_asia.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)asia
 }
 tm {
+  ->(extends)_concept
 	title `Turkmenistan`
+  name `tm`
 	#content:String =`~ return "[[=content/tm.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)central-asia
+  ->(isCountry)_concept
 }
 tj {
+  ->(extends)_concept
 	title `Tajikistan`
+  name `tj`
 	#content:String =`~ return "[[=content/tj.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)central-asia
+  ->(isCountry)_concept
 }
 kg {
+  ->(extends)_concept
 	title `Kyrgyzstan`
+  name `kg`
 	#content:String =`~ return "[[=content/kg.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)central-asia
+  ->(isCountry)_concept
 }
 kz {
+  ->(extends)_concept
 	title `Kazakhstan`
+  name `kz`
 	#content:String =`~ return "[[=content/kz.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)central-asia
+  ->(isCountry)_concept
 }
 uz {
+  ->(extends)_concept
 	title `Uzbekistan`
+  name `uz`
 	#content:String =`~ return "[[=content/uz.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)central-asia
+  ->(isCountry)_concept
 }
 eastern-asia {
+  ->(extends)_concept
 	title `Eastern Asia`
+  name `eastern-asia`
 	#content:String =`~ return "[[=content/eastern_asia.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)asia
 }
 cn {
+  ->(extends)_concept
 	title `China`
+  name `cn`
 	#content:String =`~ return "[[=content/cn.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)eastern-asia
+  ->(isCountry)_concept
 }
 hk {
+  ->(extends)_concept
 	title `Hong Kong`
+  name `hk`
 	#content:String =`~ return "[[=content/hk.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)eastern-asia
+  ->(isCountry)_concept
 }
 jp {
+  ->(extends)_concept
 	title `Japan`
+  name `jp`
 	#content:String =`~ return "[[=content/jp.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)eastern-asia
+  ->(isCountry)_concept
 }
 kp {
-	title `Korea, Democratic People&#x27;s Republic of`
+  ->(extends)_concept
+	title `Korea, Democratic People's Republic of`
+  name `kp`
 	#content:String =`~ return "[[=content/kp.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)eastern-asia
+  ->(isCountry)_concept
 }
 kr {
+  ->(extends)_concept
 	title `Korea, Republic of`
+  name `kr`
 	#content:String =`~ return "[[=content/kr.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)eastern-asia
+  ->(isCountry)_concept
 }
 mn {
+  ->(extends)_concept
 	title `Mongolia`
+  name `mn`
 	#content:String =`~ return "[[=content/mn.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)eastern-asia
+  ->(isCountry)_concept
 }
 mo {
+  ->(extends)_concept
 	title `Macao`
+  name `mo`
 	#content:String =`~ return "[[=content/mo.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)eastern-asia
+  ->(isCountry)_concept
 }
 tw {
+  ->(extends)_concept
 	title `Taiwan, Province of China`
+  name `tw`
 	#content:String =`~ return "[[=content/tw.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)eastern-asia
+  ->(isCountry)_concept
 }
 southern-asia {
+  ->(extends)_concept
 	title `Southern Asia`
+  name `southern-asia`
 	#content:String =`~ return "[[=content/southern_asia.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)asia
 }
 af {
+  ->(extends)_concept
 	title `Afghanistan`
+  name `af`
 	#content:String =`~ return "[[=content/af.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)southern-asia
+  ->(isCountry)_concept
 }
 bd {
+  ->(extends)_concept
 	title `Bangladesh`
+  name `bd`
 	#content:String =`~ return "[[=content/bd.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)southern-asia
+  ->(isCountry)_concept
 }
 bt {
+  ->(extends)_concept
 	title `Bhutan`
+  name `bt`
 	#content:String =`~ return "[[=content/bt.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)southern-asia
+  ->(isCountry)_concept
 }
 in {
+  ->(extends)_concept
 	title `India`
+  name `in`
 	#content:String =`~ return "[[=content/in.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)southern-asia
+  ->(isCountry)_concept
 }
 ir {
+  ->(extends)_concept
 	title `Iran, Islamic Republic of`
+  name `ir`
 	#content:String =`~ return "[[=content/ir.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)southern-asia
+  ->(isCountry)_concept
 }
 lk {
+  ->(extends)_concept
 	title `Sri Lanka`
+  name `lk`
 	#content:String =`~ return "[[=content/lk.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)southern-asia
+  ->(isCountry)_concept
 }
 mv {
+  ->(extends)_concept
 	title `Maldives`
+  name `mv`
 	#content:String =`~ return "[[=content/mv.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)southern-asia
+  ->(isCountry)_concept
 }
 np {
+  ->(extends)_concept
 	title `Nepal`
+  name `np`
 	#content:String =`~ return "[[=content/np.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)southern-asia
+  ->(isCountry)_concept
 }
 pk {
+  ->(extends)_concept
 	title `Pakistan`
+  name `pk`
 	#content:String =`~ return "[[=content/pk.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)southern-asia
+  ->(isCountry)_concept
 }
 south-east-asia {
+  ->(extends)_concept
 	title `South East Asia`
+  name `south-east-asia`
 	#content:String =`~ return "[[=content/south_east_asia.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)asia
 }
 bn {
+  ->(extends)_concept
 	title `Brunei Darussalam`
+  name `bn`
 	#content:String =`~ return "[[=content/bn.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)south-east-asia
+  ->(isCountry)_concept
 }
 id {
+  ->(extends)_concept
 	title `Indonesia`
+  name `id`
 	#content:String =`~ return "[[=content/id.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)south-east-asia
+  ->(isCountry)_concept
 }
 kh {
+  ->(extends)_concept
 	title `Cambodia`
+  name `kh`
 	#content:String =`~ return "[[=content/kh.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)south-east-asia
+  ->(isCountry)_concept
 }
 la {
-	title `Lao People&#x27;s Democratic Republic`
+  ->(extends)_concept
+	title `Lao People's Democratic Republic`
+  name `la`
 	#content:String =`~ return "[[=content/la.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)south-east-asia
+  ->(isCountry)_concept
 }
 mm {
+  ->(extends)_concept
 	title `Myanmar`
+  name `mm`
 	#content:String =`~ return "[[=content/mm.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)south-east-asia
+  ->(isCountry)_concept
 }
 my {
+  ->(extends)_concept
 	title `Malaysia`
+  name `my`
 	#content:String =`~ return "[[=content/my.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)south-east-asia
+  ->(isCountry)_concept
 }
 ph {
+  ->(extends)_concept
 	title `Philippines`
+  name `ph`
 	#content:String =`~ return "[[=content/ph.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)south-east-asia
+  ->(isCountry)_concept
 }
 sg {
+  ->(extends)_concept
 	title `Singapore`
+  name `sg`
 	#content:String =`~ return "[[=content/sg.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)south-east-asia
+  ->(isCountry)_concept
 }
 th {
+  ->(extends)_concept
 	title `Thailand`
+  name `th`
 	#content:String =`~ return "[[=content/th.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)south-east-asia
+  ->(isCountry)_concept
 }
 tl {
+  ->(extends)_concept
 	title `Timor-Leste`
+  name `tl`
 	#content:String =`~ return "[[=content/tl.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)south-east-asia
+  ->(isCountry)_concept
 }
 vn {
+  ->(extends)_concept
 	title `Viet Nam`
+  name `vn`
 	#content:String =`~ return "[[=content/vn.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)south-east-asia
+  ->(isCountry)_concept
 }
 western-asia {
+  ->(extends)_concept
 	title `Western Asia`
+  name `western-asia`
 	#content:String =`~ return "[[=content/western_asia.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)asia
 }
 ae {
+  ->(extends)_concept
 	title `United Arab Emirates`
+  name `ae`
 	#content:String =`~ return "[[=content/ae.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)western-asia
+  ->(isCountry)_concept
 }
 am {
+  ->(extends)_concept
 	title `Armenia`
+  name `am`
 	#content:String =`~ return "[[=content/am.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)western-asia
+  ->(isCountry)_concept
 }
 az {
+  ->(extends)_concept
 	title `Azerbaijan`
+  name `az`
 	#content:String =`~ return "[[=content/az.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)western-asia
+  ->(isCountry)_concept
 }
 bh {
+  ->(extends)_concept
 	title `Bahrain`
+  name `bh`
 	#content:String =`~ return "[[=content/bh.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)western-asia
+  ->(isCountry)_concept
 }
 cy {
+  ->(extends)_concept
 	title `Cyprus`
+  name `cy`
 	#content:String =`~ return "[[=content/cy.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)western-asia
+  ->(isCountry)_concept
 }
 ge {
+  ->(extends)_concept
 	title `Georgia`
+  name `ge`
 	#content:String =`~ return "[[=content/ge.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)western-asia
+  ->(isCountry)_concept
 }
 il {
+  ->(extends)_concept
 	title `Israel`
+  name `il`
 	#content:String =`~ return "[[=content/il.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)western-asia
+  ->(isCountry)_concept
 }
 iq {
+  ->(extends)_concept
 	title `Iraq`
+  name `iq`
 	#content:String =`~ return "[[=content/iq.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)western-asia
+  ->(isCountry)_concept
 }
 jo {
+  ->(extends)_concept
 	title `Jordan`
+  name `jo`
 	#content:String =`~ return "[[=content/jo.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)western-asia
+  ->(isCountry)_concept
 }
 kw {
+  ->(extends)_concept
 	title `Kuwait`
+  name `kw`
 	#content:String =`~ return "[[=content/kw.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)western-asia
+  ->(isCountry)_concept
 }
 lb {
+  ->(extends)_concept
 	title `Lebanon`
+  name `lb`
 	#content:String =`~ return "[[=content/lb.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)western-asia
+  ->(isCountry)_concept
 }
 om {
+  ->(extends)_concept
 	title `Oman`
+  name `om`
 	#content:String =`~ return "[[=content/om.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)western-asia
+  ->(isCountry)_concept
 }
 ps {
+  ->(extends)_concept
 	title `Palestine, State of`
+  name `ps`
 	#content:String =`~ return "[[=content/ps.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)western-asia
+  ->(isCountry)_concept
 }
 qa {
+  ->(extends)_concept
 	title `Qatar`
+  name `qa`
 	#content:String =`~ return "[[=content/qa.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)western-asia
+  ->(isCountry)_concept
 }
 sa {
+  ->(extends)_concept
 	title `Saudi Arabia`
+  name `sa`
 	#content:String =`~ return "[[=content/sa.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)western-asia
+  ->(isCountry)_concept
 }
 sy {
+  ->(extends)_concept
 	title `Syrian Arab Republic`
+  name `sy`
 	#content:String =`~ return "[[=content/sy.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)western-asia
+  ->(isCountry)_concept
 }
 tr {
+  ->(extends)_concept
 	title `Turkey`
+  name `tr`
 	#content:String =`~ return "[[=content/tr.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)western-asia
+  ->(isCountry)_concept
 }
 ye {
+  ->(extends)_concept
 	title `Yemen`
+  name `ye`
 	#content:String =`~ return "[[=content/ye.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)western-asia
+  ->(isCountry)_concept
 }
 oceania {
+  ->(extends)_concept
 	title `Oceania`
+  name `oceania`
 	#content:String =`~ return "[[=content/oceania.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)earth
 }
 australia-and-new-zealand {
+  ->(extends)_concept
 	title `Australia and New Zealand`
+  name `australia-and-new-zealand`
 	#content:String =`~ return "[[=content/australia_and_new_zealand.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)oceania
 }
 au {
+  ->(extends)_concept
 	title `Australia`
+  name `au`
 	#content:String =`~ return "[[=content/au.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)australia-and-new-zealand
+  ->(isCountry)_concept
 }
 nf {
+  ->(extends)_concept
 	title `Norfolk Island`
+  name `nf`
 	#content:String =`~ return "[[=content/nf.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)australia-and-new-zealand
+  ->(isCountry)_concept
 }
 nz {
+  ->(extends)_concept
 	title `New Zealand`
+  name `nz`
 	#content:String =`~ return "[[=content/nz.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)australia-and-new-zealand
+  ->(isCountry)_concept
 }
 melanesia {
+  ->(extends)_concept
 	title `Melanesia`
+  name `melanesia`
 	#content:String =`~ return "[[=content/melanesia.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)oceania
 }
 fj {
+  ->(extends)_concept
 	title `Fiji`
+  name `fj`
 	#content:String =`~ return "[[=content/fj.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)melanesia
+  ->(isCountry)_concept
 }
 nc {
+  ->(extends)_concept
 	title `New Caledonia`
+  name `nc`
 	#content:String =`~ return "[[=content/nc.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)melanesia
+  ->(isCountry)_concept
 }
 pg {
+  ->(extends)_concept
 	title `Papua New Guinea`
+  name `pg`
 	#content:String =`~ return "[[=content/pg.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)melanesia
+  ->(isCountry)_concept
 }
 sb {
+  ->(extends)_concept
 	title `Solomon Islands`
+  name `sb`
 	#content:String =`~ return "[[=content/sb.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)melanesia
+  ->(isCountry)_concept
 }
 vu {
+  ->(extends)_concept
 	title `Vanuatu`
+  name `vu`
 	#content:String =`~ return "[[=content/vu.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)melanesia
+  ->(isCountry)_concept
 }
 micronesia {
+  ->(extends)_concept
 	title `Micronesia`
+  name `micronesia`
 	#content:String =`~ return "[[=content/micronesia.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)oceania
 }
 fm {
+  ->(extends)_concept
 	title `Micronesia, Federated States of`
+  name `fm`
 	#content:String =`~ return "[[=content/fm.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)micronesia
+  ->(isCountry)_concept
 }
 gu {
+  ->(extends)_concept
 	title `Guam`
+  name `gu`
 	#content:String =`~ return "[[=content/gu.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)micronesia
+  ->(isCountry)_concept
 }
 ki {
+  ->(extends)_concept
 	title `Kiribati`
+  name `ki`
 	#content:String =`~ return "[[=content/ki.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)micronesia
+  ->(isCountry)_concept
 }
 mh {
+  ->(extends)_concept
 	title `Marshall Islands`
+  name `mh`
 	#content:String =`~ return "[[=content/mh.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)micronesia
+  ->(isCountry)_concept
 }
 mp {
+  ->(extends)_concept
 	title `Northern Mariana Islands`
+  name `mp`
 	#content:String =`~ return "[[=content/mp.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)micronesia
+  ->(isCountry)_concept
 }
 nr {
+  ->(extends)_concept
 	title `Nauru`
+  name `nr`
 	#content:String =`~ return "[[=content/nr.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)micronesia
+  ->(isCountry)_concept
 }
 pw {
+  ->(extends)_concept
 	title `Palau`
+  name `pw`
 	#content:String =`~ return "[[=content/pw.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)micronesia
+  ->(isCountry)_concept
 }
 polynesia {
+  ->(extends)_concept
 	title `Polynesia`
+  name `polynesia`
 	#content:String =`~ return "[[=content/polynesia.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)oceania
 }
 as {
+  ->(extends)_concept
 	title `American Samoa`
+  name `as`
 	#content:String =`~ return "[[=content/as.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)polynesia
+  ->(isCountry)_concept
 }
 ck {
+  ->(extends)_concept
 	title `Cook Islands`
+  name `ck`
 	#content:String =`~ return "[[=content/ck.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)polynesia
+  ->(isCountry)_concept
 }
 nu {
+  ->(extends)_concept
 	title `Niue`
+  name `nu`
 	#content:String =`~ return "[[=content/nu.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)polynesia
+  ->(isCountry)_concept
 }
 pf {
+  ->(extends)_concept
 	title `French Polynesia`
+  name `pf`
 	#content:String =`~ return "[[=content/pf.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)polynesia
+  ->(isCountry)_concept
 }
 pn {
+  ->(extends)_concept
 	title `Pitcairn`
+  name `pn`
 	#content:String =`~ return "[[=content/pn.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)polynesia
+  ->(isCountry)_concept
 }
 tk {
+  ->(extends)_concept
 	title `Tokelau`
+  name `tk`
 	#content:String =`~ return "[[=content/tk.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)polynesia
+  ->(isCountry)_concept
 }
 to {
+  ->(extends)_concept
 	title `Tonga`
+  name `to`
 	#content:String =`~ return "[[=content/to.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)polynesia
+  ->(isCountry)_concept
 }
 tv {
+  ->(extends)_concept
 	title `Tuvalu`
+  name `tv`
 	#content:String =`~ return "[[=content/tv.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)polynesia
+  ->(isCountry)_concept
 }
 wf {
+  ->(extends)_concept
 	title `Wallis and Futuna`
+  name `wf`
 	#content:String =`~ return "[[=content/wf.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)polynesia
+  ->(isCountry)_concept
 }
 ws {
+  ->(extends)_concept
 	title `Samoa`
+  name `ws`
 	#content:String =`~ return "[[=content/ws.xhtml]]";`
-	#resource = `~ return "[[=layout.xhtml]]";`
   ->(parent)polynesia
+  ->(isCountry)_concept
 }
