@@ -2,7 +2,6 @@ $options { default.properties "event;strict"}
 
 _concept {
   #[visited]:Integer
-  #suitability:Boolean =`true`
   event +`
     if (!${[[=_personal]]#country}.equals("")) {
       ${#visited}++;
@@ -15,6 +14,7 @@ _concept {
       return "[[=layout.xhtml]]";
     }
   `
+  #suitability:Boolean =`sum(new Object[]{${=>(isNeighborOf)#visited}}) > 0`
 }
 
 _personal {
