@@ -8,7 +8,9 @@ _concept {
     }
   `
   #resource =`~
-    if (${[[=_personal]]#country}.equals("")) {
+    if (${[[=_personal]]#language}.equals("")) {
+      return "[[=detect_language.xhtml]]";
+    } else if (${[[=_personal]]#country}.equals("")) {
       return "[[=index.xhtml]]";
     } else {
       return "[[=layout.xhtml]]";
@@ -18,7 +20,12 @@ _concept {
 }
 
 _personal {
+  #[language]:String ``
   #[country]:String ``
+  #[read_more_count]:Integer `0`
+  #[map_count]:Integer `0`
+  #textual:Boolean =`${#read_more_count} - ${#map_count} >= 5`
+  #visual:Boolean =`${#map_count} - ${#read_more_count} >= 5`
 }
 
 earth {
